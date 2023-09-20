@@ -3,7 +3,7 @@ import wwig1 from "../../assets/landing-page/what-will-i-get1.svg";
 import wwig2 from "../../assets/landing-page/what-will-i-get2.svg";
 import wwig3 from "../../assets/landing-page/what-will-i-get3.svg";
 import WhatWillIgetCard from "../../components/WhatWillIgetCard";
-import line2 from "../../assets/landing-page/line-2.svg";
+import line2 from "../../assets/landing-page/Line-2.svg";
 
 const WhatWillIGet = () => {
   const wwig = [
