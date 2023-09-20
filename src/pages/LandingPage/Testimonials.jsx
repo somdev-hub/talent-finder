@@ -6,7 +6,7 @@ import testimonial_img from "../../assets/landing-page/testimonial-img.png";
 import microsoft from "../../assets/landing-page/microsoft.png";
 import star from "../../assets/landing-page/star.svg";
 import group7 from "../../assets/landing-page/group-7.svg";
-import ellipse15 from "../../assets/landing-page/Ellipse-15.svg";
+import ellipse15 from "../../assets/landing-page/ellipse-15.svg";
 
 const Testimonials = () => {
   return (
