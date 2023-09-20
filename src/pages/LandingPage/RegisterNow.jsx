@@ -5,11 +5,11 @@ import vector222 from "../../assets/Landing-page/Vector-222.svg";
 
 const RegisterNow = () => {
   return (
-    <div className="py-[5rem] flex flex-col justify-center items-center overflow-hidden">
-      <h2 className=" m-0 text-[3.5rem] font-coolvetica-56 font-[400]">
+    <div className="p-[1.5rem] sm:py-[5rem] flex flex-col justify-center items-center overflow-hidden">
+      <h2 className=" m-0 text-[2.5rem] sm:text-[3.5rem] font-coolvetica-56 font-[400]">
         Register Now!
       </h2>
-      <p className="text-[1.25rem] font-[400] text-text-medium w-2/5 text-center font-poppins-regular-20 m-0 mt-8 mb-[4.25rem]">
+      <p className="text-[1.25rem] font-[400] text-text-medium sm:w-2/5 text-center font-poppins-regular-20 m-0 mt-8 mb-[4.25rem]">
         Begin your journey today or preview a sample profile. Your next career
         move awaits!
       </p>

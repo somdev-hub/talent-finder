@@ -24,7 +24,7 @@ const WhatWillIGet = () => {
     }
   ];
   return (
-    <div className="text-center py-[5rem] flex flex-col justify-center items-center">
+    <div className="text-center p-[1.5rem] sm:py-[5rem] flex flex-col justify-center items-center">
       <p className="text-[1.5rem] font-[400] font-coolvetica-56 text-blue m-0">
         Benefits
       </p>
@@ -34,7 +34,7 @@ const WhatWillIGet = () => {
         </h2>
         <img src={line2} alt="" className="right-0 absolute" />
       </div>
-      <div className="mt-10 flex sm:flex-row flex-col gap-6 sm:gap-10 w-4/5">
+      <div className="mt-10 flex sm:flex-row flex-col gap-6 sm:gap-10 sm:w-4/5">
         {wwig.map((item, index) => {
           return (
             <WhatWillIgetCard

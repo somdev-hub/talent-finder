@@ -1,5 +1,5 @@
 import React from "react";
-import main_logo from "../../assets/Landing-page/main_logo.svg";
+import main_logo from "../../assets/landing-page/main_logo.svg";
 import mail from "../../assets/Landing-page/mail.png";
 import social_icon1 from "../../assets/Landing-page/Social-Icons1.svg";
 import social_icon2 from "../../assets/Landing-page/Social-Icons2.svg";
