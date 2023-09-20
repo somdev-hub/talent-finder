@@ -1,5 +1,5 @@
 import React from "react";
-import group_32 from "../../assets/landing-page/group-32.svg";
+import group_32 from "../../assets/landing-page/Group-32.svg";
 import how_it_works1 from "../../assets/landing-page/how-it-works1.png";
 import { Autoplay, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
