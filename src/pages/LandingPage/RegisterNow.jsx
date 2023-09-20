@@ -1,7 +1,7 @@
 import React from "react";
 import ButtonPrimary from "../../components/ButtonPrimary";
-import vector221 from "../../assets/Landing-page/Vector-221.svg";
-import vector222 from "../../assets/Landing-page/Vector-222.svg";
+import vector221 from "../../assets/landing-page/Vector-221.svg";
+import vector222 from "../../assets/landing-page/Vector-222.svg";
 
 const RegisterNow = () => {
   return (
