@@ -10,7 +10,10 @@ const TestimonialCard = ({
   heading,
   company,
   text,
-  stars
+  stars,
+  currentPagination,
+  setCurrentPagination,
+  totalPagination
 }) => {
   return (
     <div className="sm:p-0 pt-[5rem]">
@@ -27,7 +30,7 @@ const TestimonialCard = ({
           <div className="flex sm:flex-row flex-col justify-between items-start">
             <div className="">
               <h3 className="text-[1.25rem] m-0 leading-[130%] font-poppins-regular-20 flex sm:flex-row flex-col">
-                <span className="font-[500]">{name},{" "} </span>
+                <span className="font-[500]">{name}, </span>
                 <span className="font-[300]">{designation}</span>
               </h3>
               <div className="mt-4 sm:mt-2">
@@ -46,6 +49,19 @@ const TestimonialCard = ({
           <p className=" sm:text-[1.25rem] font-[400] leading-[130%] font-poppins-regular-20 text-white sm:text-text-medium m-0 mt-4 sm:mt-[2.25rem]">
             {text}
           </p>
+          <div className="flex mt-10">
+            {[...Array(totalPagination)].map((e, i) => {
+              return (
+                <div
+                  key={i}
+                  className={`pagination-bullet ${
+                    currentPagination === i ? "active" : ""
+                  }`}
+                  onClick={() => setCurrentPagination(i)}
+                ></div>
+              );
+            })}
+          </div>
         </div>
       </div>
     </div>

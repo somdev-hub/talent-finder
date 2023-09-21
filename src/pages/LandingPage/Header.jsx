@@ -11,8 +11,19 @@ import uber_logo from "../../assets/landing-page/uber-logo.png";
 import airtel_logo from "../../assets/landing-page/airtel-logo.png";
 import ibm_logo from "../../assets/landing-page/ibm-logo.png";
 import ButtonPrimary from "../../components/ButtonPrimary";
+import { Autoplay, Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
+import "swiper/css";
 
 const Header = () => {
+  const images = [
+    whirlpool_logo,
+    tata_logo,
+    sony_logo,
+    uber_logo,
+    airtel_logo,
+    ibm_logo
+  ];
   return (
     <div className="bg-blue-shade  relative">
       <Navbar />
@@ -38,7 +49,7 @@ const Header = () => {
             Lorem ipsum dolor sit amet consectetur. Ac ut nunc sodales a
             integer. Risus sapien nec volutpat ut lectus purus enim et a.
           </p>
-         <ButtonPrimary text="Book Free Trial"/>
+          <ButtonPrimary text="Book Free Trial" />
           <div className="font-[400] leading-[120%] font-poppins-regular-20 sm:block flex flex-col items-center">
             <div className="flex mt-4">
               <img src={check_mark} alt="" />
@@ -63,13 +74,30 @@ const Header = () => {
         <p className="font-[500] text-white leading-[130%] font-poppins-regular-20 text-[1.25rem] m-0">
           Get placed at
         </p>
-        <div className="flex w-full items-center gap-10 sm:gap-[4rem] justify-center overflow-x-auto">
-          <img src={whirlpool_logo} alt="" className="sm:w-auto w-1/5" />
-          <img src={tata_logo} alt="" className="sm:w-auto w-1/5" />
-          <img src={sony_logo} alt="" className="sm:w-auto w-1/5" />
-          <img src={uber_logo} alt="" className="sm:w-auto w-1/5" />
-          <img src={airtel_logo} alt="" className="sm:w-auto w-1/5" />
-          <img src={ibm_logo} alt="" className="sm:w-auto w-1/5" />
+        <div className="flex w-full items-center gap-10 sm:gap-[4rem] justify-center mt-5 overflow-x-auto">
+          <div className="w-[80%] flex items-center justify-center m-auto">
+            <Swiper
+              className="mySwiper"
+              modules={[Autoplay]}
+              autoplay={true}
+              slidesPerView={5}
+              centeredSlides={true}
+            >
+              {images.map((image, index) => {
+                return (
+                  <SwiperSlide key={index}>
+                    <div className="flex items-center my-auto justify-center h-[3rem] sm:h-[5rem]">
+                      <img
+                        src={image}
+                        alt=""
+                        className="sm:w-auto w-[80%] m-0 h-auto"
+                      />
+                    </div>
+                  </SwiperSlide>
+                );
+              })}
+            </Swiper>
+          </div>
         </div>
       </div>
     </div>

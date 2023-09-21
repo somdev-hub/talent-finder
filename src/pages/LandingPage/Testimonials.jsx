@@ -39,13 +39,20 @@ const Testimonials = () => {
       img: testimonial_img
     }
   ];
-  const pagination = {
-    clickable: true,
-    renderBullet: function (index, className) {
-      return '<span class="' + className + ' pagination-bullet">' + "</span>";
-    },
-    bulletActiveClass: "active"
+  const [current, setCurrent] = React.useState(0);
+  const swiperRef = React.useRef(null);
+
+  const handleSlideClick = (index) => {
+    setCurrent(index);
+    swiperRef.current?.swiper.slideTo(index);
   };
+  // const pagination = {
+  //   clickable: true,
+  //   renderBullet: function (index, className) {
+  //     return '<span class="' + className + ' pagination-bullet">' + "</span>";
+  //   },
+  //   bulletActiveClass: "active"
+  // };
   return (
     <div className="relative p-6 sm:p-[5rem] bg-white sm:bg-blue-shade flex flex-col justify-center text-center items-center">
       <div className="relative">
@@ -64,18 +71,27 @@ const Testimonials = () => {
       <div className="w-full sm:mt-[4rem]  z-10">
         <div className="relative flex w-full justify-center items-center m-auto">
           <Swiper
-            pagination={pagination}
+            ref={swiperRef}
+            onSlideChange={(swiper) => {
+              setCurrent(swiper.activeIndex);
+            }}
+            // pagination={pagination}
             modules={[Pagination, Autoplay]}
             className="mySwiper"
             slidesPerView="auto"
             centeredSlides={true}
-            // autoplay={true}
+            autoplay={true}
             centeredSlidesBounds={true}
           >
             {testimonials.map((testimonial, index) => {
               return (
                 <SwiperSlide key={index}>
-                  <TestimonialCard {...testimonial} />
+                  <TestimonialCard
+                    {...testimonial}
+                    totalPagination={testimonials.length}
+                    currentPagination={current}
+                    setCurrentPagination={handleSlideClick}
+                  />
                 </SwiperSlide>
               );
             })}

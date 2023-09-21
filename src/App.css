@@ -32,12 +32,21 @@
   width: 21px !important;
   height: 4px !important;
   border-radius: 10px !important;
-  background-color: #bbbbbd !important;
+  background-color: #bbbbbd;
   z-index: 10;
   opacity: 1;
 }
 
 .active {
   width: 56px !important;
-  background-color: #4B4B4B !important;
+  background-color: #4b4b4b;
+}
+
+@media screen and (max-width: 640px) {
+  .pagination-bullet{
+    background-color: #4b4b4b;
+  }
+  .active {
+    background-color: #fff;
+  }
 }
