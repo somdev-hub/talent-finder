@@ -6,6 +6,7 @@ import WhatWillIGet from "./WhatWillIGet";
 import Testimonials from "./Testimonials";
 import Footer from "./Footer";
 import RegisterNow from "./RegisterNow";
+import FooterSm from "./FooterSm";
 
 const LandingPage = () => {
   return (
@@ -17,6 +18,7 @@ const LandingPage = () => {
       <Testimonials />
       <RegisterNow />
       <Footer />
+      <FooterSm />
     </>
   );
 };
