@@ -1,30 +1,12 @@
 import React, { useState } from "react";
 import group_32 from "../../assets/landing-page/Group-32.svg";
-import how_it_works1 from "../../assets/landing-page/how-it-works1.png";
-import { Autoplay, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import HowItWorkSlide from "../../components/HowItWorkSlide";
 import ButtonPrimary from "../../components/ButtonPrimary";
+import { howItWorksSlides } from "../../assets/data/howItWorks";
 
 const HowItWorks = () => {
-  const slides = [
-    {
-      heading: "Step 1 Name",
-      text: "Lorem ipsum dolor sit amet consectetur. Turpis dictum tincidunt pharetra ut enim sagittis aliquam. Turpis venenatis eu feugiat arcu vestibulum blandit eu ac leo. Egestas commodo malesuada risus viverra semper ornare scelerisque tristique venenatis. Elementum liber. tristique venenatis. Elementum liber.",
-      img: how_it_works1
-    },
-    {
-      heading: "Step 2 Name",
-      text: "Lorem ipsum dolor sit amet consectetur. Turpis dictum tincidunt pharetra ut enim sagittis aliquam. Turpis venenatis eu feugiat arcu vestibulum blandit eu ac leo. Egestas commodo malesuada risus viverra semper ornare scelerisque tristique venenatis. Elementum liber. tristique venenatis. Elementum liber.",
-      img: how_it_works1
-    },
-    {
-      heading: "Step 3 Name",
-      text: "Lorem ipsum dolor sit amet consectetur. Turpis dictum tincidunt pharetra ut enim sagittis aliquam. Turpis venenatis eu feugiat arcu vestibulum blandit eu ac leo. Egestas commodo malesuada risus viverra semper ornare scelerisque tristique venenatis. Elementum liber. tristique venenatis. Elementum liber.",
-      img: how_it_works1
-    }
-  ];
   const [clicked, setClicked] = useState(0);
   const swiperRef = React.useRef(null);
 
@@ -49,7 +31,7 @@ const HowItWorks = () => {
       <div className="relative sm:w-[22rem] w-[90%]  mt-[5rem]">
         <div className="relative flex justify-between w-full top-1/2">
           <div className="absolute border-[1.5px] border-slate-400 border-solid w-full top-1/2 -z-10"></div>
-          {slides.map((slide, index) => {
+          {howItWorksSlides.map((slide, index) => {
             return (
               <div
                 key={index}
@@ -82,7 +64,7 @@ const HowItWorks = () => {
             centeredSlides={true}
             centeredSlidesBounds={true}
           >
-            {slides.map((slide, index) => {
+            {howItWorksSlides.map((slide, index) => {
               return (
                 <SwiperSlide key={index}>
                   <HowItWorkSlide

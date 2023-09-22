@@ -18,21 +18,16 @@ const Testimonials = () => {
   };
 
   return (
-    <div className="relative p-6 sm:p-[5rem] bg-white sm:bg-blue-shade flex flex-col justify-center text-center items-center">
+    <div className="relative p-6 sm:p-[5rem] bg-whiteflex flex-col justify-center text-center items-center">
       <div className="relative">
-        <p className="text-blue sm:text-neon text-[1.5rem] font-[400] font-coolvetica-56 m-0">
+        <p className="text-blue text-[1.5rem] font-[400] font-coolvetica-56 m-0">
           Reviews
         </p>
-        <img
-          src={group7}
-          className="absolute left-[5rem] top-0 sm:block hidden"
-          alt=""
-        />
       </div>
-      <h2 className="text-black sm:text-white font-[400] text-[2.5rem] sm:text-[3.5rem] font-coolvetica-56 m-0 mt-8">
+      <h2 className="text-black font-[400] text-[2.5rem] sm:text-[3.5rem] font-coolvetica-56 m-0 mt-8">
         What our clients say
       </h2>
-      <div className="w-full sm:my-[4rem]  z-10">
+      <div className="w-full mb-10 sm:mb-0 sm:my-[4rem]  z-10">
         <div className="relative flex w-full justify-center items-center m-auto">
           <Swiper
             ref={swiperRef}
@@ -55,7 +50,7 @@ const Testimonials = () => {
                     totalPagination={testimonials.length}
                     currentPagination={current}
                     setCurrentPagination={handleSlideClick}
-                    backgroundColor="white"
+                    backgroundColor="blue-shade"
                   />
                 </SwiperSlide>
               );
@@ -63,12 +58,7 @@ const Testimonials = () => {
           </Swiper>
         </div>
       </div>
-      <ButtonPrimary text="Book Free Trial"/>
-      <img
-        src={ellipse15}
-        className="absolute bottom-0 right-0 z-[1] sm:block hidden"
-        alt=""
-      />
+      <ButtonPrimary text="Apply Now" />
     </div>
   );
 };

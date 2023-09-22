@@ -1,5 +1,6 @@
 import React from "react";
 import hamburger from "../assets/landing-page/hamburger.svg";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [show, setShow] = React.useState(false);
@@ -29,12 +30,16 @@ const Navbar = () => {
           } sm:gap-8 gap-4 sm:mt-0 mt-8 p-0 flex-col sm:flex-row text-center items-center
           }`}
         >
-          <li className="list-none cursor-pointer hover:text-neon">
-            Mentorship & Placement
-          </li>
-          <li className="list-none cursor-pointer hover:text-neon">
-            Placement
-          </li>
+          <Link to="/">
+            <li className="list-none cursor-pointer hover:text-neon">
+              Mentorship & Placement
+            </li>
+          </Link>
+          <Link to="/placement">
+            <li className="list-none cursor-pointer hover:text-neon">
+              Placement
+            </li>
+          </Link>
           <li className="list-none cursor-pointer hover:text-neon">Hire</li>
         </ul>
       </div>

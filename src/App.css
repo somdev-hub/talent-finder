@@ -42,8 +42,13 @@
   background-color: #4b4b4b;
 }
 
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
 @media screen and (max-width: 640px) {
-  .pagination-bullet{
+  .pagination-bullet {
     background-color: #4b4b4b;
   }
   .active {

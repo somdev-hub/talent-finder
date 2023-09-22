@@ -4,9 +4,9 @@ import WhyUs from "./WhyUs";
 import HowItWorks from "./HowItWorks";
 import WhatWillIGet from "./WhatWillIGet";
 import Testimonials from "./Testimonials";
-import Footer from "./Footer";
 import RegisterNow from "./RegisterNow";
-import FooterSm from "./FooterSm";
+import Footer from "../../components/Footer";
+import FooterSm from "../../components/FooterSm";
 
 const LandingPage = () => {
   return (

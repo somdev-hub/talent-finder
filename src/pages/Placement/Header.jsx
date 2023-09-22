@@ -1,8 +1,6 @@
-import React from "react";
 import Navbar from "../../components/Navbar";
-import header_main from "../../assets/landing-page/header-main.png";
+import header_main from "../../assets/placement/placement-header.png";
 import check_mark from "../../assets/landing-page/check-mark-circle-2.svg";
-import ellipse1 from "../../assets/landing-page/Ellipse-1.svg";
 import line1 from "../../assets/landing-page/Line-1.svg";
 import whirlpool_logo from "../../assets/landing-page/Whirlpool-logo.png";
 import tata_logo from "../../assets/landing-page/tata-logo.png";
@@ -11,9 +9,11 @@ import uber_logo from "../../assets/landing-page/uber-logo.png";
 import airtel_logo from "../../assets/landing-page/airtel-logo.png";
 import ibm_logo from "../../assets/landing-page/ibm-logo.png";
 import ButtonPrimary from "../../components/ButtonPrimary";
-import { Autoplay, Pagination } from "swiper/modules";
-import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
+import { Autoplay } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+import ellipse15 from "../../assets/placement/ellipse-15.svg";
+import hightlight4 from "../../assets/placement/highlight-4.svg";
 
 const Header = () => {
   const images = [
@@ -27,17 +27,16 @@ const Header = () => {
   return (
     <div className="bg-blue-shade  relative">
       <Navbar />
-      <div className="flex mt-[2rem] sm:mt-[5rem] px-0 sm:pl-[7.5rem] justify-between relative z-10">
+      <div className="flex mt-[2rem] sm:mt-[5rem] px-0 sm:px-[7.5rem] justify-between relative z-10">
         <div className="text-white sm:w-1/2 w-full sm:block flex flex-col gap-8 items-center justify-center">
           <div className="relative">
             <h1 className="px-[1.5rem] sm:px-0 text-center sm:text-left text-[3rem] sm:text-[5rem] font-[400] font-coolvetica-56 leading-[115%] m-0">
-              Get Job-Ready <br />
-              with us.
+              Get Placed in top <br className="sm:block hidden" /> companies.
             </h1>
             <img
-              src={line1}
+              src={hightlight4}
               alt=""
-              className="absolute sm:top-[50%] sm:right-[20%] w-[30%] right-1/4"
+              className="absolute sm:top-0 sm:right-0 left-[1%] bottom-[40%] sm:bottom-auto sm:left-auto "
             />
           </div>
           <img
@@ -49,7 +48,7 @@ const Header = () => {
             Lorem ipsum dolor sit amet consectetur. Ac ut nunc sodales a
             integer. Risus sapien nec volutpat ut lectus purus enim et a.
           </p>
-          <ButtonPrimary text="Book Free Trial" />
+          <ButtonPrimary text="Apply Now" />
           <div className="font-[400] leading-[120%] font-poppins-regular-20 sm:block flex flex-col items-center">
             <div className="flex mt-4">
               <img src={check_mark} alt="" />
@@ -66,9 +65,9 @@ const Header = () => {
         </div>
       </div>
       <img
-        src={ellipse1}
+        src={ellipse15}
         alt=""
-        className="sm:block hidden absolute bottom-0"
+        className="sm:block hidden absolute bottom-0 right-0"
       />
       <div className="py-[2.5rem] relative z-10 flex flex-col justify-center items-center">
         <p className="font-[500] text-white leading-[130%] font-poppins-regular-20 text-[1.25rem] m-0">

@@ -13,11 +13,16 @@ const TestimonialCard = ({
   stars,
   currentPagination,
   setCurrentPagination,
-  totalPagination
+  totalPagination,
+  backgroundColor
 }) => {
   return (
     <div className="sm:p-0 pt-[5rem]">
-      <div className="sm:w-[75%] relative box-border m-auto p-6 sm:px-[6rem] sm:py-[3rem] bg-blue text-white sm:text-black sm:bg-white rounded-[1.25rem] sm:rounded-[2.5rem] flex items-center justify-center gap-10">
+      <div
+        className={`sm:w-[75%] relative box-border m-auto p-6 sm:px-[6rem] sm:py-[3rem] bg-blue text-white sm:text-${
+          backgroundColor === "blue-shade" ? "white" : "black"
+        } sm:bg-${backgroundColor} rounded-[1.25rem] sm:rounded-[2.5rem] flex items-center justify-center gap-10`}
+      >
         <img
           src={img}
           alt=""
@@ -46,7 +51,11 @@ const TestimonialCard = ({
           <h2 className="text-[1.25rem] sm:text-[2.5rem] font-coolvetica-56 font-[400] m-0 mt-4">
             {heading}
           </h2>
-          <p className=" sm:text-[1.25rem] font-[400] leading-[130%] font-poppins-regular-20 text-white sm:text-text-medium m-0 mt-4 sm:mt-[2.25rem]">
+          <p
+            className={` sm:text-[1.25rem] font-[400] leading-[130%] font-poppins-regular-20 text-white sm:text-${
+              backgroundColor === "blue-shade" ? "white" : "text-medium"
+            } m-0 mt-4 sm:mt-[2.25rem]`}
+          >
             {text}
           </p>
           <div className="flex mt-10">
@@ -54,8 +63,14 @@ const TestimonialCard = ({
               return (
                 <div
                   key={i}
-                  className={`pagination-bullet ${
-                    currentPagination === i ? "active" : ""
+                  className={` inline-block ml-[5px] cursor-pointer w-[21px] h-[4px] rounded-[10px]  z-10 opacity-[1] ${
+                    currentPagination === i
+                      ? `w-[56px] bg-white ${
+                          backgroundColor === "blue-shade"
+                            ? "sm:bg-white"
+                            : "sm:bg-[#4b4b4b]"
+                        }`
+                      : "bg-[#4b4b4b] sm:bg-[#bbbbbd]"
                   }`}
                   onClick={() => setCurrentPagination(i)}
                 ></div>

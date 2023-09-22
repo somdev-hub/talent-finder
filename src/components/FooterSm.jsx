@@ -1,10 +1,10 @@
 import React from "react";
-import social_icon1 from "../../assets/landing-page/Social-Icons1.svg";
-import social_icon2 from "../../assets/landing-page/Social-Icons2.svg";
-import social_icon3 from "../../assets/landing-page/Social-Icons3.svg";
-import social_icon4 from "../../assets/landing-page/Social-Icons4.svg";
+import social_icon1 from "../assets/landing-page/Social-Icons1.svg";
+import social_icon2 from "../assets/landing-page/Social-Icons2.svg";
+import social_icon3 from "../assets/landing-page/Social-Icons3.svg";
+import social_icon4 from "../assets/landing-page/Social-Icons4.svg";
 // import tick from "../../assets/landing-page/tick.svg";
-import tick2 from "../../assets/landing-page/tick2.svg";
+import tick2 from "../assets/landing-page/tick2.svg";
 
 const FooterSm = () => {
   const [checked, setChecked] = React.useState(false);
