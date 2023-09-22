@@ -32,7 +32,7 @@ const Testimonials = () => {
       <h2 className="text-black sm:text-white font-[400] text-[2.5rem] sm:text-[3.5rem] font-coolvetica-56 m-0 mt-8">
         What our clients say
       </h2>
-      <div className="w-full sm:my-[4rem]  z-10">
+      <div className="w-full mb-10 sm:mt-[4rem] z-10">
         <div className="relative flex w-full justify-center items-center m-auto">
           <Swiper
             ref={swiperRef}
@@ -63,7 +63,7 @@ const Testimonials = () => {
           </Swiper>
         </div>
       </div>
-      <ButtonPrimary text="Book Free Trial"/>
+      <ButtonPrimary text="Book Free Trial" />
       <img
         src={ellipse15}
         className="absolute bottom-0 right-0 z-[1] sm:block hidden"

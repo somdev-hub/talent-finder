@@ -27,7 +27,7 @@ const Testimonials = () => {
       <h2 className="text-black font-[400] text-[2.5rem] sm:text-[3.5rem] font-coolvetica-56 m-0 mt-8">
         What our clients say
       </h2>
-      <div className="w-full mb-10 sm:mb-0 sm:my-[4rem]  z-10">
+      <div className="w-full mb-10 sm:mt-[4rem] z-10">
         <div className="relative flex w-full justify-center items-center m-auto">
           <Swiper
             ref={swiperRef}

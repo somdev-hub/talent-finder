@@ -19,8 +19,8 @@ const TestimonialCard = ({
   return (
     <div className="sm:p-0 pt-[5rem]">
       <div
-        className={`sm:w-[75%] relative box-border m-auto p-6 sm:px-[6rem] sm:py-[3rem] bg-blue text-white sm:text-${
-          backgroundColor === "blue-shade" ? "white" : "black"
+        className={`sm:w-[75%] relative box-border m-auto p-6 sm:px-[6rem] sm:py-[3rem] bg-blue text-white ${
+          backgroundColor === "blue-shade" ? "sm:text-white" : "sm:text-black"
         } sm:bg-${backgroundColor} rounded-[1.25rem] sm:rounded-[2.5rem] flex items-center justify-center gap-10`}
       >
         <img
@@ -52,8 +52,8 @@ const TestimonialCard = ({
             {heading}
           </h2>
           <p
-            className={` sm:text-[1.25rem] font-[400] leading-[130%] font-poppins-regular-20 text-white sm:text-${
-              backgroundColor === "blue-shade" ? "white" : "text-medium"
+            className={` sm:text-[1.25rem] font-[400] leading-[130%] font-poppins-regular-20 text-white ${
+              backgroundColor === "blue-shade" ? "sm:text-white" : "sm:text-text-medium"
             } m-0 mt-4 sm:mt-[2.25rem]`}
           >
             {text}
@@ -70,7 +70,7 @@ const TestimonialCard = ({
                             ? "sm:bg-white"
                             : "sm:bg-[#4b4b4b]"
                         }`
-                      : "bg-[#4b4b4b] sm:bg-[#bbbbbd]"
+                      : "bg-[#d9d9d9] sm:bg-[#bbbbbd]"
                   }`}
                   onClick={() => setCurrentPagination(i)}
                 ></div>

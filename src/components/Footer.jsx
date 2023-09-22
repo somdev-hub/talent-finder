@@ -8,7 +8,7 @@ import social_icon4 from "../assets/landing-page/Social-Icons4.svg";
 
 const Footer = () => {
   return (
-    <div className="hidden sm:block bg-blue text-white  pt-[5rem] px-[7.5rem] mt-[5rem]">
+    <div className="hidden sm:block bg-blue text-white  pt-[5rem] px-[7.5rem]">
       <div className="flex sm:flex-row flex-col justify-between ">
         <div className="flex flex-col justify-between">
           <img src={main_logo} alt="" className="h-[2.5rem]" />
