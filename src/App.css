@@ -44,7 +44,11 @@
 
 a {
   text-decoration: none;
-  color: #fff;
+  
+}
+
+input {
+  outline: none;
 }
 
 @media screen and (max-width: 640px) {

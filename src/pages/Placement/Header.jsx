@@ -74,12 +74,13 @@ const Header = () => {
           Get placed at
         </p>
         <div className="sm:hidden flex w-full items-center gap-10 sm:gap-[4rem] justify-center mt-5 overflow-x-auto">
-          <div className="w-[80%] flex items-center justify-center m-auto">
+          <div className="w-[100%] flex items-center justify-center m-auto">
             <Swiper
               className="mySwiper"
               modules={[Autoplay]}
               autoplay={true}
-              slidesPerView={5}
+              spaceBetween={20}
+              slidesPerView={3}
               centeredSlides={true}
             >
               {images.map((image, index) => {
@@ -89,7 +90,7 @@ const Header = () => {
                       <img
                         src={image}
                         alt=""
-                        className="sm:w-auto w-[80%] m-0 h-auto"
+                        className="sm:w-auto w-[5rem] m-0 h-auto object-contain"
                       />
                     </div>
                   </SwiperSlide>

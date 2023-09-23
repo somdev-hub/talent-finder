@@ -1,21 +1,27 @@
 import React from "react";
 import benifits_main from "../../assets/placement/benifits-main.svg";
+import highlight_6 from "../../assets/placement/highlight-6.svg";
 
 const Benefits = () => {
   return (
     <div className="p-[1.5rem] sm:p-[5rem] flex flex-col items-center justify-center ">
-      <div className="">
+      <div className="relative">
         <h2 className="text-[2.5rem] sm:text-[3.5rem] font-[400] font-coolvetica-56 m-0 text-center">
           <span className="text-text-dark">Jobs + Benefits = </span>
           <span className="text-blue-shade">Your Success !</span>
         </h2>
+        <img
+          src={highlight_6}
+          alt=""
+          className="absolute right-0 top-[-1rem]"
+        />
       </div>
       <div className="flex sm:flex-row flex-col gap-8 mt-10 sm:mt-[6rem] items-center justify-center">
         <img src={benifits_main} alt="" className="w-4/5" />
         <div className="">
           <p className="sm:block hidden text-[1.5rem] font-[400] leading-[115%] font-poppins-regular-20 m-0">
-            Are you on the hunt for your dream job? Here's why you should take
-            advantage of our platform:
+            Are you on the hunt for your dream job? <br /> Here's why you should
+            take advantage of our platform:
           </p>
           <div className="flex flex-col sm:grid grid-cols-2 grid-rows-2 sm:gap-10 mt-5 sm:text-left text-center">
             <div className="font-poppins-regular-20 ">

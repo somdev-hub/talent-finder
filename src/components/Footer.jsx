@@ -5,8 +5,10 @@ import social_icon1 from "../assets/landing-page/Social-Icons1.svg";
 import social_icon2 from "../assets/landing-page/Social-Icons2.svg";
 import social_icon3 from "../assets/landing-page/Social-Icons3.svg";
 import social_icon4 from "../assets/landing-page/Social-Icons4.svg";
+import tick2 from "../assets/landing-page/tick2.svg";
 
 const Footer = () => {
+  const [checked, setChecked] = React.useState(false);
   return (
     <div className="hidden sm:block bg-blue text-white  pt-[5rem] px-[7.5rem]">
       <div className="flex sm:flex-row flex-col justify-between ">
@@ -43,24 +45,41 @@ const Footer = () => {
                 name=""
                 id=""
                 placeholder="Enter Email"
-                className="flex pl-6 bg-white box-border font-poppins-regular-20 text-text-light font-[400] border-none"
+                className="flex pl-6 rounded-l-[0.25rem] bg-white box-border font-poppins-regular-20 text-text-light font-[400] border-none"
               />
-              <button className="items-center bg-neon flex">
+              <button className="items-center bg-neon flex rounded-r-[0.25rem]">
                 <img src={mail} alt="" />
-                <p className="font-poppins-regular-20 font-[400] text-text-dark ml-3 box-border">
+                <p className="font-poppins-regular-20 font-[400] text-text-dark m-[0.6rem] box-border">
                   Subscribe
                 </p>
               </button>
             </form>
           </div>
-          <form action="" className="mt-[1rem] flex gap-[0.25rem]">
+          <form action="" className="flex items-center justify-center">
             <input
               type="checkbox"
               name=""
               id=""
-              className="w-4 h-4 rounded-[0.25rem]"
+              checked={checked}
+              className="appearance-none"
             />
-            <p className=" m-0 font-poppins-regular-20 text-[0.75rem] text-white font-[400] ">
+            {/* <div className=""></div> */}
+            <div
+              className={`h-[16px] w-[16px] mr-4 cursor-pointer rounded-[4px] relative border-[1.6px] border-solid border-white-400`}
+              onClick={() => setChecked(!checked)}
+            >
+              <img
+                src={tick2}
+                alt=""
+                className={`absolute top-0 left-0 w-[16px]  ${
+                  checked ? "block" : "hidden"
+                }`}
+              />
+            </div>
+            <p
+              className="font-[400] text-[0.75rem] cursor-pointer font-poppins-regular-20"
+              onClick={() => setChecked(!checked)}
+            >
               I agree to receive emails from TalentFinder <br /> as per their
               Data & Privacy Policy.
             </p>

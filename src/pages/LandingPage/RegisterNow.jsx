@@ -3,6 +3,7 @@ import ButtonPrimary from "../../components/ButtonPrimary";
 import vector221 from "../../assets/landing-page/Vector-221.svg";
 import vector222 from "../../assets/landing-page/Vector-222.svg";
 import ButtonSecondary from "../../components/ButtonSecondary";
+import vector_210 from "../../assets/landing-page/vector-210.svg";
 
 const RegisterNow = () => {
   return (
@@ -30,6 +31,7 @@ const RegisterNow = () => {
       <div className="sm:hidden block mt-6">
         <ButtonSecondary text="View Sample Profile" />
       </div>
+      <img src={vector_210} alt="" className="sm:hidden block" />
     </div>
   );
 };

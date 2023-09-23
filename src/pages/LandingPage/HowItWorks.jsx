@@ -28,7 +28,7 @@ const HowItWorks = () => {
           alt=""
         />
       </h2>
-      <div className="relative sm:w-[22rem] w-[90%]  mt-[5rem]">
+      <div className="relative sm:w-[22rem] w-[75%]  mt-[5rem]">
         <div className="relative flex justify-between w-full top-1/2">
           <div className="absolute border-[1.5px] border-slate-400 border-solid w-full top-1/2 -z-10"></div>
           {howItWorksSlides.map((slide, index) => {

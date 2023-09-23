@@ -4,6 +4,7 @@ import social_icon2 from "../assets/landing-page/Social-Icons2.svg";
 import social_icon3 from "../assets/landing-page/Social-Icons3.svg";
 import social_icon4 from "../assets/landing-page/Social-Icons4.svg";
 // import tick from "../../assets/landing-page/tick.svg";
+import mail from "../assets/landing-page/mail.png";
 import tick2 from "../assets/landing-page/tick2.svg";
 
 const FooterSm = () => {
@@ -57,8 +58,11 @@ const FooterSm = () => {
               placeholder="Enter Email"
               className=" box-border flex border-none w-[60%] px-2 py-2 font-[400] font-poppins-regular-20 text-[#A0A0A0]"
             />
-            <button className=" text-black w-[10rem] h-full  px-2 py-2 font-[400] font-poppins-regular-20 bg-neon box-border">
-              Subscribe
+            <button className="flex items-center w-[10rem] h-full  px-2 py-2 bg-neon box-border">
+              <img src={mail} alt="" />
+              <p className="font-poppins-regular-20 font-[400] text-text-dark ml-3 box-border m-0">
+                Subscribe
+              </p>
             </button>
           </form>
           <div className="flex gap-4">
@@ -94,13 +98,13 @@ const FooterSm = () => {
           </div>
         </div>
       </div>
-      <div className="flex gap-4 justify-center border-y-1 py-2 border-solid border-slate-100 mt-8">
+      <div className="flex gap-4 justify-center border-y-[1px] border-opacity-[0.3] py-2 border-solid border-slate-100 mt-8">
         <img src={social_icon1} alt="" className="w-4" />
         <img src={social_icon2} alt="" className="w-4" />
         <img src={social_icon3} alt="" className="w-4" />
         <img src={social_icon4} alt="" className="w-4" />
       </div>
-      <div className="bg-dark-blue w-full text-white font-[300] font-poppins-regular-20 flex justify-center py-2">
+      <div className="bg-dark-blue text-white font-[300] font-poppins-regular-20 flex justify-start ml-5 py-2">
         © 2023 TalentFinder
       </div>
     </div>

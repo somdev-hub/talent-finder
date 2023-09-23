@@ -12,7 +12,7 @@ const WhatWillIGet = () => {
         <h2 className="font-[400] text-[2.5rem] sm:text-[3.5rem] font-coolvetica-56 m-0 mt-8">
           What will I get?
         </h2>
-        <img src={line2} alt="" className="right-0 absolute" />
+        <img src={line2} alt="" className="right-[3%] absolute" />
       </div>
       <div className="mt-10 flex sm:flex-row flex-col gap-6 sm:gap-10 sm:w-4/5">
         {whatWillIGetSlides.map((item, index) => {
