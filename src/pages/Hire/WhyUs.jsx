@@ -2,16 +2,24 @@ import whyus1 from "../../assets/hire/whyus1.svg";
 import whyus2 from "../../assets/hire/whyus2.svg";
 import whyus3 from "../../assets/hire/whyus3.svg";
 import ButtonPrimary from "../../components/ButtonPrimary";
+import line11 from "../../assets/hire/line11.svg";
 
 const WhyUs = () => {
   return (
-    <div className="bg-blue-shade text-center flex flex-col justify-center items-center p-[1.5rem] sm:p-[5rem] mt-[5rem]">
-      <p className="font-[400] text-[1.5rem] font-coolvetica-56 text-neon">
+    <div className="bg-blue-shade text-center flex flex-col justify-center items-center px-[1.5rem] py-[2.5rem]  sm:p-[5rem] mt-[5rem]">
+      <p className="font-[400] text-[1.5rem] font-coolvetica-56 text-neon sm:m-auto m-0">
         Why us?
       </p>
       <h2 className="font-[400] text-[2.5rem] sm:text-[3.5rem] font-coolvetica-56 m-0">
         <span className="text-white">The world is changing—And so is </span>
-        <span className="text-neon">hiring!</span>
+        <span className="text-neon relative">
+          hiring!
+          <img
+            src={line11}
+            alt=""
+            className="absolute bottom-[-6px] left-[-9px] sm:left-[10px]"
+          />
+        </span>
       </h2>
       <p className="text-white font-[500] leading-[130%] text-[1.25rem] font-poppins-regular-20 text-center sm:w-[60%] mt-[4rem]">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod

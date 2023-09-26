@@ -14,18 +14,35 @@ import airtel_logo from "../../assets/hire/airtel-logo.png";
 import tata_logo from "../../assets/hire/tata-logo.png";
 import sony_logo from "../../assets/hire/sony-logo.png";
 import ibm_logo from "../../assets/hire/ibm-logo.png";
+import line1 from "../../assets/hire/line1.svg";
+import { Autoplay, Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
+import "swiper/css";
 
 export const Header = () => {
+  const images = [
+    whirlpool_logo,
+    tata_logo,
+    sony_logo,
+    uber_logo,
+    airtel_logo,
+    ibm_logo
+  ];
   return (
     <div>
       <Navbar color="blue" />
-      <div className="text-center flex relative flex-col justify-center items-center">
-        <h1 className="font-[400] text-[3.5rem] sm:text-[4rem] m-0 mt-[5rem] leading-[115%] font-coolvetica-56">
+      <div className="sm:p-auto  box-border text-center flex relative flex-col justify-center items-center">
+        <h1 className="font-[400] text-[3rem] sm:text-[4rem] m-0 sm:mt-[5rem] leading-[115%] font-coolvetica-56">
           <span>
             Hire India's Top, <br className="sm:hidden block" />{" "}
           </span>
-          <span className="text-blue-shade">
+          <span className="text-blue-shade relative">
             Pre-vetted <br className="sm:hidden block" />{" "}
+            <img
+              src={line1}
+              className="absolute top-[42%] left-[25px] sm:left-[27%] bottom-[-10px] sm:top-auto"
+              alt=""
+            />
           </span>
           <span>Candidates</span>
         </h1>
@@ -56,7 +73,7 @@ export const Header = () => {
           alt=""
           className="absolute right-[18rem] top-[17rem] hidden sm:block"
         />
-        <div className="sm:hidden mt-8 relative h-[50vh] w-full">
+        <div className="sm:hidden mt-8 relative h-[65vh] overflow-hidden w-full">
           <img src={vector_538} alt="" className="absolute left-0" />
           <img
             src={hire_head1_sm}
@@ -74,7 +91,7 @@ export const Header = () => {
             className="absolute top-[19rem] left-[5%] w-[12rem]"
           />
         </div>
-        <div className="relative mt-[22rem] w-3/5 border-t-[2px] border-solid border-text-light p-5 flex items-center justify-between overflow-hidden sm:overflow-visible">
+        <div className="hidden relative mt-[22rem] w-3/5 border-t-[2px] border-solid border-text-light p-5 sm:flex items-center justify-between overflow-hidden sm:overflow-visible">
           <p className="font-[400] text-text-medium left-[30%] top-[-15%] absolute m-0 font-poppins-regular-20 bg-white z-10">
             Top tech companies trust us with their talent needs
           </p>
@@ -84,6 +101,34 @@ export const Header = () => {
           <img src={uber_logo} alt="" />
           <img src={airtel_logo} alt="" />
           <img src={ibm_logo} alt="" />
+        </div>
+        <div className="sm:hidden flex flex-col px-8 mb-8">
+          <p className="font-[400] text-text-medium m-0 font-poppins-regular-20">
+            Top tech companies trust us with their talent needs
+          </p>
+        </div>
+        <div className=" w-[80%] flex items-center justify-center m-auto">
+          <Swiper
+            className="mySwiper"
+            modules={[Autoplay]}
+            autoplay={true}
+            slidesPerView={3}
+            centeredSlides={true}
+          >
+            {images.map((image, index) => {
+              return (
+                <SwiperSlide key={index}>
+                  <div className="flex items-center my-auto justify-center h-[5rem] sm:h-[5rem]">
+                    <img
+                      src={image}
+                      alt=""
+                      className="sm:w-auto w-[5rem] m-0 h-auto"
+                    />
+                  </div>
+                </SwiperSlide>
+              );
+            })}
+          </Swiper>
         </div>
       </div>
     </div>

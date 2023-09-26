@@ -4,7 +4,7 @@ import highlight_6 from "../../assets/placement/highlight-6.svg";
 
 const Benefits = () => {
   return (
-    <div className="p-[1.5rem] sm:p-[5rem] flex flex-col items-center justify-center ">
+    <div className="p-[1.5rem] sm:p-[5rem] mt-[4rem] sm:mt-auto flex flex-col items-center justify-center ">
       <div className="relative">
         <h2 className="text-[2.5rem] sm:text-[3.5rem] font-[400] font-coolvetica-56 m-0 text-center">
           <span className="text-text-dark">Jobs + Benefits = </span>
@@ -13,7 +13,7 @@ const Benefits = () => {
         <img
           src={highlight_6}
           alt=""
-          className="absolute right-0 top-[-1rem]"
+          className="absolute right-[-15px] sm:right-0 top-[-2rem] sm:top-[-1rem]"
         />
       </div>
       <div className="flex sm:flex-row flex-col gap-8 mt-10 sm:mt-[6rem] items-center justify-center">

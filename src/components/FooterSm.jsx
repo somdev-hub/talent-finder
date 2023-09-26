@@ -56,9 +56,9 @@ const FooterSm = () => {
             <input
               type="text"
               placeholder="Enter Email"
-              className=" box-border flex border-none w-[60%] px-2 py-2 font-[400] font-poppins-regular-20 text-[#A0A0A0]"
+              className=" box-border rounded-l-[0.25rem] flex border-none w-[60%] px-[25px] py-2 font-[400] font-poppins-regular-20 text-[#A0A0A0]"
             />
-            <button className="flex items-center w-[10rem] h-full  px-2 py-2 bg-neon box-border">
+            <button className="flex rounded-r-[0.25rem] items-center w-[10rem] h-full  px-2 py-2 bg-neon box-border">
               <img src={mail} alt="" />
               <p className="font-poppins-regular-20 font-[400] text-text-dark ml-3 box-border m-0">
                 Subscribe
