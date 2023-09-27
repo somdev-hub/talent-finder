@@ -19,7 +19,7 @@ const TestimonialCard = ({
   return (
     <div className="sm:p-0 pt-[5rem]">
       <div
-        className={`sm:w-[75%] relative box-border m-auto p-6 sm:px-[6rem] sm:py-[3rem] bg-blue text-white ${
+        className={`lg:w-[75%] relative box-border m-auto p-6 md:px-[3rem] lg:px-[6rem] sm:py-[3rem] bg-blue text-white ${
           backgroundColor === "blue-shade" ? "sm:text-white" : "sm:text-black"
         } sm:bg-${backgroundColor} rounded-[1.25rem] sm:rounded-[2.5rem] flex items-center justify-center gap-10`}
       >
@@ -53,7 +53,9 @@ const TestimonialCard = ({
           </h2>
           <p
             className={` sm:text-[1.25rem] font-[400] leading-[130%] font-poppins-regular-20 text-white ${
-              backgroundColor === "blue-shade" ? "sm:text-white" : "sm:text-text-medium"
+              backgroundColor === "blue-shade"
+                ? "sm:text-white"
+                : "sm:text-text-medium"
             } m-0 mt-4 sm:mt-[2.25rem]`}
           >
             {text}

@@ -27,7 +27,7 @@ const Header = () => {
   return (
     <div className="bg-blue-shade  relative">
       <Navbar />
-      <div className="flex mt-[2rem] sm:mt-[5rem] px-0 sm:px-[7.5rem] justify-between relative z-10">
+      <div className="flex mt-[2rem] sm:mt-[5rem] px-0 md:px-[3.5rem] lg:px-[7.5rem] justify-between relative z-10">
         <div className="text-white sm:w-1/2 w-full sm:block flex flex-col gap-8 items-center justify-center">
           <div className="relative">
             <h1 className="px-[1.5rem] sm:px-0 text-center sm:text-left text-[3rem] sm:text-[5rem] font-[400] font-coolvetica-56 leading-[115%] m-0">
@@ -100,13 +100,17 @@ const Header = () => {
           </div>
         </div>
         <div className="hidden sm:flex w-full items-center gap-[4rem] justify-center mt-5 overflow-x-auto">
-          <div className="w-[80%] flex items-center justify-around">
-            <img src={whirlpool_logo} alt="" />
-            <img src={tata_logo} alt="" />
-            <img src={sony_logo} alt="" />
-            <img src={uber_logo} alt="" />
-            <img src={airtel_logo} alt="" />
-            <img src={ibm_logo} alt="" />
+          <div className="md:w-[90%] lg:w-[80%] flex items-center justify-around">
+            <img
+              src={whirlpool_logo}
+              alt=""
+              className="md:w-[6rem] lg:w-auto"
+            />
+            <img src={tata_logo} alt="" className="md:w-[6rem] lg:w-auto" />
+            <img src={sony_logo} alt="" className="md:w-[6rem] lg:w-auto" />
+            <img src={uber_logo} alt="" className="md:w-[6rem] lg:w-auto" />
+            <img src={airtel_logo} alt="" className="md:w-[6rem] lg:w-auto" />
+            <img src={ibm_logo} alt="" className="md:w-[6rem] lg:w-auto" />
           </div>
         </div>
       </div>

@@ -32,7 +32,7 @@ const Navbar = ({ color }) => {
     setChecked(links[activeIndex]?.id);
   }, [location]);
   return (
-    <div className="flex sm:flex-row flex-col justify-between px-[1.5rem] sm:px-[7.5rem] py-4 sm:py-[2rem] box-border">
+    <div className="flex sm:flex-row flex-col justify-between px-[1.5rem] md:px-[3.5rem] lg:px-[7.5rem] py-4 sm:py-[2rem] box-border">
       <div className="flex justify-between items-center w-full">
         <div className="flex flex-col items-end">
           <div className="text-[1rem] sm:text-[2rem] font-[400] font-coolvetica-56 ">

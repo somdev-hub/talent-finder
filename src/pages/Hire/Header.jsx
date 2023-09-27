@@ -107,7 +107,7 @@ export const Header = () => {
             Top tech companies trust us with their talent needs
           </p>
         </div>
-        <div className=" w-[80%] flex items-center justify-center m-auto">
+        <div className="sm:hidden w-[80%] flex items-center justify-center m-auto">
           <Swiper
             className="mySwiper"
             modules={[Autoplay]}
