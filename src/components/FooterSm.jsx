@@ -104,7 +104,7 @@ const FooterSm = () => {
         <img src={social_icon3} alt="" className="w-4" />
         <img src={social_icon4} alt="" className="w-4" />
       </div>
-      <div className="bg-dark-blue text-white font-[300] font-poppins-regular-20 flex justify-start ml-5 py-2">
+      <div className="text-[14px] bg-dark-blue text-white font-[300] font-poppins-regular-20 flex justify-start ml-5 py-2">
         © 2023 TalentFinder
       </div>
     </div>

@@ -1,6 +1,7 @@
 import WhatWillIgetCard from "../../components/WhatWillIgetCard";
 import line2 from "../../assets/landing-page/Line-2.svg";
 import { whatWillIGetSlides } from "../../assets/data/whatWillIGet";
+import ButtonPrimary from "../../components/ButtonPrimary";
 
 const WhatWillIGet = () => {
   return (
@@ -12,7 +13,11 @@ const WhatWillIGet = () => {
         <h2 className="font-[400] text-[2.5rem] sm:text-[3.5rem] font-coolvetica-56 m-0 mt-8">
           What will I get?
         </h2>
-        <img src={line2} alt="" className="right-[3%] absolute" />
+        <img
+          src={line2}
+          alt=""
+          className="right-[3%] bottom-[-26px] absolute"
+        />
       </div>
       <div className="mt-10 flex sm:flex-row flex-col gap-6 sm:gap-10 md:w-[90%] lg:w-4/5">
         {whatWillIGetSlides.map((item, index) => {
@@ -25,6 +30,9 @@ const WhatWillIGet = () => {
             />
           );
         })}
+      </div>
+      <div className="sm:hidden mt-[3.5rem]">
+        <ButtonPrimary text="Book Free Trial" />
       </div>
     </div>
   );

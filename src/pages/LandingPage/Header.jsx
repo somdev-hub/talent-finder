@@ -27,10 +27,10 @@ const Header = () => {
   return (
     <div className="bg-blue-shade  relative">
       <Navbar />
-      <div className="flex mt-[2rem] sm:mt-[5rem] px-0 sm:pl-[3.5rem] lg:pl-[7.5rem] justify-between relative z-10">
+      <div className="px-[1.5rem] py-8 flex sm:mt-[4rem] sm:pl-[3.5rem] lg:pl-[7.5rem] justify-between relative z-10">
         <div className="text-white sm:w-1/2 w-full sm:block flex flex-col gap-8 items-center justify-center">
           <div className="relative">
-            <h1 className="px-[1.5rem] sm:px-0 text-center sm:text-left text-[3rem] sm:text-[5rem] font-[400] font-coolvetica-56 leading-[115%] m-0">
+            <h1 className="px-0 text-center sm:text-left text-[3rem] sm:text-[5rem] font-[400] font-coolvetica-56 leading-[115%] m-0">
               Get Job-Ready <br />
               with us.
             </h1>
@@ -43,15 +43,15 @@ const Header = () => {
           <img
             src={header_main}
             alt=""
-            className="sm:hidden block sm:w-auto  sm:mt-auto lg:w-[90%] md:w-[60%]"
+            className="sm:hidden block lg:w-auto sm:mt-auto w-[90%] md:w-[60%]"
           />
-          <p className="font-[400] text-center sm:text-left text-[1.25rem] font-poppins-regular-20 leading-[130%] sm:my-[3rem] m-0">
+          <p className="font-[300] text-center sm:text-left text-[18px] font-poppins-regular-20 leading-[130%] sm:my-[3rem] m-0">
             Lorem ipsum dolor sit amet consectetur. Ac ut nunc sodales a
             integer. Risus sapien nec volutpat ut lectus purus enim et a.
           </p>
-          <ButtonPrimary text="Book Free Trial" />
-          <div className="font-[400] leading-[120%] font-poppins-regular-20 sm:block flex flex-col items-center">
-            <div className="flex mt-4">
+          <ButtonPrimary text={`${window.innerWidth < 640 ? "Book Now" : "Book Free Trial"}`} />
+          <div className="font-[300] leading-[120%] font-poppins-regular-20 sm:block flex flex-col items-center">
+            <div className="flex sm:mt-4">
               <img src={check_mark} alt="" />
               <p className="m-1">7-day free trial</p>
             </div>
@@ -70,17 +70,17 @@ const Header = () => {
         alt=""
         className="sm:block hidden absolute bottom-0"
       />
-      <div className="py-[2.5rem] relative z-10 flex flex-col justify-center items-center">
+      <div className="pb-[2.5rem] relative z-10 flex flex-col justify-center items-center">
         <p className="font-[500] text-white leading-[130%] font-poppins-regular-20 text-[1.25rem] m-0">
           Get placed at
         </p>
         <div className="sm:hidden flex w-full items-center gap-10 sm:gap-[4rem] justify-center mt-5 overflow-x-auto">
-          <div className="w-[80%] flex items-center justify-center m-auto">
+          <div className="w-[100%] flex items-center justify-center m-auto">
             <Swiper
               className="mySwiper"
               modules={[Autoplay]}
               autoplay={true}
-              slidesPerView={3}
+              slidesPerView={4}
               centeredSlides={true}
             >
               {images.map((image, index) => {
@@ -90,7 +90,7 @@ const Header = () => {
                       <img
                         src={image}
                         alt=""
-                        className="sm:w-auto w-[5rem] m-0 h-auto"
+                        className="sm:w-auto w-[4rem] m-0 h-auto"
                       />
                     </div>
                   </SwiperSlide>

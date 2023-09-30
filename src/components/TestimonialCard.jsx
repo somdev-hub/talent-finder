@@ -17,11 +17,15 @@ const TestimonialCard = ({
   backgroundColor
 }) => {
   return (
-    <div className="sm:p-0 pt-[5rem]">
+    <div className={`sm:p-0 pt-[5rem] `}>
       <div
-        className={`lg:w-[75%] relative box-border m-auto p-6 md:px-[3rem] lg:px-[6rem] sm:py-[3rem] bg-blue text-white ${
+        className={`${
+          backgroundColor === "blue-shade"
+            ? "sm:border-solid border-[4px] border-neon items-end"
+            : "items-center"
+        }  lg:w-[75%] relative box-border m-auto p-6 md:px-[3rem] lg:px-[6rem] sm:py-[3rem] bg-blue text-white ${
           backgroundColor === "blue-shade" ? "sm:text-white" : "sm:text-black"
-        } sm:bg-${backgroundColor} rounded-[1.25rem] sm:rounded-[2.5rem] flex items-center justify-center gap-10`}
+        } sm:bg-${backgroundColor} rounded-[1.25rem] sm:rounded-[2.5rem] flex  justify-center gap-10`}
       >
         <img
           src={img}
@@ -38,7 +42,11 @@ const TestimonialCard = ({
                 <span className="font-[500]">{name}, </span>
                 <span className="font-[300]">{designation}</span>
               </h3>
-              <div className="mt-4 sm:mt-2">
+              <div
+                className={`mt-4 sm:mt-2 ${
+                  backgroundColor === "blue-shade" ? "sm:hidden" : "sm:block"
+                }`}
+              >
                 <img src={company} alt="" />
               </div>
             </div>
@@ -52,11 +60,11 @@ const TestimonialCard = ({
             {heading}
           </h2>
           <p
-            className={` sm:text-[1.25rem] font-[400] leading-[130%] font-poppins-regular-20 text-white ${
+            className={`sm:w-[99%] sm:text-[1.25rem] font-[400] leading-[130%] font-poppins-regular-20 text-white ${
               backgroundColor === "blue-shade"
-                ? "sm:text-white"
-                : "sm:text-text-medium"
-            } m-0 mt-4 sm:mt-[2.25rem]`}
+                ? "sm:text-white sm:mt-4"
+                : "sm:text-text-medium sm:mt-[2.25rem]"
+            } m-0 mt-4 `}
           >
             {text}
           </p>

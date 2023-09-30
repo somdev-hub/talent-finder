@@ -3,6 +3,7 @@ import whyus2 from "../../assets/hire/whyus2.svg";
 import whyus3 from "../../assets/hire/whyus3.svg";
 import ButtonPrimary from "../../components/ButtonPrimary";
 import line11 from "../../assets/hire/line11.svg";
+import { hire_whyus } from "../../assets/data/hire_whyus";
 
 const WhyUs = () => {
   return (
@@ -21,47 +22,29 @@ const WhyUs = () => {
           />
         </span>
       </h2>
-      <p className="text-white font-[500] leading-[130%] text-[1.25rem] font-poppins-regular-20 text-center sm:w-[60%] mt-[4rem]">
+      <p className="text-white font-[400] leading-[130%]  sm:text-[1.25rem] font-poppins-regular-20 text-center sm:w-[60%] mt-[3rem] sm:mt-[4rem]">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim{" "}
       </p>
       <div className="flex flex-col sm:flex-row justify-center items-center gap-10 my-[4rem]">
-        <div className="flex flex-col items-center justify-center px-8">
-          <img src={whyus1} alt="" />
-          <div className="text-white text-center mt-8">
-            <h3 className="font-[500] text-[1.5rem] font-poppins-regular-20">
-              Remote or Hybrid
-            </h3>
-            <p className="mt-[1.25rem] font-[400] leading-[120%] font-poppins-regular-20">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt utl
-            </p>
-          </div>
-        </div>
-        <div className="flex flex-col items-center justify-center px-8">
-          <img src={whyus2} alt="" />
-          <div className="text-white text-center mt-8">
-            <h3 className="font-[500] text-[1.5rem] font-poppins-regular-20">
-              Mentorship
-            </h3>
-            <p className="mt-[1.25rem] font-[400] leading-[120%] font-poppins-regular-20">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt utl
-            </p>
-          </div>
-        </div>
-        <div className="flex flex-col items-center justify-center px-8">
-          <img src={whyus3} alt="" />
-          <div className="text-white text-center mt-8">
-            <h3 className="font-[500] text-[1.5rem] font-poppins-regular-20">
-              Manage Easily
-            </h3>
-            <p className="mt-[1.25rem] font-[400] leading-[120%] font-poppins-regular-20">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt utl
-            </p>
-          </div>
-        </div>
+        {hire_whyus.map((why, index) => {
+          return (
+            <div
+              key={index}
+              className="flex flex-col items-center justify-center sm:px-8"
+            >
+              <img src={why.img} alt="" />
+              <div className="text-white text-center mt-8">
+                <h3 className="font-[500] text-[1.5rem] font-poppins-regular-20 m-0">
+                  {why.title}
+                </h3>
+                <p className="mt-[1.25rem] font-[400] sm:mx-auto sm:w-[18rem] leading-[120%] font-poppins-regular-20">
+                  {why.desc}
+                </p>
+              </div>
+            </div>
+          );
+        })}
       </div>
       <ButtonPrimary text="Hire Now" />
     </div>

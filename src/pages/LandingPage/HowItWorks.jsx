@@ -15,7 +15,7 @@ const HowItWorks = () => {
   };
 
   return (
-    <div className="my-[5rem] flex flex-col justify-center items-center text-center">
+    <div className="my-8 sm:my-[6rem] flex flex-col justify-center items-center text-center">
       <p className="text-[1.5rem] font-coolvetica-56 font-[400] text-blue m-0">
         How it works
       </p>
@@ -28,9 +28,9 @@ const HowItWorks = () => {
           alt=""
         />
       </h2>
-      <div className="relative sm:w-[22rem] w-[75%]  mt-[5rem]">
+      <div className="relative sm:w-[25rem] w-[75%]  mt-[5rem]">
         <div className="relative flex justify-between w-full top-1/2">
-          <div className="absolute border-[1.5px] border-slate-400 border-solid w-full top-1/2 -z-10"></div>
+          <div className="absolute border-[1.5px] border-slate-400 border-solid w-[95%] top-1/2 -z-10"></div>
           {howItWorksSlides.map((slide, index) => {
             return (
               <div

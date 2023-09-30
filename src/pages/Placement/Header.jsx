@@ -25,12 +25,12 @@ const Header = () => {
     ibm_logo
   ];
   return (
-    <div className="bg-blue-shade  relative">
+    <div className="bg-blue-shade relative">
       <Navbar />
-      <div className="flex mt-[2rem] sm:mt-[5rem] px-0 md:px-[3.5rem] lg:px-[7.5rem] justify-between relative z-10">
+      <div className="flex mt-[2rem] px-6 sm:px-0 sm:mt-[5rem] md:px-[3.5rem] lg:px-[7.5rem] justify-between relative z-10">
         <div className="text-white sm:w-1/2 w-full sm:block flex flex-col gap-8 items-center justify-center">
           <div className="relative">
-            <h1 className="px-[1.5rem] sm:px-0 text-center sm:text-left text-[3rem] sm:text-[5rem] font-[400] font-coolvetica-56 leading-[115%] m-0">
+            <h1 className="px-[1.5rem] sm:px-0 text-center sm:text-left text-[2.5rem] sm:text-[5rem] font-[400] font-coolvetica-56 leading-[115%] m-0">
               Get Placed in top <br className="sm:block hidden" /> companies.
             </h1>
             <img
@@ -42,14 +42,14 @@ const Header = () => {
           <img
             src={header_main}
             alt=""
-            className="sm:hidden block sm:w-auto  sm:mt-auto w-[90%]"
+            className="sm:hidden block sm:w-auto  sm:mt-auto w-[85%]"
           />
-          <p className="font-[400] text-center sm:text-left text-[1.25rem] font-poppins-regular-20 leading-[130%] sm:my-[3rem] m-0">
+          <p className="font-[400] text-center sm:text-left text-[1rem] sm:text-[1.25rem] font-poppins-regular-20 leading-[130%] sm:my-[3rem] m-0">
             Lorem ipsum dolor sit amet consectetur. Ac ut nunc sodales a
             integer. Risus sapien nec volutpat ut lectus purus enim et a.
           </p>
           <ButtonPrimary text="Apply Now" />
-          <div className="font-[400] leading-[120%] font-poppins-regular-20 sm:block flex flex-col items-center">
+          <div className="font-[400] leading-[120%] font-poppins-regular-20 sm:block hidden  flex-col items-center">
             <div className="flex mt-4">
               <img src={check_mark} alt="" />
               <p className="m-1">7-day free trial</p>
@@ -79,18 +79,17 @@ const Header = () => {
               className="mySwiper"
               modules={[Autoplay]}
               autoplay={true}
-              spaceBetween={20}
-              slidesPerView={3}
+              slidesPerView={4}
               centeredSlides={true}
             >
               {images.map((image, index) => {
                 return (
                   <SwiperSlide key={index}>
-                    <div className="flex items-center my-auto justify-center h-[3rem] sm:h-[5rem]">
+                    <div className="flex items-center my-auto  justify-center h-[3rem] sm:h-[5rem]">
                       <img
                         src={image}
                         alt=""
-                        className="sm:w-auto w-[5rem] m-0 h-auto object-contain"
+                        className="sm:w-auto w-[4rem] m-0 h-auto object-contain"
                       />
                     </div>
                   </SwiperSlide>

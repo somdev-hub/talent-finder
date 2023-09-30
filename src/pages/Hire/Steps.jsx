@@ -1,8 +1,4 @@
-import React from "react";
-import steps1 from "../../assets/hire/steps1.svg";
-import steps2 from "../../assets/hire/steps2.svg";
-import steps3 from "../../assets/hire/steps3.svg";
-import steps4 from "../../assets/hire/steps4.svg";
+import { steps } from "../../assets/data/steps";
 
 const Steps = () => {
   return (
@@ -15,48 +11,23 @@ const Steps = () => {
         Begin your journey today or preview a sample profile. <br />
         Your next career move awaits!
       </p>
-      <div className="flex sm:flex-row flex-col gap-[3.5rem] mt-[4rem]">
-        <div className="flex flex-col items-center justify-center gap-[1rem]">
-          <img src={steps1} alt="" />
-          <h3 className="text-[1.5rem] font-[500] font-poppins-regular-20 leading-[120%] m-0">
-            List requirements
-          </h3>
-          <p className="font-[400] leading-[120%] font-poppins-regular-20 m-0">
-            Our team will contact you to understand your requirements. Our team
-            will contact you to.
-          </p>
-        </div>
-        <div className="flex flex-col items-center justify-center gap-[1rem]">
-          <img src={steps2} alt="" />
-          <h3 className="text-[1.5rem] font-[500] font-poppins-regular-20 leading-[120%] m-0">
-            List requirements
-          </h3>
-          <p className="font-[400] leading-[120%] font-poppins-regular-20 m-0">
-            Our team will contact you to understand your requirements. Our team
-            will contact you to.
-          </p>
-        </div>
-
-        <div className="flex flex-col items-center justify-center gap-[1rem]">
-          <img src={steps3} alt="" />
-          <h3 className="text-[1.5rem] font-[500] font-poppins-regular-20 leading-[120%] m-0">
-            List requirements
-          </h3>
-          <p className="font-[400] leading-[120%] font-poppins-regular-20 m-0">
-            Our team will contact you to understand your requirements. Our team
-            will contact you to.
-          </p>
-        </div>
-        <div className="flex flex-col items-center justify-center gap-[1rem]">
-          <img src={steps4} alt="" />
-          <h3 className="text-[1.5rem] font-[500] font-poppins-regular-20 leading-[120%] m-0">
-            List requirements
-          </h3>
-          <p className="font-[400] leading-[120%] font-poppins-regular-20 m-0">
-            Our team will contact you to understand your requirements. Our team
-            will contact you to.
-          </p>
-        </div>
+      <div className="flex sm:flex-row flex-col gap-[3.5rem] mt-8 sm:mt-[4rem] items-end">
+        {steps.map((step, index) => {
+          return (
+            <div
+              className="flex flex-col items-center justify-center gap-[1rem]"
+              key={index}
+            >
+              <img src={step.img} alt="" />
+              <h3 className="text-[1.5rem] font-[500] font-poppins-regular-20 leading-[120%] m-0">
+                {step.title}
+              </h3>
+              <p className="font-[400] leading-[120%] font-poppins-regular-20 m-0">
+                {step.desc}
+              </p>
+            </div>
+          );
+        })}
       </div>
     </div>
   );

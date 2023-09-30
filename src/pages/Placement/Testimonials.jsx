@@ -25,14 +25,14 @@ const Testimonials = () => {
         </p>
         <img
           src={group7}
-          className="absolute left-[5rem] top-0 sm:block hidden"
+          className="absolute left-[5.5rem] top-[-7px] sm:block hidden"
           alt=""
         />
       </div>
-      <h2 className="text-black font-[400] text-[2.5rem] sm:text-[3.5rem] font-coolvetica-56 m-0 mt-8">
+      <h2 className="text-black font-[400] text-[2rem] sm:text-[3.5rem] font-coolvetica-56 m-0 mt-4">
         What our clients say
       </h2>
-      <div className="w-full mb-10 sm:mt-[4rem] z-10">
+      <div className="w-full mb-10 mt-4 sm:mt-[4rem] z-10">
         <div className="relative flex w-full justify-center items-center m-auto">
           <Swiper
             ref={swiperRef}
@@ -44,7 +44,7 @@ const Testimonials = () => {
             className="mySwiper"
             slidesPerView="auto"
             centeredSlides={true}
-            autoplay={true}
+            // autoplay={true}
             centeredSlidesBounds={true}
           >
             {testimonials.map((testimonial, index) => {

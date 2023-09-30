@@ -51,6 +51,11 @@ input {
   outline: none;
 }
 
+.sidebar-open {
+  height: 100vh;
+  overflow: hidden;
+}
+
 @media screen and (max-width: 640px) {
   .pagination-bullet {
     background-color: #4b4b4b;

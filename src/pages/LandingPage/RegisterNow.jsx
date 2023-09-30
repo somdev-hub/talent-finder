@@ -7,13 +7,13 @@ import vector_210 from "../../assets/landing-page/vector-210.svg";
 
 const RegisterNow = () => {
   return (
-    <div className="p-[1.5rem] sm:py-[5rem] flex flex-col justify-center items-center overflow-hidden">
+    <div className="py-8 px-[1.5rem] sm:py-[5rem] flex flex-col justify-center items-center overflow-hidden">
       <h2 className=" m-0 text-[2.5rem] sm:text-[3.5rem] font-coolvetica-56 font-[400]">
         Register Now!
       </h2>
-      <p className="text-[1.25rem] font-[400] text-text-medium sm:w-2/5 text-center font-poppins-regular-20 m-0 mt-8 mb-10 sm:mb-[4.25rem]">
-        Begin your journey today or preview a sample profile. Your next career
-        move awaits!
+      <p className="text-[1rem] font-[400] text-text-medium sm:w-2/5 text-center font-poppins-regular-20 m-0 mt-8 mb-10 sm:mb-[4.25rem]">
+        Begin your journey today or preview a sample profile. <br /> Your next
+        career move awaits!
       </p>
       <div className="relative">
         <img
@@ -21,7 +21,7 @@ const RegisterNow = () => {
           alt=""
           className="absolute right-[44%] bottom-[-4rem] -z-10 sm:block hidden"
         />
-        <ButtonPrimary text="Book Free Trial" />
+        <ButtonPrimary text={`${window.innerWidth < 640 ? "Apply Now" : "Book Free Trial"}`} />
         <img
           src={vector221}
           alt=""

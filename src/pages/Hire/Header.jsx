@@ -31,8 +31,8 @@ export const Header = () => {
   return (
     <div>
       <Navbar color="blue" />
-      <div className="sm:p-auto  box-border text-center flex relative flex-col justify-center items-center">
-        <h1 className="font-[400] text-[3rem] sm:text-[4rem] m-0 sm:mt-[5rem] leading-[115%] font-coolvetica-56">
+      <div className="mt-[1rem] sm:mt-auto sm:p-auto  box-border text-center flex relative flex-col justify-center items-center">
+        <h1 className="px-[1.5rem] sm:px-auto font-[400] text-[3rem] sm:text-[4rem] m-0 sm:mt-[5rem] leading-[115%] font-coolvetica-56">
           <span>
             Hire India's Top, <br className="sm:hidden block" />{" "}
           </span>
@@ -46,7 +46,7 @@ export const Header = () => {
           </span>
           <span>Candidates</span>
         </h1>
-        <p className="text-[1.25rem] font-[400] leading-[130%] font-poppins-regular-20 m-0 mt-[1.5rem] mb-8 text-center">
+        <p className="px-[1.5rem] sm:px-auto text-[18px] font-[400] leading-[130%] font-poppins-regular-20 m-0 mt-[1.5rem] mb-8 text-center">
           Save time and resources. <br /> Hire and directly manage remote or
           on-site talent with confidence.
         </p>
@@ -73,22 +73,26 @@ export const Header = () => {
           alt=""
           className="absolute right-[18rem] top-[17rem] hidden sm:block"
         />
-        <div className="sm:hidden mt-8 relative h-[65vh] overflow-hidden w-full">
-          <img src={vector_538} alt="" className="absolute left-0" />
+        <div className="sm:hidden relative h-[53vh] overflow-hidden w-full">
+          <img
+            src={vector_538}
+            alt=""
+            className="absolute left-[-4rem] top-[-8%]"
+          />
           <img
             src={hire_head1_sm}
             alt=""
-            className="absolute top-[5%] left-[10%] w-[12rem]"
+            className="absolute top-[6%] left-[14%] w-[10rem]"
           />
           <img
             src={hire_head2_sm}
             alt=""
-            className="absolute right-[5%] top-[12rem] w-[12rem]"
+            className="absolute right-[10%] top-[10rem] w-[10rem]"
           />
           <img
             src={hire_head3_sm}
             alt=""
-            className="absolute top-[19rem] left-[5%] w-[12rem]"
+            className="absolute top-[15rem] left-[5%] w-[10rem]"
           />
         </div>
         <div className="hidden relative mt-[22rem] w-3/5 border-t-[2px] border-solid border-text-light p-5 sm:flex items-center justify-between overflow-hidden sm:overflow-visible">
@@ -107,7 +111,7 @@ export const Header = () => {
             Top tech companies trust us with their talent needs
           </p>
         </div>
-        <div className="sm:hidden w-[80%] flex items-center justify-center m-auto">
+        <div className="sm:hidden w-full flex items-center justify-center m-auto">
           <Swiper
             className="mySwiper"
             modules={[Autoplay]}
