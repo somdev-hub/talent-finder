@@ -116,7 +116,7 @@ export const Header = () => {
             className="mySwiper"
             modules={[Autoplay]}
             autoplay={true}
-            slidesPerView={3}
+            slidesPerView={4}
             centeredSlides={true}
           >
             {images.map((image, index) => {
@@ -126,7 +126,7 @@ export const Header = () => {
                     <img
                       src={image}
                       alt=""
-                      className="sm:w-auto w-[5rem] m-0 h-auto"
+                      className="sm:w-auto w-[4rem] m-0 h-auto"
                     />
                   </div>
                 </SwiperSlide>

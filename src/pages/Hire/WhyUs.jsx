@@ -7,7 +7,7 @@ import { hire_whyus } from "../../assets/data/hire_whyus";
 
 const WhyUs = () => {
   return (
-    <div className="bg-blue-shade text-center flex flex-col justify-center items-center px-[1.5rem] py-[2.5rem]  sm:p-[5rem] mt-[5rem]">
+    <div className="bg-blue-shade text-center flex flex-col justify-center items-center px-[1.5rem] py-[2.5rem]  sm:p-[5rem] mt-[3rem]">
       <p className="font-[400] text-[1.5rem] font-coolvetica-56 text-neon sm:m-auto m-0">
         Why us?
       </p>
