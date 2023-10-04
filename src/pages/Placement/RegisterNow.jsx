@@ -11,7 +11,7 @@ const RegisterNow = () => {
       <h2 className=" m-0 text-[2.5rem] sm:text-[3.5rem] font-coolvetica-56 font-[400]">
         Register Now!
       </h2>
-      <p className="text-[1rem] font-[400] text-text-medium sm:w-2/5 text-center font-poppins-regular-20 m-0 mt-8 mb-10 sm:mb-[4.25rem]">
+      <p className="sm:text-[1.25rem] font-[400] text-text-medium sm:w-2/5 text-center font-poppins-regular-20 m-0 mt-8 mb-10 sm:mb-[4.25rem]">
         Begin your journey today or preview a sample profile. <br /> Your next
         career move awaits!
       </p>
@@ -28,7 +28,7 @@ const RegisterNow = () => {
         <img
           src={vector221}
           alt=""
-          className="absolute bottom-[10%] left-[30rem] -z-10 sm:block hidden"
+          className="absolute bottom-[10%] left-[29rem] -z-10 sm:block hidden"
         />
       </div>
       <div className="sm:hidden block mt-6">

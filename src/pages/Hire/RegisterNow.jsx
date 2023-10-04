@@ -14,10 +14,10 @@ const RegisterNow = () => {
   };
 
   const handleScrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  window.addEventListener('scroll', handleScroll);
+  window.addEventListener("scroll", handleScroll);
   return (
     <div className="px-[1.5rem] py-[2.5rem] sm:p-[5rem] text-center sm:mb-auto mb-[3rem]">
       <h2 className=" text-[2rem] sm:text-[3.5rem] font-[400] font-coolvetica-56 m-0">
@@ -26,15 +26,16 @@ const RegisterNow = () => {
         <span className="text-text-dark">Indian without any hassle.</span>
       </h2>
       <p className="mb-[3rem] sm:mb-[4rem] font-[400] text-[1.25rem] font-poppins-regular-20 text-text-medium m-0 mt-8 leading-[130%]">
-        and we understand your requirements better!
+        and we understand your <br className="block sm:hidden" /> requirements
+        better!
       </p>
       <div className="relative w-fit  m-auto">
         <ButtonPrimary text="Hire Now" />
         <img
           src={register_now1}
-          className="absolute z-20 sm:bottom-[-13px] bottom-[-4rem] right-[40%] cursor-pointer"
+          className="absolute z-20 sm:bottom-[-13px] bottom-[-2.5rem] right-[40%] cursor-pointer"
           alt=""
-          style={{ display: showScrollToTop ? 'block' : 'none' }}
+          style={{ display: showScrollToTop ? "block" : "none" }}
           onClick={handleScrollToTop}
         />
       </div>

@@ -5,7 +5,7 @@ import "swiper/css";
 import group7 from "../../assets/landing-page/group-7.svg";
 import ellipse15 from "../../assets/landing-page/ellipse-15.svg";
 import TestimonialCard from "../../components/TestimonialCard";
-import { testimonials } from "../../assets/data/testimonials";
+import { testimonialsBlue } from "../../assets/data/testimonials";
 import ButtonPrimary from "../../components/ButtonPrimary";
 
 const Testimonials = () => {
@@ -47,12 +47,12 @@ const Testimonials = () => {
             // autoplay={true}
             centeredSlidesBounds={true}
           >
-            {testimonials.map((testimonial, index) => {
+            {testimonialsBlue.map((testimonial, index) => {
               return (
                 <SwiperSlide key={index}>
                   <TestimonialCard
                     {...testimonial}
-                    totalPagination={testimonials.length}
+                    totalPagination={testimonialsBlue.length}
                     currentPagination={current}
                     setCurrentPagination={handleSlideClick}
                     backgroundColor="blue-shade"

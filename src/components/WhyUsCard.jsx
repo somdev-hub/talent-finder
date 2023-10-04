@@ -8,7 +8,7 @@ const WhyUsCard = ({ img, heading, text }) => {
         <h4 className=" text-text-dark font-[500] text-[1.5rem] m-0">
           {heading}
         </h4>
-        <p className="mt-4 sm:px-[5%]  sm:text-[1rem] text-[14px] font-[400] text-text-medium">
+        <p className="sm:w-[75%] w-[90%] mx-auto  mt-4 sm:px-[5%]  sm:text-[1rem] text-[14px] font-[400] text-text-medium">
           {text}
         </p>
       </div>

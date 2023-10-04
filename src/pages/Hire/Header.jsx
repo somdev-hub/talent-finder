@@ -46,7 +46,7 @@ export const Header = () => {
           </span>
           <span>Candidates</span>
         </h1>
-        <p className="px-[1.5rem] sm:px-auto text-[18px] font-[400] leading-[130%] font-poppins-regular-20 m-0 mt-[1.5rem] mb-8 text-center">
+        <p className="w-full sm:w-auto px-[1.5rem] sm:px-auto text-[18px] font-[400] leading-[130%] font-poppins-regular-20 m-0 mt-[1.5rem] mb-8 text-center">
           Save time and resources. <br /> Hire and directly manage remote or
           on-site talent with confidence.
         </p>

@@ -25,9 +25,9 @@ const Header = () => {
     ibm_logo
   ];
   return (
-    <div className="bg-blue-shade  relative">
+    <div className="bg-blue-shade  relative sm:pb-[2%]">
       <Navbar />
-      <div className="px-[1.5rem] py-8 flex sm:mt-[4rem] sm:pl-[3.5rem] lg:pl-[7.5rem] justify-between relative z-10">
+      <div className="px-[1.5rem] pt-8 flex sm:mt-[2rem] sm:pl-[3.5rem] lg:pl-[7.5rem] justify-between relative z-10">
         <div className="text-white sm:w-1/2 w-full sm:block flex flex-col gap-8 items-center justify-center">
           <div className="relative">
             <h1 className="px-0 text-center sm:text-left text-[3rem] sm:text-[5rem] font-[400] font-coolvetica-56 leading-[115%] m-0">
@@ -37,7 +37,7 @@ const Header = () => {
             <img
               src={line1}
               alt=""
-              className="absolute sm:top-[50%] sm:right-[20%] w-[30%] right-1/4"
+              className="absolute sm:top-[50%] sm:right-[20%] w-[20%] right-[22%] bottom-[-7px]"
             />
           </div>
           <img
@@ -45,11 +45,13 @@ const Header = () => {
             alt=""
             className="sm:hidden block lg:w-auto sm:mt-auto w-[90%] md:w-[60%]"
           />
-          <p className="font-[300] text-center sm:text-left text-[18px] font-poppins-regular-20 leading-[130%] sm:my-[3rem] m-0">
-            Lorem ipsum dolor sit amet consectetur. Ac ut nunc sodales a
-            integer. Risus sapien nec volutpat ut lectus purus enim et a.
+          <p className="font-[400] text-[1.25rem] text-center sm:text-left font-poppins-regular-20 leading-[130%] sm:my-[3rem] m-0">
+            Lorem ipsum dolor sit amet consectetur. Ac ut nunc <br /> sodales a
+            integer. Risus sapien nec volutpat ut lectus <br /> purus enim et a.
           </p>
-          <ButtonPrimary text={`${window.innerWidth < 640 ? "Book Now" : "Book Free Trial"}`} />
+          <ButtonPrimary
+            text={`${window.innerWidth < 640 ? "Book Now" : "Book Free Trial"}`}
+          />
           <div className="font-[300] leading-[120%] font-poppins-regular-20 sm:block flex flex-col items-center">
             <div className="flex sm:mt-4">
               <img src={check_mark} alt="" />
@@ -70,11 +72,11 @@ const Header = () => {
         alt=""
         className="sm:block hidden absolute bottom-0"
       />
-      <div className="pb-[2.5rem] relative z-10 flex flex-col justify-center items-center">
+      <div className="py-[2rem] sm:py-0 relative z-10 flex flex-col justify-center items-center">
         <p className="font-[500] text-white leading-[130%] font-poppins-regular-20 text-[1.25rem] m-0">
           Get placed at
         </p>
-        <div className="sm:hidden flex w-full items-center gap-10 sm:gap-[4rem] justify-center mt-5 overflow-x-auto">
+        <div className="sm:hidden flex w-full items-center gap-10 sm:gap-[4rem] justify-center overflow-x-auto">
           <div className="w-[100%] flex items-center justify-center m-auto">
             <Swiper
               className="mySwiper"
@@ -99,7 +101,7 @@ const Header = () => {
             </Swiper>
           </div>
         </div>
-        <div className="hidden sm:flex w-full items-center gap-[4rem] justify-center mt-5 overflow-x-auto">
+        <div className="hidden sm:flex w-full items-center gap-[4rem] justify-center  overflow-x-auto">
           <div className="sm:w-auto md:w-[90%] lg:w-[80%] flex items-center justify-around">
             <img src={whirlpool_logo} alt="" className="w-[6rem] lg:w-auto" />
             <img src={tata_logo} alt="" className="w-[6rem] lg:w-auto" />

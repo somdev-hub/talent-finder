@@ -49,7 +49,7 @@ const FooterSm = () => {
           </ul>
         </div>
         <div className="flex flex-col items-center justify-center mt-4">
-          <h3 className="text-[1.25rem] font-[500] font-poppins-regular-20 my-4">
+          <h3 className="text-[1.25rem] font-[500] font-poppins-regular-20 m-0">
             Join our mailing list
           </h3>
           <form action="" className="flex my-4">

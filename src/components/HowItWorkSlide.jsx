@@ -7,7 +7,7 @@ const HowItWorkSlide = ({ heading, text, img }) => {
         <h3 className="text-[2.25rem] sm:text-[2.5rem] m-0 font-[400] font-coolvetica-56">
           {heading}
         </h3>
-        <p className="text-[1rem] leading-[130%] font-[400] font-poppins-regular-20 text-text-medium">
+        <p className="sm:w-[93%] text-[1.25rem] sm:text-[1rem] leading-[130%] font-[400] font-poppins-regular-20 text-text-medium">
           {text}
         </p>
       </div>

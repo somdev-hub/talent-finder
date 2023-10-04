@@ -25,11 +25,11 @@ const Testimonials = () => {
         </p>
         <img
           src={group7}
-          className="absolute left-[5rem] top-0 sm:block hidden"
+          className="absolute left-[6rem] bottom-[-2rem] sm:block hidden"
           alt=""
         />
       </div>
-      <h2 className="text-black sm:text-white font-[400] text-[2.2rem] sm:text-[3.5rem] font-coolvetica-56 m-0 mt-8">
+      <h2 className="text-black sm:text-white font-[400] text-[2.2rem] sm:text-[3.5rem] font-coolvetica-56 m-0 mt-[0.5rem]">
         What our clients say
       </h2>
       <div className="w-full mb-10 sm:mt-[4rem] z-10 mt-4">

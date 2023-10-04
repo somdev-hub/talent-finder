@@ -1,6 +1,3 @@
-import whyus1 from "../../assets/hire/whyus1.svg";
-import whyus2 from "../../assets/hire/whyus2.svg";
-import whyus3 from "../../assets/hire/whyus3.svg";
 import ButtonPrimary from "../../components/ButtonPrimary";
 import line11 from "../../assets/hire/line11.svg";
 import { hire_whyus } from "../../assets/data/hire_whyus";
@@ -11,7 +8,7 @@ const WhyUs = () => {
       <p className="font-[400] text-[1.5rem] font-coolvetica-56 text-neon sm:m-auto m-0">
         Why us?
       </p>
-      <h2 className="font-[400] text-[2.5rem] sm:text-[3.5rem] font-coolvetica-56 m-0">
+      <h2 className="sm:mt-8 font-[400] text-[2.5rem] sm:text-[3.5rem] font-coolvetica-56 m-0">
         <span className="text-white">The world is changing—And so is </span>
         <span className="text-neon relative">
           hiring!

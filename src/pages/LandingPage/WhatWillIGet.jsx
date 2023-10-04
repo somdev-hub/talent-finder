@@ -16,7 +16,7 @@ const WhatWillIGet = () => {
         <img
           src={line2}
           alt=""
-          className="right-[3%] bottom-[-26px] absolute"
+          className="right-[5%] sm:right-[3%] bottom-[-37px] sm:bottom-[-26px] absolute"
         />
       </div>
       <div className="mt-10 flex sm:flex-row flex-col gap-6 sm:gap-10 md:w-[90%] lg:w-4/5">

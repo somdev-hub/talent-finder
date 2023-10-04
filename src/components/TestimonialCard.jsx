@@ -40,7 +40,7 @@ const TestimonialCard = ({
             <div className="">
               <h3 className="text-[1.25rem] m-0 leading-[130%] font-poppins-regular-20 flex sm:flex-row flex-col">
                 <span className="font-[500]">{name}, </span>
-                <span className="font-[300]">{designation}</span>
+                <span className="font-[300] sm:ml-[7px]">{designation}</span>
               </h3>
               <div
                 className={`mt-4 sm:mt-2 ${
@@ -60,7 +60,7 @@ const TestimonialCard = ({
             {heading}
           </h2>
           <p
-            className={`sm:w-[99%] sm:text-[1.25rem] font-[400] leading-[130%] font-poppins-regular-20 text-white ${
+            className={`sm:w-[99%] w-[104%] sm:text-[1.25rem] font-[400] leading-[130%] font-poppins-regular-20 text-white ${
               backgroundColor === "blue-shade"
                 ? "sm:text-white sm:mt-4"
                 : "sm:text-text-medium sm:mt-[2.25rem]"

@@ -1,11 +1,12 @@
 import WhyUsCard from "../../components/WhyUsCard";
 import circle1 from "../../assets/landing-page/circle1.svg";
+import circle1_sm from "../../assets/landing-page/circle1-sm.svg";
 import { whyUsSlides } from "../../assets/data/whyUs";
 
 const WhyUs = () => {
   return (
-    <div className="px-[1.5rem] sm:px-auto py-[2.5rem] sm:py-auto sm:mt-[5rem] flex text-center flex-col justify-center items-center">
-      <p className="text-[1.5rem] font-[400] font-coolvetica-56 text-blue m-0">
+    <div className=" sm:px-auto py-[2.5rem] sm:py-auto sm:mt-[5rem] flex text-center flex-col justify-center items-center">
+      <p className=" text-[1.5rem] font-[400] font-coolvetica-56 text-blue m-0">
         Why us?
       </p>
       <div className="relative">
@@ -15,7 +16,12 @@ const WhyUs = () => {
         <img
           src={circle1}
           alt=""
-          className="absolute sm:top-[35%] sm:right-[26%] sm:w-auto w-1/4 bottom-[8%] sm:left-auto left-[15%]"
+          className="hidden sm:block absolute sm:top-[35%] sm:right-[26%] sm:w-auto w-1/4 bottom-[8%] sm:left-auto left-[15%]"
+        />
+        <img
+          src={circle1_sm}
+          alt=""
+          className="sm:hidden block absolute w-[35%] bottom-[10%] left-[10%]"
         />
       </div>
       <div className="flex sm:flex-row flex-col gap-6 sm:gap-10 mt-10 sm:mt-[4rem] sm:w-[80%]">

@@ -45,7 +45,7 @@ const Footer = () => {
                 name=""
                 id=""
                 placeholder="Enter Email"
-                className="flex pl-6 rounded-l-[0.25rem] bg-white box-border font-poppins-regular-20 text-text-light font-[400] border-none"
+                className="flex pl-6 rounded-l-[0.25rem] bg-white box-border font-poppins-regular-20 text-text-light font-[400] border-none focus:text-text-dark"
               />
               <button className="items-center bg-neon flex rounded-r-[0.25rem]">
                 <img src={mail} alt="" />

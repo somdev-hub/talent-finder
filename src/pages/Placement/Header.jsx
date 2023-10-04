@@ -45,8 +45,12 @@ const Header = () => {
             className="sm:hidden block sm:w-auto  sm:mt-auto w-[85%]"
           />
           <p className="font-[400] text-center sm:text-left text-[1rem] sm:text-[1.25rem] font-poppins-regular-20 leading-[130%] sm:my-[3rem] m-0">
-            Lorem ipsum dolor sit amet consectetur. Ac ut nunc sodales a
-            integer. Risus sapien nec volutpat ut lectus purus enim et a.
+            Lorem ipsum dolor sit amet <br className="sm:hidden block" />{" "}
+            consectetur. Ac ut nunc <br className="hidden sm:block" /> sodales a
+            <br className="sm:hidden block" /> integer. Risus sapien nec
+            volutpat ut
+            <br className="sm:hidden block" /> lectus{" "}
+            <br className="hidden sm:block" /> purus enim et a.
           </p>
           <ButtonPrimary text="Apply Now" />
           <div className="font-[400] leading-[120%] font-poppins-regular-20 sm:block hidden  flex-col items-center">
@@ -73,7 +77,7 @@ const Header = () => {
         <p className="font-[500] text-white leading-[130%] font-poppins-regular-20 text-[1.25rem] m-0">
           Get placed at
         </p>
-        <div className="sm:hidden flex w-full items-center gap-10 sm:gap-[4rem] justify-center mt-5 overflow-x-auto">
+        <div className="sm:hidden flex w-full items-center gap-10 sm:gap-[4rem] justify-center overflow-x-auto">
           <div className="w-[100%] flex items-center justify-center m-auto">
             <Swiper
               className="mySwiper"
