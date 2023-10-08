@@ -44,7 +44,7 @@ const Testimonials = () => {
             className="mySwiper"
             slidesPerView="auto"
             centeredSlides={true}
-            // autoplay={true}
+            autoplay={true}
             centeredSlidesBounds={true}
           >
             {testimonialsBlue.map((testimonial, index) => {

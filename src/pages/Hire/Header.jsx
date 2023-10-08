@@ -31,7 +31,7 @@ export const Header = () => {
   return (
     <div>
       <Navbar color="blue" />
-      <div className="mt-[1rem] sm:mt-auto sm:p-auto  box-border text-center flex relative flex-col justify-center items-center">
+      <div className="mt-[1rem] sm:mt-auto sm:p-auto  box-border text-center flex relative flex-col justify-center items-center overflow-hidden">
         <h1 className="px-[1.5rem] sm:px-auto font-[400] text-[3rem] sm:text-[4rem] m-0 sm:mt-[5rem] leading-[115%] font-coolvetica-56">
           <span>
             Hire India's Top, <br className="sm:hidden block" />{" "}
@@ -66,7 +66,7 @@ export const Header = () => {
         <img
           src={hire_head2}
           alt=""
-          className="absolute top-[25rem] hidden sm:block"
+          className="absolute top-[24rem] hidden sm:block"
         />
         <img
           src={hire_head3}
@@ -95,7 +95,7 @@ export const Header = () => {
             className="absolute top-[15rem] left-[5%] w-[10rem]"
           />
         </div>
-        <div className="hidden relative mt-[22rem] w-3/5 border-t-[2px] border-solid border-text-light p-5 sm:flex items-center justify-between overflow-hidden sm:overflow-visible">
+        <div className="hidden relative mt-[22rem] w-[75%] lg:w-3/5 border-t-[2px] border-solid border-text-light p-5 sm:flex items-center justify-between overflow-hidden sm:overflow-visible">
           <p className="font-[400] text-text-medium left-[30%] top-[-15%] absolute m-0 font-poppins-regular-20 bg-white z-10">
             Top tech companies trust us with their talent needs
           </p>

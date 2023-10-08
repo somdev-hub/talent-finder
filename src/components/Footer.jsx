@@ -45,17 +45,17 @@ const Footer = () => {
                 name=""
                 id=""
                 placeholder="Enter Email"
-                className="flex pl-6 rounded-l-[0.25rem] bg-white box-border font-poppins-regular-20 text-text-light font-[400] border-none focus:text-text-dark"
+                className="flex pl-6 rounded-l-[0.25rem] bg-white box-border font-poppins-regular-20 text-[1rem] text-text-light font-[400] border-none focus:text-text-dark"
               />
               <button className="items-center bg-neon flex rounded-r-[0.25rem]">
                 <img src={mail} alt="" />
-                <p className="font-poppins-regular-20 font-[400] text-text-dark m-[0.6rem] box-border">
+                <p className="font-poppins-regular-20 font-[400] text-text-dark m-[0.6rem] text-[1rem] box-border">
                   Subscribe
                 </p>
               </button>
             </form>
           </div>
-          <form action="" className="flex items-center justify-center">
+          <form action="" className="flex items-center ">
             <input
               type="checkbox"
               name=""

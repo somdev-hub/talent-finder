@@ -19,7 +19,7 @@ const WhyUs = () => {
           />
         </span>
       </h2>
-      <p className="text-white font-[400] leading-[130%]  sm:text-[1.25rem] font-poppins-regular-20 text-center sm:w-[60%] mt-[3rem] sm:mt-[4rem]">
+      <p className="text-white font-[400] leading-[130%]  sm:text-[1.25rem] font-poppins-regular-20 text-center lg:w-[60%] mt-[3rem] sm:mt-[4rem]">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim{" "}
       </p>
@@ -28,7 +28,7 @@ const WhyUs = () => {
           return (
             <div
               key={index}
-              className="flex flex-col items-center justify-center sm:px-8"
+              className="flex flex-col items-center justify-center lg:px-8"
             >
               <img src={why.img} alt="" />
               <div className="text-white text-center mt-8">
