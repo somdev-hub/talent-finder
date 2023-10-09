@@ -21,9 +21,12 @@ const RegisterNow = () => {
           alt=""
           className="absolute right-[44%] bottom-[-4rem] -z-10 sm:block hidden"
         />
-        <ButtonPrimary
-          text={`${window.innerWidth < 640 ? "Apply Now" : "Book Free Trial"}`}
-        />
+        <div className="sm:hidden block">
+          <ButtonPrimary text={"Apply Now"} />
+        </div>
+        <div className="hidden sm:block">
+          <ButtonPrimary text={"Book Free Trial"} />
+        </div>
         <img
           src={vector221}
           alt=""

@@ -10,7 +10,7 @@ const WhyUs = () => {
         Why us?
       </p>
       <div className="relative">
-        <h2 className="m-0 mt-6 sm:mt-8 text-[2rem] sm:text-[3.5rem] font-coolvetica-56 font-[400]">
+        <h2 className="relative sm:static z-10 m-0 mt-6 sm:mt-8 text-[2rem] sm:text-[3.5rem] font-coolvetica-56 font-[400]">
           We'll guide you to your perfect placement.
         </h2>
         <img

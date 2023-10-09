@@ -25,13 +25,13 @@ const Header = () => {
     ibm_logo
   ];
   return (
-    <div className="bg-blue-shade  relative sm:pb-[2%]">
+    <div className="bg-blue-shade  relative sm:pb-[2%] sm:h-screen">
       <Navbar />
-      <div className="px-[1.5rem] pt-8 flex sm:mt-[2rem] sm:pl-[3.5rem] lg:pl-[7.5rem] justify-between relative z-10">
-        <div className="text-white sm:w-1/2 w-full sm:block flex flex-col gap-8 items-center justify-center">
+      <div className=" px-[1.5rem] pt-8 flex sm:mt-[2rem] lg:mt-8 xl:mt-0 sm:pl-[3.5rem] lg:pl-[7.5rem] justify-between relative z-10">
+        <div className="text-white xl:w-1/2 lg:w-auto w-full sm:block flex flex-col gap-8 items-center justify-center">
           <div className="relative">
-            <h1 className="px-0 text-center sm:text-left text-[3rem] sm:text-[5rem] font-[400] font-coolvetica-56 leading-[115%] m-0">
-              Get Job-Ready <br />
+            <h1 className="px-0 text-center sm:text-left text-[3rem] lg:text-[4rem] xl:text-[5rem] sm:text-[5rem] font-[400] font-coolvetica-56 leading-[115%] m-0">
+              Get Job-Ready <br className="lg:hidden block xl:block" />
               with us.
             </h1>
             <img
@@ -45,13 +45,17 @@ const Header = () => {
             alt=""
             className="sm:hidden block lg:w-auto sm:mt-auto w-[90%] md:w-[60%]"
           />
-          <p className="font-[400] text-[1.25rem] text-center sm:text-left font-poppins-regular-20 leading-[130%] sm:my-[3rem] m-0">
+          <p className="font-[400] text-[1.25rem] lg:text-[1rem] xl:text-[1.25rem] text-center sm:text-left font-poppins-regular-20 leading-[130%] sm:my-[3rem] 2xl:my-8 m-0">
             Lorem ipsum dolor sit amet consectetur. Ac ut nunc <br /> sodales a
             integer. Risus sapien nec volutpat ut lectus <br /> purus enim et a.
           </p>
-          <ButtonPrimary
-            text={`${window.innerWidth < 640 ? "Book Now" : "Book Free Trial"}`}
-          />
+          <div className="hidden sm:block">
+            <ButtonPrimary text={"Book Free Trial"} />
+          </div>
+          <div className="block sm:hidden">
+            <ButtonPrimary text={"Book Now"} />
+          </div>
+
           <div className="font-[300] leading-[120%] font-poppins-regular-20 sm:block flex flex-col items-center">
             <div className="flex sm:mt-4">
               <img src={check_mark} alt="" />
@@ -64,13 +68,17 @@ const Header = () => {
           </div>
         </div>
         <div className="hidden sm:flex justify-center items-center">
-          <img src={header_main} alt="" />
+          <img
+            src={header_main}
+            alt=""
+            className="2xl:w-[80%] w-auto lg:w-[75%] xl:w-auto"
+          />
         </div>
       </div>
       <img
         src={ellipse1}
         alt=""
-        className="sm:block hidden absolute bottom-0"
+        className="sm:block hidden absolute bottom-0 w-auto 2xl:w-[40%]"
       />
       <div className="py-[2rem] sm:py-0 relative z-10 flex flex-col justify-center items-center">
         <p className="font-[500] text-white leading-[130%] font-poppins-regular-20 text-[1.25rem] m-0">
@@ -82,6 +90,7 @@ const Header = () => {
               className="mySwiper"
               modules={[Autoplay]}
               autoplay={true}
+              loop={true}
               slidesPerView={4}
               centeredSlides={true}
             >
@@ -104,11 +113,31 @@ const Header = () => {
         <div className="hidden sm:flex w-full items-center gap-[4rem] justify-center  overflow-x-auto">
           <div className="sm:w-auto md:w-[90%] lg:w-[80%] flex items-center justify-around">
             <img src={whirlpool_logo} alt="" className="w-[6rem] lg:w-auto" />
-            <img src={tata_logo} alt="" className="w-[6rem] lg:w-auto" />
-            <img src={sony_logo} alt="" className="w-[6rem] lg:w-auto" />
-            <img src={uber_logo} alt="" className="w-[6rem] lg:w-auto" />
-            <img src={airtel_logo} alt="" className="w-[6rem] lg:w-auto" />
-            <img src={ibm_logo} alt="" className="w-[6rem] lg:w-auto" />
+            <img
+              src={tata_logo}
+              alt=""
+              className="w-[6rem] lg:w-auto xl:w-[6rem]"
+            />
+            <img
+              src={sony_logo}
+              alt=""
+              className="w-[6rem] lg:w-auto xl:w-[6rem]"
+            />
+            <img
+              src={uber_logo}
+              alt=""
+              className="w-[6rem] lg:w-auto xl:w-[6rem]"
+            />
+            <img
+              src={airtel_logo}
+              alt=""
+              className="w-[6rem] lg:w-auto xl:w-[6rem]"
+            />
+            <img
+              src={ibm_logo}
+              alt=""
+              className="w-[6rem] lg:w-auto xl:w-[6rem]"
+            />
           </div>
         </div>
       </div>

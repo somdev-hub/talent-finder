@@ -27,7 +27,7 @@ const Benefits = () => {
             Are you on the hunt for your dream job? <br /> Here's why you should
             take advantage of our platform:
           </p>
-          <div className="flex flex-col sm:grid grid-cols-2 grid-rows-2 sm:gap-10 mt-5 sm:text-left text-center">
+          <div className="sm:w-[80%] flex flex-col sm:grid grid-cols-2 grid-rows-2 sm:gap-10 mt-5 sm:text-left text-center">
             {benefits.map((benefit, index) => {
               return (
                 <div key={index} className="font-poppins-regular-20 mb-6">
