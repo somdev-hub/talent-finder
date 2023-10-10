@@ -45,7 +45,7 @@ const Header = () => {
             alt=""
             className="sm:hidden block lg:w-auto sm:mt-auto w-[90%] md:w-[60%]"
           />
-          <p className="font-[400] text-[1.25rem] lg:text-[1rem] xl:text-[1.25rem] text-center sm:text-left font-poppins-regular-20 leading-[130%] sm:my-[3rem] 2xl:my-8 m-0">
+          <p className="font-[300] text-[1.25rem] lg:text-[1rem] xl:text-[1.25rem] text-center sm:text-left font-poppins-regular-20 leading-[130%] sm:my-[3rem] 2xl:my-8 m-0">
             Lorem ipsum dolor sit amet consectetur. Ac ut nunc <br /> sodales a
             integer. Risus sapien nec volutpat ut lectus <br /> purus enim et a.
           </p>

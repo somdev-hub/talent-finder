@@ -47,7 +47,7 @@ const Footer = () => {
                 placeholder="Enter Email"
                 className="flex pl-6 rounded-l-[0.25rem] bg-white box-border font-poppins-regular-20 text-[1rem] text-text-light font-[400] border-none focus:text-text-dark"
               />
-              <button className="items-center bg-neon flex rounded-r-[0.25rem]">
+              <button className="items-center bg-neon flex rounded-r-[0.25rem] cursor-pointer">
                 <img src={mail} alt="" />
                 <p className="font-poppins-regular-20 font-[400] text-text-dark m-[0.6rem] text-[1rem] box-border">
                   Subscribe

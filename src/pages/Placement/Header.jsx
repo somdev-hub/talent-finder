@@ -44,7 +44,7 @@ const Header = () => {
             alt=""
             className="sm:hidden block sm:w-auto  sm:mt-auto w-[85%]"
           />
-          <p className="font-[400] text-center xl:text-left text-[1rem] sm:text-[1.25rem] font-poppins-regular-20 leading-[130%] md:my-4 xl:my-[3rem] m-0">
+          <p className="font-[300] text-center xl:text-left text-[1rem] sm:text-[1.25rem] font-poppins-regular-20 leading-[130%] md:my-4 xl:my-[3rem] m-0">
             Lorem ipsum dolor sit amet <br className="sm:hidden block" />{" "}
             consectetur. Ac ut nunc <br className="hidden sm:block" /> sodales a
             <br className="sm:hidden block" /> integer. Risus sapien nec

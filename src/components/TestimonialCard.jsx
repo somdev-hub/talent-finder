@@ -60,7 +60,7 @@ const TestimonialCard = ({
             {heading}
           </h2>
           <p
-            className={`sm:w-[99%] xl:w-[103%] w-[100%] 2xl:w-[103%] sm:text-[1.25rem] font-[400] leading-[130%] font-poppins-regular-20 text-white ${
+            className={`sm:w-[99%] xl:w-[103%] w-[100%] 2xl:w-[103%] sm:text-[1.25rem] font-[300] leading-[130%] font-poppins-regular-20 text-white ${
               backgroundColor === "blue-shade"
                 ? "sm:text-white sm:mt-4"
                 : "sm:text-text-medium sm:mt-[2.25rem]"
