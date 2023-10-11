@@ -24,7 +24,7 @@ const WhyUs = () => {
           className="sm:hidden block absolute w-[35%] bottom-[10%] left-[10%]"
         />
       </div>
-      <div className="flex sm:flex-row flex-col gap-6 sm:gap-10 mt-10 sm:mt-[4rem] sm:w-[80%]">
+      <div className="flex xl:flex-row flex-col gap-6 sm:gap-10 mt-10 sm:mt-[4rem] sm:w-[80%]">
         {whyUsSlides.map((item, index) => {
           return (
             <WhyUsCard

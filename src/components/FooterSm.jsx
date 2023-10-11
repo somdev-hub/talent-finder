@@ -10,40 +10,40 @@ import tick2 from "../assets/landing-page/tick2.svg";
 const FooterSm = () => {
   const [checked, setChecked] = React.useState(false);
   return (
-    <div className="sm:hidden block text-white bg-blue-shade">
+    <div className="xl:hidden block text-white bg-blue-shade">
       <div className="flex flex-col  px-[1.5rem] py-[2rem] items-start pb-2 border-b-2 border-solid border-white">
         <div className="text-[1rem] sm:text-[2rem] font-[400] font-coolvetica-56 ">
           <span className="text-neon">Talent</span>
           <span className="text-white">Finder</span>
         </div>
-        <p className="text-[7px] sm:text-[14px] font-[400] m-0 font-poppins-regular-20 text-white">
+        <p className="text-[7px] sm:text-[14px]  font-[400] m-0 font-poppins-regular-20 text-white">
           by rework
         </p>
       </div>
       <div className="px-[1.5rem] ">
-        <div className="flex flex-between">
+        <div className="flex justify-between md:justify-around">
           <ul className="text-left p-0">
-            <h3 className="text-[17px] font-poppins-regular-20 font-[500] mb-4">
+            <h3 className="text-[17px] md:text-[2rem] font-poppins-regular-20 font-[500] mb-4">
               Quick Links
             </h3>
-            <li className="list-none font-[400] text-[14px] font-poppins-regular-20 mb-2">
+            <li className="list-none font-[400] text-[14px] md:text-[1.5rem] font-poppins-regular-20 mb-2">
               Mentorship & Placement
             </li>
-            <li className="list-none font-[400] text-[14px] font-poppins-regular-20 mb-2">
+            <li className="list-none font-[400] text-[14px] md:text-[1.5rem] font-poppins-regular-20 mb-2">
               Placement
             </li>
-            <li className="list-none font-[400] text-[14px] font-poppins-regular-20 mb-2">
+            <li className="list-none font-[400] text-[14px] md:text-[1.5rem] font-poppins-regular-20 mb-2">
               Hiret
             </li>
           </ul>
           <ul className="text-left p-0">
-            <h3 className="text-[17px] font-poppins-regular-20 font-[500] mb-4">
+            <h3 className="text-[17px] md:text-[2rem] font-poppins-regular-20 font-[500] mb-4">
               More By Reinsure
             </h3>
-            <li className="list-none font-[400] text-[14px] font-poppins-regular-20 mb-2">
+            <li className="list-none font-[400] text-[14px] md:text-[1.5rem] font-poppins-regular-20 mb-2">
               Job Insurance
             </li>
-            <li className="list-none font-[400] text-[14px] font-poppins-regular-20 mb-2">
+            <li className="list-none font-[400] text-[14px] md:text-[1.5rem] font-poppins-regular-20 mb-2">
               AI Recruitment Platform
             </li>
           </ul>
@@ -104,7 +104,7 @@ const FooterSm = () => {
         <img src={social_icon3} alt="" className="w-4" />
         <img src={social_icon4} alt="" className="w-4" />
       </div>
-      <div className="text-[14px] bg-dark-blue text-white font-[300] font-poppins-regular-20 flex justify-start ml-5 py-2">
+      <div className="text-[14px] md:text-[1.5rem] bg-dark-blue text-white font-[300] font-poppins-regular-20 flex justify-start ml-5 py-2">
         © 2023 TalentFinder
       </div>
     </div>

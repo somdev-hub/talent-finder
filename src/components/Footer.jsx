@@ -10,7 +10,7 @@ import tick2 from "../assets/landing-page/tick2.svg";
 const Footer = () => {
   const [checked, setChecked] = React.useState(false);
   return (
-    <div className="hidden sm:block bg-blue text-white  pt-[5rem] md:px-[3.5rem] lg:px-[7.5rem]">
+    <div className="hidden xl:block bg-blue text-white  pt-[5rem] md:px-[3.5rem] lg:px-[7.5rem]">
       <div className="flex sm:flex-row flex-col justify-between ">
         <div className="flex flex-col justify-between">
           <img src={main_logo} alt="" className="h-[2.5rem]" />

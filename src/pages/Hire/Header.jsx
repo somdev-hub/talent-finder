@@ -56,22 +56,22 @@ export const Header = () => {
         <img
           src={vector_445}
           alt=""
-          className="absolute top-[13rem] hidden sm:block"
+          className="absolute md:top-[23rem] xl:top-[13rem] hidden sm:block"
         />
         <img
           src={hire_head1}
           alt=""
-          className="absolute left-[18rem] top-[18rem] hidden sm:block"
+          className="absolute md:left-[5rem] md:top-[25rem] xl:left-[18rem] xl:top-[18rem] hidden sm:block"
         />
         <img
           src={hire_head2}
           alt=""
-          className="absolute top-[24rem] hidden sm:block"
+          className="absolute md:top-[33rem] md:right-[15rem] xl:top-[24rem] hidden sm:block"
         />
         <img
           src={hire_head3}
           alt=""
-          className="absolute right-[18rem] top-[17rem] hidden sm:block"
+          className="absolute md:top-[24rem] xl:right-[18rem] md:right-[5rem] xl:top-[17rem] hidden sm:block"
         />
         <div className="sm:hidden relative h-[53vh] overflow-hidden w-full">
           <img
@@ -95,7 +95,7 @@ export const Header = () => {
             className="absolute top-[15rem] left-[5%] w-[10rem]"
           />
         </div>
-        <div className="hidden relative mt-[22rem] w-[75%] lg:w-3/5 border-t-[2px] border-solid border-text-light p-5 sm:flex items-center justify-between overflow-hidden sm:overflow-visible">
+        <div className="hidden relative mt-[22rem] md:w-[90%] xl:w-[75%] lg:w-3/5 border-t-[2px] border-solid border-text-light p-5 sm:flex items-center justify-between overflow-hidden sm:overflow-visible">
           <p className="font-[400] text-text-medium left-[30%] top-[-15%] absolute m-0 font-poppins-regular-20 bg-white z-10">
             Top tech companies trust us with their talent needs
           </p>

@@ -25,12 +25,12 @@ const Header = () => {
     ibm_logo
   ];
   return (
-    <div className="bg-blue-shade  relative sm:pb-[2%] sm:h-screen">
+    <div className="bg-blue-shade relative 2xl:pb-0 xl:pb-[2%] 2xl:h-screen">
       <Navbar />
-      <div className=" px-[1.5rem] pt-8 flex sm:mt-[2rem] lg:mt-8 xl:mt-0 sm:pl-[3.5rem] lg:pl-[7.5rem] justify-between relative z-10">
-        <div className="text-white xl:w-1/2 lg:w-auto w-full sm:block flex flex-col gap-8 items-center justify-center">
+      <div className=" px-[1.5rem] pt-8 flex md:flex-col xl:flex-row  lg:mt-8 xl:mt-0 sm:pl-[3.5rem] lg:pl-[7.5rem] justify-between relative z-10">
+        <div className="text-white xl:w-1/2 lg:w-auto w-full xl:block flex flex-col gap-8 md:gap-4 items-center justify-center">
           <div className="relative">
-            <h1 className="px-0 text-center sm:text-left text-[3rem] lg:text-[4rem] xl:text-[5rem] sm:text-[5rem] font-[400] font-coolvetica-56 leading-[115%] m-0">
+            <h1 className="px-0 text-center xl:text-left text-[3rem] lg:text-[4rem] xl:text-[5rem] sm:text-[5rem] font-[400] font-coolvetica-56 leading-[115%] m-0">
               Get Job-Ready <br className="lg:hidden block xl:block" />
               with us.
             </h1>
@@ -43,9 +43,9 @@ const Header = () => {
           <img
             src={header_main}
             alt=""
-            className="sm:hidden block lg:w-auto sm:mt-auto w-[90%] md:w-[60%]"
+            className="xl:hidden block lg:w-auto sm:mt-auto w-[90%] md:w-[60%]"
           />
-          <p className="font-[300] text-[1.25rem] lg:text-[1rem] xl:text-[1.25rem] text-center sm:text-left font-poppins-regular-20 leading-[130%] sm:my-[3rem] 2xl:my-8 m-0">
+          <p className="font-[300] text-[1.25rem] lg:text-[1rem] xl:text-[1.25rem] text-center xl:text-left font-poppins-regular-20 leading-[130%] sm:my-[1rem] xl:my-8 m-0">
             Lorem ipsum dolor sit amet consectetur. Ac ut nunc <br /> sodales a
             integer. Risus sapien nec volutpat ut lectus <br /> purus enim et a.
           </p>
@@ -67,20 +67,20 @@ const Header = () => {
             </div>
           </div>
         </div>
-        <div className="hidden sm:flex justify-center items-center">
+        <div className="hidden xl:flex justify-center items-center">
           <img
             src={header_main}
             alt=""
-            className="2xl:w-[80%] w-auto lg:w-[75%] xl:w-auto"
+            className="2xl:w-[80%] w-auto lg:w-[75%] "
           />
         </div>
       </div>
       <img
         src={ellipse1}
         alt=""
-        className="sm:block hidden absolute bottom-0 w-auto 2xl:w-[40%]"
+        className="xl:block hidden absolute bottom-0 w-auto 2xl:w-[40%]"
       />
-      <div className="py-[2rem] sm:py-0 relative z-10 flex flex-col justify-center items-center">
+      <div className="py-[2rem] xl:py-0 relative z-10 flex flex-col justify-center items-center xl:pt-[3rem]">
         <p className="font-[500] text-white leading-[130%] font-poppins-regular-20 text-[1.25rem] m-0">
           Get placed at
         </p>
@@ -110,7 +110,7 @@ const Header = () => {
             </Swiper>
           </div>
         </div>
-        <div className="hidden sm:flex w-full items-center gap-[4rem] justify-center  overflow-x-auto">
+        <div className="hidden sm:flex w-full items-center gap-[4rem] justify-center  overflow-x-auto ">
           <div className="sm:w-auto md:w-[90%] lg:w-[80%] flex items-center justify-around">
             <img src={whirlpool_logo} alt="" className="w-[6rem] lg:w-auto" />
             <img

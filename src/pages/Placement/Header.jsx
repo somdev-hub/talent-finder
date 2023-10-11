@@ -25,7 +25,7 @@ const Header = () => {
     ibm_logo
   ];
   return (
-    <div className="bg-blue-shade relative sm:h-screen overflow-hidden">
+    <div className="bg-blue-shade relative  overflow-hidden">
       <Navbar />
       <div className="flex mt-[2rem] px-6 sm:px-0 sm:mt-[3rem] md:px-[3.5rem] lg:px-[7.5rem] justify-between sm:flex-col lg:flex-row relative z-10">
         <div className="text-white xl:w-1/2 w-full xl:block flex flex-col gap-8 items-center justify-center">

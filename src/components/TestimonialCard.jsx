@@ -17,26 +17,26 @@ const TestimonialCard = ({
   backgroundColor
 }) => {
   return (
-    <div className={`sm:p-0 pt-[5rem] `}>
+    <div className={`xl:p-0 pt-[5rem] `}>
       <div
         className={`${
           backgroundColor === "blue-shade"
             ? "sm:border-solid border-[4px] border-neon items-end"
             : "items-center"
-        }  lg:w-[75%] relative box-border m-auto p-6 md:px-[3rem] lg:px-[6rem] sm:py-[3rem] bg-blue text-white ${
+        }  xl:w-[75%] relative box-border m-auto p-6 md:px-[3rem] lg:px-[6rem] xl:py-[3rem] bg-blue text-white ${
           backgroundColor === "blue-shade" ? "sm:text-white" : "sm:text-black"
         } sm:bg-${backgroundColor} rounded-[1.25rem] sm:rounded-[2.5rem] flex  justify-center gap-10`}
       >
         <img
           src={img}
           alt=""
-          className="sm:w-auto w-[35%] right-0 top-[-5rem] absolute sm:hidden block"
+          className="xl:w-auto w-[35%] md:w-1/4 md:top-[-6rem] right-0 top-[-5rem] absolute xl:hidden block"
         />
-        <div className="sm:static hidden sm:block absolute top-[-10%]">
+        <div className="sm:static hidden xl:block absolute top-[-10%]">
           <img src={img} alt="" className="sm:w-auto w-2/3" />
         </div>
         <div className="text-left">
-          <div className="flex sm:flex-row flex-col justify-between items-start">
+          <div className="flex xl:flex-row flex-col justify-between items-start">
             <div className="">
               <h3 className="text-[1.25rem] m-0 leading-[130%] font-poppins-regular-20 flex sm:flex-row flex-col">
                 <span className="font-[500]">{name}, </span>

@@ -4,6 +4,7 @@ import hamburger_black from "../assets/hire/hamburger-white.svg";
 import { Link, useLocation } from "react-router-dom";
 import arrow_right from "../assets/arrow-right.svg";
 import main_logo from "../assets/main-logo.png";
+import main_logo_blue from "../assets/main-logo-blue.png";
 
 const Navbar = ({ color }) => {
   const [checked, setChecked] = useState(null);
@@ -45,12 +46,18 @@ const Navbar = ({ color }) => {
   };
   return (
     <div className="">
-      <div className="flex sm:flex-row flex-col justify-between px-[1.5rem] md:px-[3.5rem] lg:px-[7.5rem] py-4 sm:py-[2rem] box-border">
-        <div className="flex justify-between items-center w-full">
+      <div className="flex sm:flex-row flex-col justify-between px-[1.5rem] md:px-[2.5rem] lg:px-[3.5rem] xl:px-[7.5rem] py-4 sm:py-[2rem] box-border">
+        <div className="flex justify-between items-center xl:w-full">
           <div className="flex flex-col items-end">
-            <div className="flex items-center">
-              <img src={main_logo} alt="" className="w-1/2 sm:w-auto" />
-            </div>
+            {color === "blue" ? (
+              <div className={` flex items-center`}>
+                <img src={main_logo_blue} alt="" className="w-1/2 sm:w-auto" />
+              </div>
+            ) : (
+              <div className={` flex items-center`}>
+                <img src={main_logo} alt="" className="w-1/2 sm:w-auto" />
+              </div>
+            )}
             {/* <div className="text-[1rem] sm:text-[2rem] font-[400] font-coolvetica-56 ">
               <span
                 className={`
