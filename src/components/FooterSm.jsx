@@ -11,7 +11,7 @@ import main_logo from "../assets/main-logo.png";
 const FooterSm = () => {
   const [checked, setChecked] = React.useState(false);
   return (
-    <div className="xl:hidden block text-white bg-blue-shade">
+    <div className="lg:hidden block text-white bg-blue-shade">
       <div className="flex items-center px-[1.25rem] py-[2rem] justify-start pb-2 border-b-2 border-solid border-white">
         <img src={main_logo} alt="" className="w-1/4" />
       </div>

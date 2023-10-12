@@ -2,7 +2,7 @@ import { steps } from "../../assets/data/steps";
 
 const Steps = () => {
   return (
-    <div className="px-[1.5rem] py-[2.5rem]  sm:p-[5rem] flex flex-col items-center justify-center text-center">
+    <div className="px-[1.5rem] py-[2.5rem]  sm:p-[5rem] lg:p-[3rem] xl:p-[5rem] flex flex-col items-center justify-center text-center">
       <h2 className=" text-[2rem] sm:text-[3.5rem] font-[400] font-coolvetica-56 m-0">
         <span className="text-text-dark">Top-quality remote hiring in </span>
         <span className="text-blue-shade">4 simple steps</span>
@@ -11,7 +11,7 @@ const Steps = () => {
         Begin your journey today or preview a sample profile. <br />
         Your next career move awaits!
       </p>
-      <div className="flex xl:flex-row flex-col gap-[3.5rem] mt-8 sm:mt-[4rem] xl:items-end">
+      <div className="flex lg:flex-row flex-col gap-[3.5rem] mt-8 sm:mt-[4rem] xl:items-end">
         {steps.map((step, index) => {
           return (
             <div

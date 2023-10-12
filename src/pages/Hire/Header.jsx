@@ -66,7 +66,7 @@ export const Header = () => {
         <img
           src={hire_head2}
           alt=""
-          className="absolute md:top-[33rem] md:right-[15rem] xl:top-[24rem] xl:right-auto hidden sm:block"
+          className="absolute md:top-[33rem] lg:right-[25rem] md:right-[15rem] xl:top-[24rem] xl:right-auto hidden sm:block"
         />
         <img
           src={hire_head3}
@@ -95,7 +95,7 @@ export const Header = () => {
             className="absolute top-[15rem] left-[5%] w-[10rem]"
           />
         </div>
-        <div className="hidden relative mt-[22rem] md:w-[90%] xl:w-[75%] lg:w-3/5 border-t-[2px] border-solid border-text-light p-5 sm:flex items-center justify-between overflow-hidden sm:overflow-visible">
+        <div className="hidden relative mt-[22rem] md:w-[90%] xl:w-[75%] lg:w-[85%] border-t-[2px] border-solid border-text-light p-5 sm:flex items-center justify-between overflow-hidden sm:overflow-visible">
           <p className="font-[400] text-text-medium left-[30%] top-[-15%] absolute m-0 font-poppins-regular-20 bg-white z-10">
             Top tech companies trust us with their talent needs
           </p>

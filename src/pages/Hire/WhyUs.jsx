@@ -4,7 +4,7 @@ import { hire_whyus } from "../../assets/data/hire_whyus";
 
 const WhyUs = () => {
   return (
-    <div className="bg-blue-shade text-center flex flex-col justify-center items-center px-[1.5rem] py-[2.5rem]  sm:p-[5rem] mt-[3rem]">
+    <div className="bg-blue-shade text-center flex flex-col justify-center items-center px-[1.5rem] py-[2.5rem]  sm:p-[5rem] mt-[3rem] lg:p-[2rem] xl:p-[5rem]">
       <p className="font-[400] text-[1.5rem] font-coolvetica-56 text-neon sm:m-auto m-0">
         Why us?
       </p>
@@ -23,7 +23,7 @@ const WhyUs = () => {
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim{" "}
       </p>
-      <div className="flex flex-col xl:flex-row justify-center items-center gap-10 my-[4rem]">
+      <div className="flex flex-col lg:flex-row justify-center items-center gap-10 my-[4rem]">
         {hire_whyus.map((why, index) => {
           return (
             <div

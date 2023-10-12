@@ -21,13 +21,13 @@ const Benefits = () => {
         />
       </div>
       <div className="flex xl:flex-row flex-col sm:gap-8 mt-10 sm:mt-[6rem] items-center justify-center">
-        <img src={benifits_main} alt="" className="w-4/5" />
+        <img src={benifits_main} alt="" className="w-4/5 lg:w-1/2 xl:pl-[7%]" />
         <div className="">
           <p className="sm:block hidden text-[1.5rem] font-[400] leading-[115%] font-poppins-regular-20 m-0">
             Are you on the hunt for your dream job? <br /> Here's why you should
             take advantage of our platform:
           </p>
-          <div className="xl:w-[80%] flex flex-col sm:grid grid-cols-2 grid-rows-2 sm:gap-10 mt-5 sm:text-left text-center">
+          <div className="xl:w-[90%] flex flex-col sm:grid grid-cols-2 grid-rows-2 sm:gap-10 mt-5 sm:text-left text-center">
             {benefits.map((benefit, index) => {
               return (
                 <div key={index} className="font-poppins-regular-20 mb-6">

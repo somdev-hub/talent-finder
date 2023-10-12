@@ -23,14 +23,14 @@ const TestimonialCard = ({
           backgroundColor === "blue-shade"
             ? "sm:border-solid border-[4px] border-neon items-end"
             : "items-center"
-        }  xl:w-[75%] relative box-border m-auto p-6 md:px-[3rem] lg:px-[6rem] xl:py-[3rem] bg-blue text-white ${
+        }  xl:w-[75%] relative box-border m-auto p-6 md:px-[3rem] lg:px-[4rem] xl:py-[3rem] bg-blue text-white ${
           backgroundColor === "blue-shade" ? "sm:text-white" : "sm:text-black"
         } sm:bg-${backgroundColor} rounded-[1.25rem] sm:rounded-[2.5rem] flex  justify-center gap-10`}
       >
         <img
           src={img}
           alt=""
-          className="xl:w-auto w-[35%] md:w-1/4 md:top-[-6rem] right-0 top-[-5rem] absolute xl:hidden block"
+          className="xl:w-auto w-[35%] md:w-1/4 lg:w-[18%] md:top-[-6rem] right-0 top-[-5rem] absolute xl:hidden block"
         />
         <div className="sm:static hidden xl:block absolute top-[-10%]">
           <img src={img} alt="" className="sm:w-auto w-2/3" />

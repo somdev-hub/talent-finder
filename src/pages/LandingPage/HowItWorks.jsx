@@ -52,7 +52,7 @@ const HowItWorks = () => {
         </div>
       </div>
       <div className="my-[2.5rem] w-full">
-        <div className="w-[90%] md:w-[80%] lg:w-[60%] m-auto">
+        <div className="w-[90%] md:w-[80%] lg:w-[85%] xl:w-[60%] m-auto">
           <Swiper
             ref={swiperRef}
             onSlideChange={(swiper) => {
