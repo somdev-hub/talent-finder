@@ -23,7 +23,7 @@ const WhyUs = () => {
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim{" "}
       </p>
-      <div className="flex flex-col sm:flex-row justify-center items-center gap-10 my-[4rem]">
+      <div className="flex flex-col xl:flex-row justify-center items-center gap-10 my-[4rem]">
         {hire_whyus.map((why, index) => {
           return (
             <div
@@ -35,7 +35,7 @@ const WhyUs = () => {
                 <h3 className="font-[500] text-[1.5rem] font-poppins-regular-20 m-0">
                   {why.title}
                 </h3>
-                <p className="mt-[1.25rem] font-[400] sm:mx-auto sm:w-[18rem] leading-[120%] font-poppins-regular-20">
+                <p className="mt-[1.25rem] font-[400] sm:mx-auto xl:w-[18rem] leading-[120%] font-poppins-regular-20">
                   {why.desc}
                 </p>
               </div>

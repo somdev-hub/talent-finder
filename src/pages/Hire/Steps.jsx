@@ -11,7 +11,7 @@ const Steps = () => {
         Begin your journey today or preview a sample profile. <br />
         Your next career move awaits!
       </p>
-      <div className="flex sm:flex-row flex-col gap-[3.5rem] mt-8 sm:mt-[4rem] items-end">
+      <div className="flex xl:flex-row flex-col gap-[3.5rem] mt-8 sm:mt-[4rem] xl:items-end">
         {steps.map((step, index) => {
           return (
             <div

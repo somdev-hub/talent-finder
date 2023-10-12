@@ -25,7 +25,7 @@ const Header = () => {
     ibm_logo
   ];
   return (
-    <div className="bg-blue-shade relative 2xl:pb-0 xl:pb-[2%] 2xl:h-screen">
+    <div className="bg-blue-shade relative  xl:pb-[2%] ">
       <Navbar />
       <div className=" px-[1.5rem] pt-8 flex md:flex-col xl:flex-row  lg:mt-8 xl:mt-0 sm:pl-[3.5rem] lg:pl-[7.5rem] justify-between relative z-10">
         <div className="text-white xl:w-1/2 lg:w-auto w-full xl:block flex flex-col gap-8 md:gap-4 items-center justify-center">
@@ -37,7 +37,7 @@ const Header = () => {
             <img
               src={line1}
               alt=""
-              className="absolute sm:top-[50%] sm:right-[20%] w-[20%] right-[22%] bottom-[-7px]"
+              className="absolute md:top-[53%] xl:top-[50%] md:right-[-6%] xl:right-[20%] w-[27%] xl:w-[20%] right-[22%] bottom-[-12px]"
             />
           </div>
           <img

@@ -6,12 +6,16 @@ import social_icon4 from "../assets/landing-page/Social-Icons4.svg";
 // import tick from "../../assets/landing-page/tick.svg";
 import mail from "../assets/landing-page/mail.png";
 import tick2 from "../assets/landing-page/tick2.svg";
+import main_logo from "../assets/main-logo.png";
 
 const FooterSm = () => {
   const [checked, setChecked] = React.useState(false);
   return (
     <div className="xl:hidden block text-white bg-blue-shade">
-      <div className="flex flex-col  px-[1.5rem] py-[2rem] items-start pb-2 border-b-2 border-solid border-white">
+      <div className="flex items-center px-[1.25rem] py-[2rem] justify-start pb-2 border-b-2 border-solid border-white">
+        <img src={main_logo} alt="" />
+      </div>
+      {/* <div className="flex flex-col  px-[1.25rem] py-[2rem] items-start pb-2 border-b-2 border-solid border-white">
         <div className="text-[1rem] sm:text-[2rem] font-[400] font-coolvetica-56 ">
           <span className="text-neon">Talent</span>
           <span className="text-white">Finder</span>
@@ -19,31 +23,31 @@ const FooterSm = () => {
         <p className="text-[7px] sm:text-[14px]  font-[400] m-0 font-poppins-regular-20 text-white">
           by rework
         </p>
-      </div>
-      <div className="px-[1.5rem] ">
+      </div> */}
+      <div className="px-[1.25rem] ">
         <div className="flex justify-between md:justify-around">
           <ul className="text-left p-0">
-            <h3 className="text-[17px] md:text-[2rem] font-poppins-regular-20 font-[500] mb-4">
+            <h3 className="text-[17px] md:text-[1.5rem] font-poppins-regular-20 font-[500] mb-4">
               Quick Links
             </h3>
-            <li className="list-none font-[400] text-[14px] md:text-[1.5rem] font-poppins-regular-20 mb-2">
+            <li className="list-none font-[400] text-[14px] md:text-[1.25rem] font-poppins-regular-20 mb-2">
               Mentorship & Placement
             </li>
-            <li className="list-none font-[400] text-[14px] md:text-[1.5rem] font-poppins-regular-20 mb-2">
+            <li className="list-none font-[400] text-[14px] md:text-[1.25rem] font-poppins-regular-20 mb-2">
               Placement
             </li>
-            <li className="list-none font-[400] text-[14px] md:text-[1.5rem] font-poppins-regular-20 mb-2">
+            <li className="list-none font-[400] text-[14px] md:text-[1.25rem] font-poppins-regular-20 mb-2">
               Hiret
             </li>
           </ul>
           <ul className="text-left p-0">
-            <h3 className="text-[17px] md:text-[2rem] font-poppins-regular-20 font-[500] mb-4">
-              More By Reinsure
+            <h3 className="text-[17px] md:text-[1.5rem] font-poppins-regular-20 font-[500] mb-4">
+              More By Rework
             </h3>
-            <li className="list-none font-[400] text-[14px] md:text-[1.5rem] font-poppins-regular-20 mb-2">
+            <li className="list-none font-[400] text-[14px] md:text-[1.25rem] font-poppins-regular-20 mb-2">
               Job Insurance
             </li>
-            <li className="list-none font-[400] text-[14px] md:text-[1.5rem] font-poppins-regular-20 mb-2">
+            <li className="list-none font-[400] text-[14px] md:text-[1.25rem] font-poppins-regular-20 mb-2">
               AI Recruitment Platform
             </li>
           </ul>
@@ -56,11 +60,11 @@ const FooterSm = () => {
             <input
               type="text"
               placeholder="Enter Email"
-              className=" box-border rounded-l-[0.25rem] flex border-none w-[60%] px-[25px] py-2 font-[400] font-poppins-regular-20 text-[#A0A0A0]"
+              className="md:text-[1rem] box-border rounded-l-[0.25rem] flex border-none w-[60%] px-[25px] py-2 font-[400] font-poppins-regular-20 text-[#A0A0A0]"
             />
             <button className="flex rounded-r-[0.25rem] items-center w-[10rem] h-full  px-2 py-2 bg-neon box-border">
               <img src={mail} alt="" />
-              <p className="font-poppins-regular-20 font-[400] text-text-dark ml-3 box-border m-0">
+              <p className="md:text-[1rem] font-poppins-regular-20 font-[400] text-text-dark ml-3 box-border m-0">
                 Subscribe
               </p>
             </button>
@@ -89,7 +93,7 @@ const FooterSm = () => {
               </div>
             </form>
             <p
-              className="font-[400] text-[0.75rem] font-poppins-regular-20"
+              className="md:text-[1rem] font-[400] text-[0.75rem] font-poppins-regular-20"
               onClick={() => setChecked(!checked)}
             >
               I agree to receive emails from TalentFinder as per their Data &
@@ -104,7 +108,7 @@ const FooterSm = () => {
         <img src={social_icon3} alt="" className="w-4" />
         <img src={social_icon4} alt="" className="w-4" />
       </div>
-      <div className="text-[14px] md:text-[1.5rem] bg-dark-blue text-white font-[300] font-poppins-regular-20 flex justify-start ml-5 py-2">
+      <div className="text-[14px] md:text-[1.25rem] bg-dark-blue text-white font-[300] font-poppins-regular-20 flex justify-start ml-5 py-2">
         © 2023 TalentFinder
       </div>
     </div>

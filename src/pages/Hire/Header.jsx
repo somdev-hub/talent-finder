@@ -66,7 +66,7 @@ export const Header = () => {
         <img
           src={hire_head2}
           alt=""
-          className="absolute md:top-[33rem] md:right-[15rem] xl:top-[24rem] hidden sm:block"
+          className="absolute md:top-[33rem] md:right-[15rem] xl:top-[24rem] xl:right-auto hidden sm:block"
         />
         <img
           src={hire_head3}

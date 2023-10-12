@@ -16,7 +16,7 @@ const WhyUs = () => {
         <img
           src={circle1}
           alt=""
-          className="hidden sm:block absolute sm:top-[35%] sm:right-[26%] sm:w-auto w-1/4 bottom-[8%] sm:left-auto left-[15%]"
+          className="hidden sm:block absolute xl:top-[35%] md:top-[20%] md:right-[5%] xl:right-[26%] sm:w-auto w-1/4 bottom-[8%] sm:left-auto left-[15%]"
         />
         <img
           src={circle1_sm}
