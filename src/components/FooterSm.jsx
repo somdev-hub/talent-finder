@@ -13,7 +13,7 @@ const FooterSm = () => {
   return (
     <div className="xl:hidden block text-white bg-blue-shade">
       <div className="flex items-center px-[1.25rem] py-[2rem] justify-start pb-2 border-b-2 border-solid border-white">
-        <img src={main_logo} alt="" />
+        <img src={main_logo} alt="" className="w-1/4" />
       </div>
       {/* <div className="flex flex-col  px-[1.25rem] py-[2rem] items-start pb-2 border-b-2 border-solid border-white">
         <div className="text-[1rem] sm:text-[2rem] font-[400] font-coolvetica-56 ">
