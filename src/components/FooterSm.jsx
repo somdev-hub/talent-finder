@@ -37,7 +37,7 @@ const FooterSm = () => {
               Placement
             </li>
             <li className="list-none font-[400] text-[14px] md:text-[1.25rem] font-poppins-regular-20 mb-2">
-              Hiret
+              Hire
             </li>
           </ul>
           <ul className="text-left p-0">
@@ -69,7 +69,7 @@ const FooterSm = () => {
               </p>
             </button>
           </form>
-          <div className="flex gap-4">
+          <div className="flex gap-4 px-[3%]">
             <form action="" className="flex items-center justify-center">
               <input
                 type="checkbox"

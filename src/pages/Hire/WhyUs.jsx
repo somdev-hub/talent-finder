@@ -15,11 +15,11 @@ const WhyUs = () => {
           <img
             src={line11}
             alt=""
-            className="absolute bottom-[-6px] left-[-9px] sm:left-[10px]"
+            className="absolute bottom-[-6px] left-[-9px] sm:left-[-16px] sm:w-[75%]"
           />
         </span>
       </h2>
-      <p className="text-white font-[400] leading-[130%]  sm:text-[1.25rem] font-poppins-regular-20 text-center lg:w-[60%] mt-[3rem] sm:mt-[4rem]">
+      <p className="text-white font-[400] leading-[130%]  sm:text-[1.25rem] font-poppins-regular-20 text-center lg:w-[58%] mt-[3rem] sm:mt-[4rem]">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim{" "}
       </p>
@@ -35,7 +35,7 @@ const WhyUs = () => {
                 <h3 className="font-[500] text-[1.5rem] font-poppins-regular-20 m-0">
                   {why.title}
                 </h3>
-                <p className="mt-[1.25rem] font-[400] sm:mx-auto xl:w-[18rem] leading-[120%] font-poppins-regular-20">
+                <p className="mt-[1.25rem] font-[300] sm:mx-auto xl:w-[18rem] leading-[130%] font-poppins-regular-20">
                   {why.desc}
                 </p>
               </div>

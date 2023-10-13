@@ -40,7 +40,7 @@ export const Header = () => {
             Pre-vetted <br className="sm:hidden block" />{" "}
             <img
               src={line1}
-              className="absolute top-[42%] left-[25px] sm:left-[27%] bottom-[-10px] sm:top-auto"
+              className="absolute top-[42%] left-[47px] w-[12rem] sm:w-auto sm:left-[27%] bottom-[-10px] sm:top-auto"
               alt=""
             />
           </span>
@@ -66,23 +66,23 @@ export const Header = () => {
         <img
           src={hire_head2}
           alt=""
-          className="absolute md:top-[33rem] lg:right-[25rem] md:right-[15rem] xl:top-[24rem] xl:right-auto hidden sm:block"
+          className="absolute md:top-[33rem] lg:right-[25rem] md:right-[15rem] xl:top-[23.5rem] xl:right-auto hidden sm:block"
         />
         <img
           src={hire_head3}
           alt=""
-          className="absolute md:top-[24rem] xl:right-[18rem] md:right-[5rem] xl:top-[17rem] hidden sm:block"
+          className="absolute md:top-[24rem] xl:right-[20rem] md:right-[5rem] xl:top-[17rem] hidden sm:block"
         />
         <div className="sm:hidden relative h-[53vh] overflow-hidden w-full">
           <img
             src={vector_538}
             alt=""
-            className="absolute left-[-4rem] top-[-8%]"
+            className="absolute left-[-4rem] top-[-10%]"
           />
           <img
             src={hire_head1_sm}
             alt=""
-            className="absolute top-[6%] left-[14%] w-[10rem]"
+            className="absolute top-[8%] left-[14%] w-[10rem]"
           />
           <img
             src={hire_head2_sm}
@@ -92,10 +92,10 @@ export const Header = () => {
           <img
             src={hire_head3_sm}
             alt=""
-            className="absolute top-[15rem] left-[5%] w-[10rem]"
+            className="absolute top-[14.3rem] left-[5%] w-[10rem]"
           />
         </div>
-        <div className="hidden relative mt-[22rem] md:w-[90%] xl:w-[75%] lg:w-[85%] border-t-[2px] border-solid border-text-light p-5 sm:flex items-center justify-between overflow-hidden sm:overflow-visible">
+        <div className="hidden relative mt-[22rem] md:w-[90%] xl:w-[60%] lg:w-[85%] border-t-[2px] border-solid border-text-light p-5 sm:flex items-center justify-between overflow-hidden sm:overflow-visible">
           <p className="font-[400] text-text-medium left-[30%] top-[-15%] absolute m-0 font-poppins-regular-20 bg-white z-10">
             Top tech companies trust us with their talent needs
           </p>
@@ -106,7 +106,7 @@ export const Header = () => {
           <img src={airtel_logo} alt="" />
           <img src={ibm_logo} alt="" />
         </div>
-        <div className="sm:hidden flex flex-col px-8 mb-8">
+        <div className="sm:hidden flex flex-col px-4 mb-8">
           <p className="font-[400] text-text-medium m-0 font-poppins-regular-20">
             Top tech companies trust us with their talent needs
           </p>

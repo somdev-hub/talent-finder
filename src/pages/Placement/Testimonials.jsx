@@ -6,6 +6,7 @@ import group7 from "../../assets/landing-page/group-7.svg";
 import ellipse15 from "../../assets/landing-page/ellipse-15.svg";
 import TestimonialCard from "../../components/TestimonialCard";
 import { testimonialsBlue } from "../../assets/data/testimonials";
+import { testimonials } from "../../assets/data/testimonials";
 import ButtonPrimary from "../../components/ButtonPrimary";
 
 const Testimonials = () => {
@@ -32,7 +33,7 @@ const Testimonials = () => {
       <h2 className="text-black font-[400] text-[2rem] sm:text-[3.5rem] font-coolvetica-56 m-0 mt-4">
         What our clients say
       </h2>
-      <div className="w-full mb-10 mt-4 sm:mt-[4rem] z-10">
+      <div className="hidden sm:block w-full mb-10 mt-4 sm:mt-[4rem] z-10">
         <div className="relative flex w-full justify-center items-center m-auto">
           <Swiper
             ref={swiperRef}
@@ -48,6 +49,37 @@ const Testimonials = () => {
             centeredSlidesBounds={true}
           >
             {testimonialsBlue.map((testimonial, index) => {
+              return (
+                <SwiperSlide key={index}>
+                  <TestimonialCard
+                    {...testimonial}
+                    totalPagination={testimonialsBlue.length}
+                    currentPagination={current}
+                    setCurrentPagination={handleSlideClick}
+                    backgroundColor="blue-shade"
+                  />
+                </SwiperSlide>
+              );
+            })}
+          </Swiper>
+        </div>
+      </div>
+      <div className="block sm:hidden w-full mb-10 mt-4 sm:mt-[4rem] z-10">
+        <div className="relative flex w-full justify-center items-center m-auto">
+          <Swiper
+            ref={swiperRef}
+            onSlideChange={(swiper) => {
+              setCurrent(swiper.activeIndex);
+            }}
+            // pagination={pagination}
+            modules={[Pagination, Autoplay]}
+            className="mySwiper"
+            slidesPerView="auto"
+            centeredSlides={true}
+            autoplay={true}
+            centeredSlidesBounds={true}
+          >
+            {testimonials.map((testimonial, index) => {
               return (
                 <SwiperSlide key={index}>
                   <TestimonialCard

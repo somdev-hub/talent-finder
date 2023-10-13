@@ -10,19 +10,19 @@ import tick2 from "../assets/landing-page/tick2.svg";
 const Footer = () => {
   const [checked, setChecked] = React.useState(false);
   return (
-    <div className="hidden lg:block bg-blue text-white  pt-[5rem] lg:pt-[3rem] xl:pt-[5rem] md:px-[3.5rem] lg:px-[1.5rem] xl:px-[7.5rem]">
+    <div className="hidden lg:block bg-blue-shade text-white  pt-[5rem] lg:pt-[3rem] xl:pt-[5rem] md:px-[3.5rem] lg:px-[1.5rem] xl:px-[7.5rem]">
       <div className="flex sm:flex-row flex-col justify-between ">
         <div className="flex flex-col justify-between">
           <img src={main_logo} alt="" className="h-[2.5rem]" />
         </div>
         <div className="m-0">
-          <ul className="font-poppins-regular-20 font-[400] text-white m-0">
+          <ul className="font-poppins-regular-20 font-[300] text-white m-0">
             <h3 className="font-poppins-regular-20 text-[1.25rem] font-[500] m-0 text-white mb-[1rem]">
               Quick Links
             </h3>
-            <li className="list-none mb-[0.5rem]">About Us</li>
-            <li className="list-none mb-[0.5rem]">Contact Us</li>
-            <li className="list-none mb-[0.5rem]">FAQs</li>
+            <li className="list-none mb-[0.5rem]">Mentorship & Placement</li>
+            <li className="list-none mb-[0.5rem]">Placement</li>
+            <li className="list-none mb-[0.5rem]">Hire</li>
           </ul>
         </div>
         <div className="">
@@ -30,7 +30,7 @@ const Footer = () => {
             <h3 className="font-poppins-regular-20 text-[1.25rem] font-[500] m-0 text-white mb-[1rem]">
               More By Rework
             </h3>
-            <li className="list-none mb-[0.5rem]">Talent Finder</li>
+            <li className="list-none mb-[0.5rem]">Job Insurance</li>
             <li className="list-none mb-[0.5rem]">AI Recruitment Platform</li>
           </ul>
         </div>
@@ -77,7 +77,7 @@ const Footer = () => {
               />
             </div>
             <p
-              className="font-[400] text-[0.75rem] cursor-pointer font-poppins-regular-20"
+              className="font-[300] text-[0.75rem] cursor-pointer font-poppins-regular-20"
               onClick={() => setChecked(!checked)}
             >
               I agree to receive emails from TalentFinder <br /> as per their
@@ -100,7 +100,7 @@ const Footer = () => {
           </div>
         </div>
         <hr className="text-white h-[1px] bg-white" />
-        <div className="">
+        <div className="pb-10">
           <p className="m-0 text-[1rem] font-poppins-regular-20 text-white font-[300]">
             © 2023 TalentFinder
           </p>

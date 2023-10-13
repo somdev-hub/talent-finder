@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "../../components/Navbar";
 import header_main from "../../assets/landing-page/header-main.png";
+import header_main_sm from "../../assets/landing-page/header-main-sm.png";
 import check_mark from "../../assets/landing-page/check-mark-circle-2.svg";
 import ellipse1 from "../../assets/landing-page/Ellipse-1.svg";
 import line1 from "../../assets/landing-page/Line-1.svg";
@@ -25,9 +26,9 @@ const Header = () => {
     ibm_logo
   ];
   return (
-    <div className="bg-blue-shade relative  xl:pb-[2%] ">
+    <div className="bg-blue-shade relative  xl:pb-[2%] overflow-hidden">
       <Navbar />
-      <div className=" px-[1.5rem] pt-8 flex md:flex-col lg:flex-row  lg:mt-8 xl:mt-0 sm:pl-[3.5rem] lg:pl-[3.5rem] xl:pl-[7.5rem] justify-between relative z-10">
+      <div className=" px-[1.5rem] xl:px-0 pt-4 sm:pt-8 flex md:flex-col lg:flex-row  lg:mt-8 xl:mt-0 sm:pl-[3.5rem] lg:pl-[3.5rem] xl:pl-[7.5rem] justify-between relative z-10">
         <div className="text-white xl:w-1/2 lg:w-auto w-full lg:block flex flex-col gap-8 md:gap-4 items-center justify-center">
           <div className="relative">
             <h1 className="px-0 text-center lg:text-left text-[3rem] lg:text-[4rem] xl:text-[5rem] sm:text-[5rem] font-[400] font-coolvetica-56 leading-[115%] m-0">
@@ -37,13 +38,13 @@ const Header = () => {
             <img
               src={line1}
               alt=""
-              className="absolute md:top-[53%] xl:top-[50%] md:right-[-6%] xl:right-[20%] w-[27%] xl:w-[20%] right-[22%] bottom-[-12px] lg:top-[50%] lg:right-[9%]"
+              className="absolute md:top-[53%] xl:top-[50%] md:right-[-6%] xl:right-[20%] w-[25%] xl:w-[20%] right-[22%] bottom-[-10px] lg:top-[50%] lg:right-[9%]"
             />
           </div>
           <img
-            src={header_main}
+            src={header_main_sm}
             alt=""
-            className="lg:hidden block lg:w-auto sm:mt-auto w-[90%] md:w-[60%]"
+            className="lg:hidden block lg:w-auto sm:mt-auto w-[120%] sm:w-auto relative left-[15%] md:left-[8%]"
           />
           <p className="font-[300] text-[1.25rem] lg:text-[1rem] xl:text-[1.25rem] text-center lg:text-left font-poppins-regular-20 leading-[130%] sm:my-[1rem] xl:my-8 m-0">
             Lorem ipsum dolor sit amet consectetur. Ac ut nunc <br /> sodales a
@@ -67,11 +68,11 @@ const Header = () => {
             </div>
           </div>
         </div>
-        <div className="hidden lg:flex justify-center items-center">
+        <div className="hidden lg:flex justify-end items-center">
           <img
             src={header_main}
             alt=""
-            className="2xl:w-[80%] w-auto lg:w-[75%] "
+            className="2xl:w-[80%] w-auto lg:w-[90%] "
           />
         </div>
       </div>
@@ -111,7 +112,7 @@ const Header = () => {
           </div>
         </div>
         <div className="hidden sm:flex w-full items-center gap-[4rem] justify-center  overflow-x-auto ">
-          <div className="sm:w-auto md:w-[90%] lg:w-[80%] flex items-center justify-around">
+          <div className="sm:w-auto md:w-[90%] lg:w-[80%] xl:w-[82%] flex items-center justify-around">
             <img src={whirlpool_logo} alt="" className="w-[6rem] lg:w-auto" />
             <img src={tata_logo} alt="" className="w-[6rem] xl:w-[6rem]" />
             <img src={sony_logo} alt="" className="w-[6rem] xl:w-[6rem]" />

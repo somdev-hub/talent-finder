@@ -2,6 +2,7 @@ import React from "react";
 import benifits_main from "../../assets/placement/benifits-main.svg";
 import highlight_6 from "../../assets/placement/highlight-6.svg";
 import { benefits } from "../../assets/data/benefits";
+import { benefits_sm } from "../../assets/data/benefits";
 
 const Benefits = () => {
   return (
@@ -27,8 +28,22 @@ const Benefits = () => {
             Are you on the hunt for your dream job? <br /> Here's why you should
             take advantage of our platform:
           </p>
-          <div className="xl:w-[90%] flex flex-col sm:grid grid-cols-2 grid-rows-2 sm:gap-10 mt-5 sm:text-left text-center">
+          <div className="hidden  xl:w-[90%] flex-col sm:grid grid-cols-2 grid-rows-2 sm:gap-10 mt-5 sm:text-left text-center">
             {benefits.map((benefit, index) => {
+              return (
+                <div key={index} className="font-poppins-regular-20 mb-6">
+                  <h3 className="text-[1.5rem] font-[500] leading-[120%] text-blue sm:m-auto m-0">
+                    {benefit.title}
+                  </h3>
+                  <p className="sm:pr-[25%] font-[400] leading-[120%] sm:text-[1rem] text-[14px] text-text-medium">
+                    {benefit.desc}
+                  </p>
+                </div>
+              );
+            })}
+          </div>
+          <div className=" sm:hidden xl:w-[90%] flex flex-col grid-cols-2 grid-rows-2 sm:gap-10 mt-5 sm:text-left text-center">
+            {benefits_sm.map((benefit, index) => {
               return (
                 <div key={index} className="font-poppins-regular-20 mb-6">
                   <h3 className="text-[1.5rem] font-[500] leading-[120%] text-blue sm:m-auto m-0">

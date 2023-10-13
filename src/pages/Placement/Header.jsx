@@ -27,16 +27,17 @@ const Header = () => {
   return (
     <div className="bg-blue-shade relative  overflow-hidden">
       <Navbar />
-      <div className="flex mt-[2rem] px-6 sm:px-0 sm:mt-[3rem] md:px-[3.5rem] lg:px-[3.5rem] xl:px-[7.5rem] justify-between sm:flex-col lg:flex-row relative z-10">
-        <div className="text-white lg:w-[65%] w-full lg:block flex flex-col gap-8 items-center justify-center">
+      <div className="flex mt-[1rem] px-6 sm:px-0 sm:mt-[3rem] md:px-[3.5rem] lg:px-[3.5rem] xl:px-[7.5rem] justify-between sm:flex-col lg:flex-row relative z-10">
+        <div className="text-white lg:w-[65%] xl:w-1/2 w-full lg:block flex flex-col gap-8 items-center justify-center">
           <div className="relative">
             <h1 className="px-[1.5rem] sm:px-0 text-center lg:text-left sm:text-center text-[2.5rem] sm:text-[5rem] lg:text-[4rem] xl:text-[5rem] font-[400] font-coolvetica-56 leading-[115%] m-0">
-              Get Placed in top <br className="sm:block hidden" /> companies.
+              Get Placed in <br className="block sm:hidden" /> top{" "}
+              <br className="sm:block hidden" /> companies.
             </h1>
             <img
               src={hightlight4}
               alt=""
-              className="absolute sm:top-0 sm:right-0 left-[1%] bottom-[40%] sm:bottom-auto sm:left-auto "
+              className="absolute sm:top-0 sm:right-[6%] left-[3%] bottom-[32%] w-[8%] sm:w-auto sm:bottom-auto sm:left-auto "
             />
           </div>
           <img
@@ -98,7 +99,7 @@ const Header = () => {
           </div>
         </div>
         <div className="hidden sm:flex w-full items-center gap-[4rem] justify-center overflow-x-auto">
-          <div className="md:w-[90%] lg:w-[80%] flex items-center justify-around">
+          <div className="md:w-[90%] lg:w-[80%] xl:w-[82%] flex items-center justify-around">
             <img
               src={whirlpool_logo}
               alt=""

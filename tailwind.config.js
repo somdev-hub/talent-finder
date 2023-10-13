@@ -1,9 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
       colors: {
@@ -17,7 +14,7 @@ export default {
         "text-medium": "#4b4b4b",
         "text-light": "#bbbbbd",
         blue: "#6d38fb",
-        darkorange: "#ff9635",
+        darkorange: "#ff9635"
       },
       spacing: {},
       fontFamily: {
@@ -25,7 +22,7 @@ export default {
         "coolvetica-56": "Coolvetica",
         "gilroy-semibold": "Gilroy-SemiBold",
         outfit: "Outfit",
-        "gilroy-regular": "Gilroy-Regular",
+        "gilroy-regular": "Gilroy-Regular"
       },
       borderRadius: {
         "7xs-7": "5.7px",
@@ -35,8 +32,8 @@ export default {
         "12xs-9": "0.9px",
         "9xs-6": "3.6px",
         "4xs": "9px",
-        "24xl-8": "43.8px",
-      },
+        "24xl-8": "43.8px"
+      }
     },
     fontSize: {
       xl: "1.25rem",
@@ -49,12 +46,11 @@ export default {
       "21xl": "2.5rem",
       "3xs": "0.63rem",
       "61xl": "5rem",
-      inherit: "inherit",
-    },
+      inherit: "inherit"
+    }
   },
   corePlugins: {
-    preflight: false,
+    preflight: false
   },
-  plugins: [],
-}
-
+  plugins: []
+};

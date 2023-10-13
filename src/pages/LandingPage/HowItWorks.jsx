@@ -15,7 +15,7 @@ const HowItWorks = () => {
   };
 
   return (
-    <div className="my-8 sm:my-[6rem] flex flex-col justify-center items-center text-center">
+    <div className="my-8 sm:my-[5rem] flex flex-col justify-center items-center text-center">
       <p className="text-[1.5rem] font-coolvetica-56 font-[400] text-blue m-0">
         How it works
       </p>

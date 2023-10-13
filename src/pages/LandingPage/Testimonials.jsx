@@ -63,9 +63,13 @@ const Testimonials = () => {
           </Swiper>
         </div>
       </div>
-      <ButtonPrimary
-        text={`${window.innerWidth < 640 ? "Apply Now" : "Book Free Trial"}`}
-      />
+      <div className="hidden sm:block">
+        <ButtonPrimary text={"Book Free Trial"}/>
+      </div>
+      <div className="block sm:hidden">
+        <ButtonPrimary text={"Apply Now"}/>
+      </div>
+      
       <img
         src={ellipse15}
         className="absolute bottom-0 right-0 z-[1] sm:block hidden"

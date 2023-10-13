@@ -5,7 +5,7 @@ import ButtonPrimary from "../../components/ButtonPrimary";
 
 const WhatWillIGet = () => {
   return (
-    <div className="text-center p-[1.5rem] sm:py-[5rem] flex flex-col justify-center items-center">
+    <div className="mt-[5rem] sm:mt-0 text-center p-[1.5rem] sm:py-[5rem] flex flex-col justify-center items-center">
       <p className="text-[1.5rem] font-[400] font-coolvetica-56 text-blue m-0">
         Benefits
       </p>
