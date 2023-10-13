@@ -26,7 +26,7 @@ const Footer = () => {
           </ul>
         </div>
         <div className="">
-          <ul className="font-poppins-regular-20 font-[400] text-white m-0">
+          <ul className="font-poppins-regular-20 font-[300] text-white m-0">
             <h3 className="font-poppins-regular-20 text-[1.25rem] font-[500] m-0 text-white mb-[1rem]">
               More By Rework
             </h3>
