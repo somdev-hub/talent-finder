@@ -16,15 +16,7 @@ const FooterSm = () => {
       <div className="flex items-center px-[1.25rem] py-[2rem] justify-start pb-2 border-b-2 border-solid border-white">
         <img src={main_logo} alt="" className="w-1/4" />
       </div>
-      {/* <div className="flex flex-col  px-[1.25rem] py-[2rem] items-start pb-2 border-b-2 border-solid border-white">
-        <div className="text-[1rem] sm:text-[2rem] font-[400] font-coolvetica-56 ">
-          <span className="text-neon">Talent</span>
-          <span className="text-white">Finder</span>
-        </div>
-        <p className="text-[7px] sm:text-[14px]  font-[400] m-0 font-poppins-regular-20 text-white">
-          by rework
-        </p>
-      </div> */}
+      
       <div className="px-[1.25rem] ">
         <div className="flex justify-between md:justify-around">
           <ul className="text-left p-0">
