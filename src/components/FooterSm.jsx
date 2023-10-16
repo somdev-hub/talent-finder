@@ -7,6 +7,7 @@ import social_icon4 from "../assets/landing-page/Social-Icons4.svg";
 import mail from "../assets/landing-page/mail.png";
 import tick2 from "../assets/landing-page/tick2.svg";
 import main_logo from "../assets/main-logo.png";
+import Tooltip from "@mui/material/Tooltip";
 
 const FooterSm = () => {
   const [checked, setChecked] = React.useState(false);
@@ -103,10 +104,18 @@ const FooterSm = () => {
         </div>
       </div>
       <div className="flex gap-4 justify-center border-y-[1px] border-opacity-[0.3] py-2 border-solid border-slate-100 mt-8">
-        <img src={social_icon1} alt="" className="w-4" />
-        <img src={social_icon2} alt="" className="w-4" />
-        <img src={social_icon3} alt="" className="w-4" />
-        <img src={social_icon4} alt="" className="w-4" />
+        <Tooltip placement="top" title="Facebook">
+          <img src={social_icon1} alt="" className="w-4" />
+        </Tooltip>
+        <Tooltip placement="top" title="X">
+          <img src={social_icon2} alt="" className="w-4" />
+        </Tooltip>
+        <Tooltip placement="top" title="Instagram ">
+          <img src={social_icon3} alt="" className="w-4" />
+        </Tooltip>
+        <Tooltip placement="top" title="Linkedin">
+          <img src={social_icon4} alt="" className="w-4" />
+        </Tooltip>
       </div>
       <div className="text-[14px] md:text-[1.25rem] bg-dark-blue text-white font-[300] font-poppins-regular-20 flex justify-start ml-5 py-2">
         © 2023 TalentFinder

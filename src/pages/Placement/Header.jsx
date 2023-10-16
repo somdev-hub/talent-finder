@@ -31,14 +31,17 @@ const Header = () => {
         <div className="text-white lg:w-[65%] xl:w-1/2 w-full lg:block flex flex-col gap-8 items-center justify-center">
           <div className="relative">
             <h1 className="px-[1.5rem] sm:px-0 text-center lg:text-left sm:text-center text-[2.5rem] sm:text-[5rem] lg:text-[4rem] xl:text-[5rem] font-[400] font-coolvetica-56 leading-[115%] m-0">
-              Get Placed in <br className="block sm:hidden" /> top{" "}
+              Get Placed in <br className="block sm:hidden" />{" "}
+              <span>
+                top{" "}
+                <img
+                  src={hightlight4}
+                  alt=""
+                  className="absolute sm:top-0  left-[3%] bottom-[32%] w-[8%] sm:w-auto sm:bottom-auto sm:left-auto "
+                />
+              </span>
               <br className="sm:block hidden" /> companies.
             </h1>
-            <img
-              src={hightlight4}
-              alt=""
-              className="absolute sm:top-0 sm:right-[6%] left-[3%] bottom-[32%] w-[8%] sm:w-auto sm:bottom-auto sm:left-auto "
-            />
           </div>
           <img
             src={header_main}
