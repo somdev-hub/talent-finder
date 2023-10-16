@@ -6,6 +6,7 @@ import social_icon2 from "../assets/landing-page/Social-Icons2.svg";
 import social_icon3 from "../assets/landing-page/Social-Icons3.svg";
 import social_icon4 from "../assets/landing-page/Social-Icons4.svg";
 import tick2 from "../assets/landing-page/tick2.svg";
+import Tooltip from "@mui/material/Tooltip";
 
 const Footer = () => {
   const [checked, setChecked] = React.useState(false);
@@ -93,10 +94,18 @@ const Footer = () => {
             <span className="text-white">Finder</span>
           </div>
           <div className="flex gap-4">
-            <img src={social_icon1} alt="" />
-            <img src={social_icon2} alt="" />
-            <img src={social_icon3} alt="" />
-            <img src={social_icon4} alt="" />
+            <Tooltip title="Facebook" placement="top">
+              <img src={social_icon1} alt="" className="cursor-pointer"/>
+            </Tooltip>
+            <Tooltip placement="top" title="X">
+              <img src={social_icon2} alt="" className="cursor-pointer"/>
+            </Tooltip>
+            <Tooltip placement="top" title="Instagram">
+              <img src={social_icon3} alt="" className="cursor-pointer"/>
+            </Tooltip>
+            <Tooltip placement="top" title="Linkedin">
+              <img src={social_icon4} alt="" className="cursor-pointer"/>
+            </Tooltip>
           </div>
         </div>
         <hr className="text-white h-[1px] bg-white" />
