@@ -22,12 +22,11 @@ const Header = () => {
     sony_logo,
     uber_logo,
     airtel_logo,
-    ibm_logo,
+    ibm_logo
   ];
   return (
     <div className="bg-blue-shade relative  overflow-hidden">
-      <Navbar />
-      <div className="flex mt-[1rem] px-6 sm:px-0 sm:mt-[3rem] md:px-[3.5rem] lg:px-[3.5rem] xl:px-[7.5rem] justify-between sm:flex-col lg:flex-row relative z-10">
+      <div className="flex  px-6 sm:px-0 sm:mt-[3rem] md:px-[3.5rem] lg:px-[3.5rem] xl:px-[7.5rem] justify-between sm:flex-col lg:flex-row relative z-10 mt-[5rem] lg:mt-[5rem] md:mt-[5rem] xl:mt-[9rem]">
         <div className="text-white lg:w-[65%] xl:w-1/2 w-full lg:block flex flex-col gap-8 items-center justify-center">
           <div className="relative">
             <h1 className="px-[1.5rem] sm:px-0 text-center lg:text-left sm:text-center text-[2.5rem] sm:text-[5rem] lg:text-[4rem] xl:text-[5rem] font-[400] font-coolvetica-56 leading-[115%] m-0">

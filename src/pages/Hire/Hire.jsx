@@ -1,21 +1,18 @@
 import React from "react";
 import { Header } from "./Header";
 import WhyUs from "./WhyUs";
-import Footer from "../../components/Footer";
-import FooterSm from "../../components/FooterSm";
 import Steps from "./Steps";
 import RegisterNow from "./RegisterNow";
+import Layout from "../../components/common/Layout";
 
 const Hire = () => {
   return (
-    <>
+    <Layout color="blue">
       <Header />
       <WhyUs />
       <Steps />
-      <RegisterNow  />
-      <Footer />
-      <FooterSm />
-    </>
+      <RegisterNow />
+    </Layout>
   );
 };
 

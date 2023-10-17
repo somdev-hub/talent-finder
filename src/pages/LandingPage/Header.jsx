@@ -23,12 +23,11 @@ const Header = () => {
     sony_logo,
     uber_logo,
     airtel_logo,
-    ibm_logo,
+    ibm_logo
   ];
   return (
-    <div className="bg-blue-shade relative  xl:pb-[2%] overflow-hidden">
-      <Navbar />
-      <div className=" px-[1.5rem] xl:px-0 pt-4 sm:pt-8 flex md:flex-col lg:flex-row  lg:mt-8 xl:mt-0 sm:pl-[3.5rem] lg:pl-[3.5rem] xl:pl-[7.5rem] justify-between relative z-10">
+    <div className="bg-blue-shade relative  xl:pb-[2%] overflow-hidden ">
+      <div className=" px-[1.5rem] xl:px-0 pt-4 sm:pt-8 flex md:flex-col lg:flex-row mt-10 lg:mt-[5rem] md:mt-[5rem] xl:mt-[6rem] sm:pl-[3.5rem] lg:pl-[3.5rem] xl:pl-[7.5rem] justify-between relative z-10">
         <div className="text-white xl:w-1/2 lg:w-auto w-full lg:block flex flex-col gap-8 md:gap-4 items-center justify-center">
           <div className="relative">
             <h1 className="px-0 text-center lg:text-left text-[3rem] lg:text-[4rem] xl:text-[5rem] sm:text-[5rem] font-[400] font-coolvetica-56 leading-[115%] m-0">
@@ -48,7 +47,8 @@ const Header = () => {
           />
           {/* added width in line 50 */}
           <p className="w-[382px] sm:w-[590px] font-[300] text-[1.25rem] lg:text-[1rem] xl:text-[1.25rem] text-center lg:text-left font-poppins-regular-20 leading-[130%] sm:my-[1rem] xl:my-8 m-0">
-            Lorem ipsum dolor sit amet consectetur. Ac ut nunc sodales a integer. Risus sapien nec volutpat ut lectus purus enim et a.
+            Lorem ipsum dolor sit amet consectetur. Ac ut nunc sodales a
+            integer. Risus sapien nec volutpat ut lectus purus enim et a.
           </p>
           <div className="hidden sm:block">
             <ButtonPrimary text={"Book Free Trial"} />

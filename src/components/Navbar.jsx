@@ -45,8 +45,12 @@ const Navbar = ({ color }) => {
     }
   };
   return (
-    <div className="">
-      <div className="flex sm:flex-row flex-col justify-between px-[1.5rem] md:px-[2.5rem] lg:px-[3.5rem] xl:px-[7.5rem] py-4 sm:py-[2rem] box-border">
+    <div
+      className={`fixed top-0 ${
+        color === "blue" ? "bg-white" : "bg-blue-shade"
+      } z-20 w-full`}
+    >
+      <div className="flex sm:flex-row flex-col justify-between px-[1.5rem] md:px-[2.5rem] lg:px-[3.5rem] xl:px-[7.5rem] py-4 sm:pt-[2rem] sm:pb-4 box-border">
         <div className="flex justify-between items-center xl:w-full">
           <div className="flex flex-col items-end">
             {color === "blue" ? (
@@ -58,27 +62,6 @@ const Navbar = ({ color }) => {
                 <img src={main_logo} alt="" className="w-1/2 sm:w-auto" />
               </div>
             )}
-            {/* <div className="text-[1rem] sm:text-[2rem] font-[400] font-coolvetica-56 ">
-              <span
-                className={`
-              ${color == "blue" ? "text-blue" : "text-neon"}
-            `}
-              >
-                Talent
-              </span>
-              <span
-                className={`${color == "blue" ? "text-black" : "text-white"}`}
-              >
-                Finder
-              </span>
-            </div> */
-            /* <p
-              className={`text-[7px] sm:text-[14px] font-[400] m-0 font-poppins-regular-20 ${
-                color == "blue" ? "text-black" : "text-white"
-              }`}
-            >
-              by rework
-            </p> */}
           </div>
           <img
             src={color === "blue" ? hamburger_black : hamburger}

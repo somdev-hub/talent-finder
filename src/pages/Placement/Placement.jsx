@@ -1,21 +1,20 @@
 import React from "react";
 import Header from "./Header";
 import Benefits from "./Benefits";
-import FooterSm from "../../components/FooterSm";
-import Footer from "../../components/Footer";
 import RegisterNow from "./RegisterNow";
 import Testimonials from "./Testimonials";
+import Layout from "../../components/common/Layout";
 
 const Placement = () => {
   return (
-    <>
-      <Header />
-      <Benefits />
-      <RegisterNow />
-      <Testimonials />
-      <Footer />
-      <FooterSm />
-    </>
+    <Layout>
+      
+        <Header />
+        <Benefits />
+        <RegisterNow />
+        <Testimonials />
+      
+    </Layout>
   );
 };
 

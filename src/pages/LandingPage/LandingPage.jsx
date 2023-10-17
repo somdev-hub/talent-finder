@@ -5,21 +5,18 @@ import HowItWorks from "./HowItWorks";
 import WhatWillIGet from "./WhatWillIGet";
 import Testimonials from "./Testimonials";
 import RegisterNow from "./RegisterNow";
-import Footer from "../../components/Footer";
-import FooterSm from "../../components/FooterSm";
+import Layout from "../../components/common/Layout";
 
 const LandingPage = () => {
   return (
-    <>
+    <Layout>
       <Header />
       <WhyUs />
       <HowItWorks />
       <WhatWillIGet />
       <Testimonials />
       <RegisterNow />
-      <Footer />
-      <FooterSm />
-    </>
+    </Layout>
   );
 };
 

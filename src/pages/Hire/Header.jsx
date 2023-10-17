@@ -30,8 +30,7 @@ export const Header = () => {
   ];
   return (
     <div>
-      <Navbar color="blue" />
-      <div className="mt-[1rem] sm:mt-auto sm:p-auto  box-border text-center flex relative flex-col justify-center items-center overflow-hidden">
+      <div className=" sm:mt-auto sm:p-auto  box-border text-center flex relative flex-col justify-center items-center overflow-hidden mt-[5rem] lg:mt-[5rem] md:mt-[5rem] xl:mt-[6rem]">
         <h1 className="px-[1.5rem] sm:px-auto font-[400] text-[3rem] sm:text-[4rem] m-0 sm:mt-[5rem] leading-[115%] font-coolvetica-56">
           <span>
             Hire India's Top, <br className="sm:hidden block" />{" "}
@@ -113,7 +112,7 @@ export const Header = () => {
           </p>
         </div>
         <div className="sm:hidden w-full flex items-center justify-center m-auto">
-        {/* added   autoplay={true}
+          {/* added   autoplay={true}
               slidesPerView={1}
               loopedSlides={true}*/}
           <Swiper
