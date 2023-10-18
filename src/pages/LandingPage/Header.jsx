@@ -27,7 +27,7 @@ const Header = () => {
   ];
   return (
     <div className="bg-blue-shade relative  xl:pb-[2%] overflow-hidden ">
-      <div className=" px-[1.5rem] xl:px-0 pt-4 sm:pt-8 flex md:flex-col lg:flex-row mt-10 lg:mt-[5rem] md:mt-[5rem] xl:mt-[6rem] sm:pl-[3.5rem] lg:pl-[3.5rem] xl:pl-[7.5rem] justify-between relative z-10">
+      <div className=" px-[1.5rem] xl:px-0 pt-4 sm:pt-8 flex md:flex-col lg:flex-row mt-[4rem] lg:mt-[5rem] md:mt-[5rem] xl:mt-[6rem] sm:pl-[3.5rem] lg:pl-[3.5rem] xl:pl-[7.5rem] justify-between relative z-10">
         <div className="text-white xl:w-1/2 lg:w-auto w-full lg:block flex flex-col gap-8 md:gap-4 items-center justify-center">
           <div className="relative">
             <h1 className="px-0 text-center lg:text-left text-[3rem] lg:text-[4rem] xl:text-[5rem] sm:text-[5rem] font-[400] font-coolvetica-56 leading-[115%] m-0">
@@ -51,10 +51,10 @@ const Header = () => {
             integer. Risus sapien nec volutpat ut lectus purus enim et a.
           </p>
           <div className="hidden sm:block">
-            <ButtonPrimary text={"Book Free Trial"} />
+            <ButtonPrimary text={"Book Free Trial"} link={"/bookfreetrial"} />
           </div>
           <div className="block sm:hidden">
-            <ButtonPrimary text={"Book Now"} />
+            <ButtonPrimary text={"Book Now"} link={"/bookfreetrial"} />
           </div>
 
           <div className="font-[300] leading-[120%] font-poppins-regular-20 sm:block flex flex-col items-center">

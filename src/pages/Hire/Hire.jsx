@@ -1,4 +1,3 @@
-import React from "react";
 import { Header } from "./Header";
 import WhyUs from "./WhyUs";
 import Steps from "./Steps";

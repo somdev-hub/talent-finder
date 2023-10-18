@@ -26,14 +26,37 @@ const Navbar = ({ color }) => {
       link: "/hire"
     }
   ];
+  const links_render = [
+    {
+      id: "1",
+      link: "/"
+    },
+    {
+      id: "2",
+      link: "/placement"
+    },
+    {
+      id: "3",
+      link: "/hire"
+    },
+    {
+      id: "1",
+      link: "/bookfreetrial"
+    }
+  ];
   const [show, setShow] = useState(false);
   const [sidebar, setSidebar] = useState(false);
   useEffect(() => {
     const currPath = window.location.pathname.split("/")[1];
-    const activeIndex = links.findIndex(
+    if (currPath === "bookfreetrial") {
+      setChecked(links[0].id);
+
+      console.log(links[0].id);
+    }
+    const activeIndex = links_render.findIndex(
       (item) => item.link.split("/")[1] === currPath
     );
-    setChecked(links[activeIndex]?.id);
+    setChecked(links_render[activeIndex]?.id);
   }, [location]);
 
   const handleSidebarToggle = () => {
@@ -46,7 +69,7 @@ const Navbar = ({ color }) => {
   };
   return (
     <div
-      className={`fixed top-0 ${
+      className={`fixed top-0 shadow-md ${
         color === "blue" ? "bg-white" : "bg-blue-shade"
       } z-20 w-full`}
     >
@@ -84,6 +107,9 @@ const Navbar = ({ color }) => {
           }`}
           >
             {links.map((item, index) => {
+              console.log(checked === item.id);
+              console.log(item.id);
+              console.log(checked);
               return (
                 <Link to={item.link} key={index}>
                   <li
