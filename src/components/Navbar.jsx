@@ -51,7 +51,7 @@ const Navbar = ({ color }) => {
     if (currPath === "bookfreetrial") {
       setChecked(links[0].id);
 
-      console.log(links[0].id);
+      // console.log(links[0].id);
     }
     const activeIndex = links_render.findIndex(
       (item) => item.link.split("/")[1] === currPath
@@ -107,9 +107,9 @@ const Navbar = ({ color }) => {
           }`}
           >
             {links.map((item, index) => {
-              console.log(checked === item.id);
-              console.log(item.id);
-              console.log(checked);
+              // console.log(checked === item.id);
+              // console.log(item.id);
+              // console.log(checked);
               return (
                 <Link to={item.link} key={index}>
                   <li

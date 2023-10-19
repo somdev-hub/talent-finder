@@ -48,6 +48,13 @@ a {
 
 input {
   outline: none;
+  
+}
+
+input[type="file"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 .sidebar-open {

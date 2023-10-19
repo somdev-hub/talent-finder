@@ -1,10 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import asterisk from "../../assets/BookFreeTrial/asterisk.png";
-import tick2 from "../../assets/landing-page/tick2.svg";
 import tick from "../../assets/BookFreeTrial/tick.svg";
 import ButtonPrimary from "../../components/ButtonPrimary";
 
-const SubInput = ({ label, onChange, type, required }) => {
+const SubInput = ({ label, onChange, type, required, name }) => {
   return (
     <div className="flex flex-col w-full relative">
       <label
@@ -23,6 +22,8 @@ const SubInput = ({ label, onChange, type, required }) => {
       <input
         type="text"
         required={true}
+        name={name}
+        onChange={onChange}
         className="text-[14px] sm:text-[1rem] font-poppins-regular-20 p-[8px] sm:p-4 pl-[12px] sm:pl-[25px] box-border border-2 border-solid border-text-light rounded-full inline-block"
       />
     </div>
@@ -34,6 +35,33 @@ const Form = () => {
     yes: false,
     no: false
   });
+  const [formData, setFormData] = useState({
+    fullName: "",
+    email: "",
+    phone: "",
+    areaOfInterest: "",
+    highestEducationalQualification: "",
+    currentCompany: "",
+    expertise: "",
+    goal1: "",
+    goal2: "",
+    goal3: "",
+    isCommitted: false,
+    howDidYouHear: ""
+  });
+
+  const handleChange = (e) => {
+    e.preventDefault();
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(formData);
+  };
 
   return (
     <div className="mx-[1.5rem] xl:mx-[7.5rem] sm:mx-[3.5rem] sm:mt-[10rem] mb-[5rem]">
@@ -63,20 +91,56 @@ const Form = () => {
         <div className="mt-[3.5rem]">
           <form action="">
             <div className="flex flex-col gap-[2.5rem]">
-              <div className="flex sm:flex-row flex-col gap-[1.5rem] w-full">
-                <SubInput label="Full Name" required={true} />
-                <SubInput label="Email Address" required={true} />
+              <div
+                className="flex sm:flex-row flex-col gap-[1.5rem] w-full"
+                onChange={handleChange}
+              >
+                <SubInput
+                  label="Full Name"
+                  required={true}
+                  name="fullName"
+                  onChange={handleChange}
+                />
+                <SubInput
+                  label="Email Address"
+                  required={true}
+                  name="email"
+                  onChange={handleChange}
+                />
               </div>
               <div className="flex sm:flex-row flex-col gap-[1.5rem] w-full">
-                <SubInput label="Phone Number" required={true} />
-                <SubInput label="Area of Interest" required={true} />
+                <SubInput
+                  label="Phone Number"
+                  required={true}
+                  name="phone"
+                  onChange={handleChange}
+                />
+                <SubInput
+                  label="Area of Interest"
+                  required={true}
+                  name="areaOfInterest"
+                  onChange={handleChange}
+                />
               </div>
               <div className="flex sm:flex-row flex-col gap-[1.5rem] w-full">
-                <SubInput label="Highest Education Qualification " />
-                <SubInput label="Current company" />
+                <SubInput
+                  label="Highest Education Qualification "
+                  name="highestEducationalQualification"
+                  onChange={handleChange}
+                />
+                <SubInput
+                  label="Current company"
+                  name="currentCompany"
+                  onChange={handleChange}
+                />
               </div>
 
-              <SubInput label="Expertise/Skills" required={true} />
+              <SubInput
+                label="Expertise/Skills"
+                required={true}
+                name="expertise"
+                onChange={handleChange}
+              />
               <h3 className="hidden sm:block text-text-dark text-[1rem] sm:text-[1.5rem] font-poppins-regular-20 font-[500] leading-[120%] text-center sm:text-left ">
                 We appreciate your interest, Please Fill out the form
               </h3>
@@ -84,9 +148,9 @@ const Form = () => {
                 Please Indicate Learning goals
               </h3>
               <div className="flex flex-col gap-[2.5rem]">
-                <SubInput label="Goal 1" />
-                <SubInput label="Goal 2" />
-                <SubInput label="Goal 3" />
+                <SubInput label="Goal 1" name="goal1" onChange={handleChange} />
+                <SubInput label="Goal 2" name="goal2" onChange={handleChange} />
+                <SubInput label="Goal 3" name="goal3" onChange={handleChange} />
               </div>
               <div className="">
                 <h3 className="text-text-dark text-[14px] sm:text-[1.5rem] font-poppins-regular-20 font-[500] leading-[120%] text-center sm:text-left ">
@@ -102,7 +166,6 @@ const Form = () => {
                       checked={checked.yes}
                       className="appearance-none"
                     />
-                    {/* <div className=""></div> */}
                     <div className="flex">
                       <div
                         className={`text-text-medium sm:text-text-dark h-[1.3rem] w-[1.3rem] mr-4 cursor-pointer relative border-[2.5px] border-solid border-white-400`}
@@ -133,7 +196,6 @@ const Form = () => {
                       checked={checked.no}
                       className="appearance-none"
                     />
-                    {/* <div className=""></div> */}
                     <div className="flex">
                       <div
                         className={`text-text-medium sm:text-text-dark h-[1.3rem] w-[1.3rem] mr-4 cursor-pointer relative border-[2.5px] border-solid border-white-400`}
@@ -162,14 +224,18 @@ const Form = () => {
                   How did you hear of our mentoring ?
                 </h3>
                 <div className="hidden sm:block">
-                  <SubInput />
+                  <SubInput name="howDidYouHear" onChange={handleChange} />
                 </div>
                 <div className="block sm:hidden">
-                  <SubInput label="How did you hear of our mentoring ?" />
+                  <SubInput
+                    label="How did you hear of our mentoring ?"
+                    name="howDidYouHear"
+                    onChange={handleChange}
+                  />
                 </div>
               </div>
               <div className="flex justify-center">
-                <ButtonPrimary text="Book Free Trial" />
+                <ButtonPrimary text="Book Free Trial" onclick={handleSubmit} />
               </div>
             </div>
           </form>
