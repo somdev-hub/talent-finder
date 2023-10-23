@@ -55,7 +55,7 @@ const Header = () => {
             <br className="sm:hidden block" /> lectus{" "}
             <br className="hidden sm:block" /> purus enim et a.
           </p>
-          <ButtonPrimary text="Apply Now" link={"/placement-form"} />
+          <ButtonPrimary text="Apply Now" link={"/placement-form"} color="neon" />
         </div>
         <div className="hidden sm:flex justify-center items-center">
           <img

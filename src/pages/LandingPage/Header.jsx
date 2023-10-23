@@ -51,10 +51,10 @@ const Header = () => {
             integer. Risus sapien nec volutpat ut lectus purus enim et a.
           </p>
           <div className="hidden sm:block">
-            <ButtonPrimary text={"Book Free Trial"} link={"/bookfreetrial"} />
+            <ButtonPrimary text={"Book Free Trial"} link={"/bookfreetrial"} color="neon" />
           </div>
           <div className="block sm:hidden">
-            <ButtonPrimary text={"Book Now"} link={"/bookfreetrial"} />
+            <ButtonPrimary text={"Book Now"} link={"/bookfreetrial"} color="neon" />
           </div>
 
           <div className="font-[300] leading-[120%] font-poppins-regular-20 sm:block flex flex-col items-center">

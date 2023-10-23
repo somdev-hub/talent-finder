@@ -35,7 +35,7 @@ const Testimonials = () => {
       </h2>
       <div className="hidden sm:block w-full mb-10 mt-4 sm:mt-[4rem] z-10">
         <div className="relative flex w-full justify-center items-center m-auto">
-         {/* added   autoplay={true}
+          {/* added   autoplay={true}
               slidesPerView={1}
               loopedSlides={true}*/}
           <Swiper
@@ -44,7 +44,7 @@ const Testimonials = () => {
               setCurrent(swiper.activeIndex);
             }}
             // pagination={pagination}
-            
+
             modules={[Pagination, Autoplay]}
             className="mySwiper"
             slidesPerView={1}
@@ -98,7 +98,7 @@ const Testimonials = () => {
           </Swiper>
         </div>
       </div>
-      <ButtonPrimary text="Apply Now" />
+      <ButtonPrimary text="Apply Now" color="neon" />
     </div>
   );
 };

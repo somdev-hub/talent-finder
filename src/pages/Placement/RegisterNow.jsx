@@ -21,9 +21,10 @@ const RegisterNow = () => {
           alt=""
           className="absolute right-[10%] 2xl:right-[15%] bottom-[-3rem] -z-10 sm:block hidden"
         />
-        <ButtonPrimary text="Apply Now" />
+        <ButtonPrimary text="Apply Now" color="neon" />
         <span className="hidden sm:block">
-          <ButtonSecondary text="View Sample Profile" />
+          {/* <ButtonSecondary text="View Sample Profile" /> */}
+          <ButtonPrimary text="View Sample Profile" primary={false} />
         </span>
         <img
           src={vector221}
@@ -32,7 +33,8 @@ const RegisterNow = () => {
         />
       </div>
       <div className="sm:hidden block mt-6">
-        <ButtonSecondary text="View Sample Profile" />
+        {/* <ButtonSecondary text="View Sample Profile" /> */}
+        <ButtonPrimary text="View Sample Profile" primary={false} />
       </div>
       <img src={vector_210} alt="" className="sm:hidden block " />
     </div>

@@ -30,7 +30,7 @@ const RegisterNow = () => {
         better!
       </p>
       <div className="relative w-fit  m-auto">
-        <ButtonPrimary text="Hire Now" />
+        <ButtonPrimary text="Hire Now" color="neon" />
         <img
           src={register_now1}
           className="absolute z-20 sm:bottom-[-13px] bottom-[-2.5rem] right-[40%] cursor-pointer"

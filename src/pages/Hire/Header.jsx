@@ -1,5 +1,3 @@
-import React from "react";
-import Navbar from "../../components/Navbar";
 import hire_head1 from "../../assets/hire/hire-head1.png";
 import hire_head2 from "../../assets/hire/hire-head2.png";
 import hire_head3 from "../../assets/hire/hire-head3.png";
@@ -15,10 +13,11 @@ import tata_logo from "../../assets/hire/tata-logo.png";
 import sony_logo from "../../assets/hire/sony-logo.png";
 import ibm_logo from "../../assets/hire/ibm-logo.png";
 import line1 from "../../assets/hire/line1.svg";
-import { Autoplay, Pagination } from "swiper/modules";
-import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
+import { Autoplay } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { Link } from "react-router-dom";
+import ButtonPrimary from "../../components/ButtonPrimary";
 
 export const Header = () => {
   const images = [
@@ -51,11 +50,12 @@ export const Header = () => {
           Save time and resources. <br /> Hire and directly manage remote or
           on-site talent with confidence.
         </p>
-        <Link to="/hire-form">
+        {/* <Link to="/hire-form">
           <button className="cursor-pointer inline-flex py-[0.8rem] px-8 justify-center items-center rounded-[2.5rem] bg-blue-shade text-[1.25rem] font-[500] font-poppins-regular-20 m-0 text-white">
             Hire Now
           </button>
-        </Link>
+        </Link> */}
+        <ButtonPrimary text="Hire Now" color="blue-shade" link="/hire-form" />
         <img
           src={vector_445}
           alt=""

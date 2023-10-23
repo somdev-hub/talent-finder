@@ -40,7 +40,7 @@ const HowItWorks = () => {
               <div
                 key={index}
                 className={`bullet-class rounded-full  h-[39px] sm:w-[56px] w-[39px] sm:h-[56px] border-[2.5px] border-solid flex items-center justify-center text-[2.5rem] font-[400] font-coolvetica-56 cursor-pointer box-border ${
-                  clicked === index 
+                  clicked === index
                     ? "bg-[var(--blue,#6D38FB)] text-white border-none"
                     : "bg-white text-[var(--blue,#BBBBBD)] border-[var(--blue,#BBBBBD)]"
                 }`}
@@ -82,7 +82,7 @@ const HowItWorks = () => {
           </Swiper>
         </div>
       </div>
-      <ButtonPrimary text="Book Free Trial" />
+      <ButtonPrimary text="Book Free Trial" color="neon" />
     </div>
   );
 };

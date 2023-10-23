@@ -22,10 +22,10 @@ const RegisterNow = () => {
           className="absolute right-[44%] 2xl:right-[62%] bottom-[-4rem] -z-10 sm:block hidden"
         />
         <div className="sm:hidden block">
-          <ButtonPrimary text={"Apply Now"} />
+          <ButtonPrimary text={"Apply Now"} color="neon" />
         </div>
         <div className="hidden sm:block 2xl:ml-[18px]">
-          <ButtonPrimary text={"Book Free Trial"} />
+          <ButtonPrimary text={"Book Free Trial"} color="neon" />
         </div>
         <img
           src={vector221}

@@ -34,7 +34,7 @@ const Testimonials = () => {
       </h2>
       <div className="w-full mb-10 sm:mt-[4rem] z-10 mt-4">
         <div className="relative flex w-full justify-center items-center m-auto">
-         {/* added   autoplay={true}
+          {/* added   autoplay={true}
               slidesPerView={4}
               loopedSlides={true}*/}
           <Swiper
@@ -66,10 +66,10 @@ const Testimonials = () => {
         </div>
       </div>
       <div className="hidden sm:block">
-        <ButtonPrimary text={"Book Free Trial"} />
+        <ButtonPrimary text={"Book Free Trial"} color="neon" />
       </div>
       <div className="block sm:hidden">
-        <ButtonPrimary text={"Apply Now"} />
+        <ButtonPrimary text={"Apply Now"} color="neon" />
       </div>
 
       <img

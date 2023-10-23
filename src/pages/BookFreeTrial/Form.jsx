@@ -235,7 +235,7 @@ const Form = () => {
                 </div>
               </div>
               <div className="flex justify-center">
-                <ButtonPrimary text="Book Free Trial" onclick={handleSubmit} />
+                <ButtonPrimary text="Book Free Trial" onclick={handleSubmit} color="neon" />
               </div>
             </div>
           </form>

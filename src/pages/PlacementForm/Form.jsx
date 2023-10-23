@@ -174,7 +174,11 @@ const Form = () => {
               <ReCAPTCHA sitekey="6Lfa97UoAAAAAA719RaIb97bptsRnGtQP_9cB1V8" />
 
               <div className=" justify-center hidden sm:flex">
-                <ButtonPrimary text="Apply Now" onclick={handleSubmit} />
+                <ButtonPrimary
+                  text="Apply Now"
+                  onclick={handleSubmit}
+                  color="neon"
+                />
               </div>
             </div>
           </form>
@@ -215,7 +219,7 @@ const Form = () => {
           </p>
         </div>
         <div className=" justify-center sm:hidden flex">
-          <ButtonPrimary text="Apply Now" onclick={handleSubmit} />
+          <ButtonPrimary text="Apply Now" onclick={handleSubmit} color="neon" />
         </div>
       </div>
     </div>
