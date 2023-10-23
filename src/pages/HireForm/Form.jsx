@@ -103,8 +103,8 @@ const Form = () => {
         <h1 className="hidden sm:block text-text-dark m-0 mt-[4.5rem] sm:mt-0 font-coolvetica-56 text-[3.5rem] font-[400]">
           Apply Now for Placement Opportunities.
         </h1>
-        <h1 className="sm:hidden block text-text-dark m-0 mt-[4.5rem] font-coolvetica-56 text-[2.3rem] font-[400]">
-          Book Your Free Trial.
+        <h1 className="sm:hidden block text-text-dark m-0 mt-[4.5rem] font-coolvetica-56 text-[1.8rem] font-[400]">
+          Apply Now for Placement Opportunities.
         </h1>
 
         <h3 className="m-0 my-[1.5rem] sm:my-[1.5rem] text-text-medium font-poppins-regular-20 text-[14px] sm:text-[1.5rem] font-[400] leading-[120%]">
@@ -141,7 +141,11 @@ const Form = () => {
           <ReCAPTCHA sitekey="6Lfa97UoAAAAAA719RaIb97bptsRnGtQP_9cB1V8" />
 
           <div className=" justify-center hidden sm:flex">
-            <ButtonPrimary text="Apply Now" onclick={handleSubmit} color="neon" />
+            <ButtonPrimary
+              text="Apply Now"
+              onclick={handleSubmit}
+              color="neon"
+            />
           </div>
         </form>
       </div>

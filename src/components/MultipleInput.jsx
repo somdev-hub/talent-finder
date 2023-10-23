@@ -94,4 +94,11 @@ MultipleInput.propTypes = {
   handleInputChange: PropTypes.func
 };
 
+MultipleInput.defaultProps = {
+  required: false,
+  options: [],
+  heading: "",
+  subheading: ""
+};
+
 export default MultipleInput;

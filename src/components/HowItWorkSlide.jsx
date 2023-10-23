@@ -1,4 +1,12 @@
-import React from "react";
+import PropsType from "prop-types";
+
+/**
+ * @param {string} heading
+ * @param {string} text
+ * @param {string} img
+ * @returns {JSX.Element}
+ *
+ */
 
 const HowItWorkSlide = ({ heading, text, img }) => {
   return (
@@ -19,6 +27,12 @@ const HowItWorkSlide = ({ heading, text, img }) => {
       </div>
     </div>
   );
+};
+
+HowItWorkSlide.propTypes = {
+  heading: PropsType.string.isRequired,
+  text: PropsType.string.isRequired,
+  img: PropsType.string.isRequired
 };
 
 export default HowItWorkSlide;

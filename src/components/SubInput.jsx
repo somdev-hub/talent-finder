@@ -16,7 +16,7 @@ import PropTypes from "prop-types";
  */
 
 const SubInput = ({ label, onChange, type, required, name, value }) => {
-  const [file, setFile] = useState(null); // [1
+  const [file, setFile] = useState(null);
   const fileRef = useRef(null);
 
   const handleFileClick = () => {
@@ -83,5 +83,10 @@ SubInput.propTypes = {
   name: PropTypes.string,
   value: PropTypes.string
 };
+
+SubInput.defaultProps = {
+  type: "text",
+  required: false
+}
 
 export default SubInput;
