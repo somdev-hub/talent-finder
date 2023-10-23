@@ -5,6 +5,7 @@ import Placement from "./pages/Placement/Placement";
 import Hire from "./pages/Hire/Hire";
 import BookFreeTrial from "./pages/BookFreeTrial/BookFreeTrial";
 import PlacementForm from "./pages/PlacementForm/PlacementForm";
+import Hireform from "./pages/HireForm/Hireform";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route exact path="/hire" element={<Hire />} />
         <Route exact path="/bookfreetrial" element={<BookFreeTrial />} />
         <Route exact path="/placement-form" element={<PlacementForm />} />
+        <Route exact path="/hire-form" element={<Hireform />} />
       </Routes>
 
       {/* <LandingPage /> */}

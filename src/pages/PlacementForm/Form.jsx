@@ -5,9 +5,23 @@ import facebook from "../../assets/PlacementForm/facebook_blue.svg";
 import x from "../../assets/PlacementForm/x_blue.svg";
 import insta from "../../assets/PlacementForm/insta_blue.svg";
 import linkedin from "../../assets/PlacementForm/linkedin_blue.svg";
+import ReCAPTCHA from "react-google-recaptcha";
 
 const Form = () => {
-  const [formData, setFormData] = React.useState({});
+  const [formData, setFormData] = React.useState({
+    fullName: "",
+    email: "",
+    phone: "",
+    areaOfInterest: "",
+    highestEducationalQualification: "",
+    nameOfEducationalInstitution: "",
+    currentCompany: "",
+    totalExperience: "",
+    expertise: "",
+    resume: "",
+    coverLetter: "",
+    howDidYouHear: ""
+  });
   const handleChange = (e) => {
     e.preventDefault();
     setFormData({
@@ -22,19 +36,19 @@ const Form = () => {
   };
   return (
     <div className="mx-[1.5rem] xl:mx-[7.5rem] sm:mx-[3.5rem] sm:mt-[8rem] mb-[5rem]">
-      <div className=" text-center">
-        <h1 className="hidden sm:block text-text-dark m-0 mt-[4.5rem] font-coolvetica-56 text-[3.5rem] font-[400]">
+      <div className=" text-center flex flex-col items-center">
+        <h1 className="hidden sm:block text-text-dark m-0 mt-[4.5rem] sm:mt-0 font-coolvetica-56 text-[3.5rem] font-[400]">
           Apply Now for Placement Opportunities.
         </h1>
         <h1 className="sm:hidden block text-text-dark m-0 mt-[4.5rem] font-coolvetica-56 text-[2.3rem] font-[400]">
           Book Your Free Trial.
         </h1>
 
-        <h3 className="my-[1.5rem] sm:my-[1.5rem] text-text-medium font-poppins-regular-20 text-[14px] sm:text-[1.5rem] font-[400] leading-[120%]">
+        <h3 className="m-0 my-[1.5rem] sm:my-[1.5rem] text-text-medium font-poppins-regular-20 text-[14px] sm:text-[1.5rem] font-[400] leading-[120%]">
           Your privacy is important to us. Your information will only be used
           for processing your application
         </h3>
-        <p className="hidden sm:block text-text-medium font-poppins-regular-20 font-[400] leading-[120%]">
+        <p className="sm:w-[83%] hidden sm:block text-text-medium font-poppins-regular-20 font-[400] leading-[120%]">
           Step into the world of industry insights with our Placement Program.
           Explore the inner workings of different sectors, from tech startups to
           multinational corporations. Immerse yourself in projects that matter,
@@ -60,12 +74,14 @@ const Form = () => {
                   required={true}
                   name="fullName"
                   onChange={handleChange}
+                  value={formData.fullName}
                 />
                 <SubInput
                   label="Email Address"
                   required={true}
                   name="email"
                   onChange={handleChange}
+                  value={formData.email}
                 />
               </div>
               <div className="flex sm:flex-row flex-col gap-[1.5rem] w-full">
@@ -74,12 +90,14 @@ const Form = () => {
                   required={true}
                   name="phone"
                   onChange={handleChange}
+                  value={formData.phone}
                 />
                 <SubInput
                   label="Address"
                   required={true}
                   name="areaOfInterest"
                   onChange={handleChange}
+                  value={formData.areaOfInterest}
                 />
               </div>
               <div className="flex sm:flex-row flex-col gap-[1.5rem] w-full">
@@ -87,23 +105,27 @@ const Form = () => {
                   label="Highest Education Qualification "
                   name="highestEducationalQualification"
                   onChange={handleChange}
+                  value={formData.highestEducationalQualification}
                 />
                 <SubInput
                   label="Name of educational institution"
-                  name="currentCompany"
+                  name="nameOfEducationalInstitution"
                   onChange={handleChange}
+                  value={formData.nameOfEducationalInstitution}
                 />
               </div>
               <div className="flex sm:flex-row flex-col gap-[1.5rem] w-full">
                 <SubInput
-                  label="Current  company "
-                  name="highestEducationalQualification"
+                  label="Current company "
+                  name="currentCompany"
                   onChange={handleChange}
+                  value={formData.currentCompany}
                 />
                 <SubInput
                   label="Total Experience"
-                  name="currentCompany"
+                  name="totalExperience"
                   onChange={handleChange}
+                  value={formData.totalExperience}
                 />
               </div>
 
@@ -112,17 +134,18 @@ const Form = () => {
                 required={true}
                 name="expertise"
                 onChange={handleChange}
+                value={formData.expertise}
               />
               <div className="flex sm:flex-row flex-col gap-[1.5rem] w-full">
                 <SubInput
                   label="Resume/CV Upload  "
-                  name="highestEducationalQualification"
+                  name="resume"
                   onChange={handleChange}
                   type="file"
                 />
                 <SubInput
                   label="Cover Letter"
-                  name="currentCompany"
+                  name="coverLetter"
                   onChange={handleChange}
                   type="file"
                 />
@@ -133,16 +156,23 @@ const Form = () => {
                   How did you hear of our mentoring ?
                 </h3>
                 <div className="hidden sm:block">
-                  <SubInput name="howDidYouHear" onChange={handleChange} />
+                  <SubInput
+                    name="howDidYouHear"
+                    onChange={handleChange}
+                    value={formData.howDidYouHear}
+                  />
                 </div>
                 <div className="block sm:hidden">
                   <SubInput
-                    label="How did you hear of our mentoring ?"
+                    label="How did you hear of our Placement opportunity?"
                     name="howDidYouHear"
                     onChange={handleChange}
+                    value={formData.howDidYouHear}
                   />
                 </div>
               </div>
+              <ReCAPTCHA sitekey="6Lfa97UoAAAAAA719RaIb97bptsRnGtQP_9cB1V8" />
+
               <div className=" justify-center hidden sm:flex">
                 <ButtonPrimary text="Apply Now" onclick={handleSubmit} />
               </div>

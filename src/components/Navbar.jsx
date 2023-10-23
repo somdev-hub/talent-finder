@@ -42,7 +42,15 @@ const Navbar = ({ color }) => {
     {
       id: "1",
       link: "/bookfreetrial"
-    }
+    },
+    {
+      id: "2",
+      link: "/placement-form"
+    },
+    {
+      id: "3",
+      link: "/hire-form"
+    },
   ];
   const [show, setShow] = useState(false);
   const [sidebar, setSidebar] = useState(false);

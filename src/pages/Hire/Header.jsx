@@ -18,6 +18,7 @@ import line1 from "../../assets/hire/line1.svg";
 import { Autoplay, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
 import "swiper/css";
+import { Link } from "react-router-dom";
 
 export const Header = () => {
   const images = [
@@ -50,9 +51,11 @@ export const Header = () => {
           Save time and resources. <br /> Hire and directly manage remote or
           on-site talent with confidence.
         </p>
-        <button className="inline-flex py-[0.8rem] px-8 justify-center items-center rounded-[2.5rem] bg-blue-shade text-[1.25rem] font-[500] font-poppins-regular-20 m-0 text-white">
-          Hire Now
-        </button>
+        <Link to="/hire-form">
+          <button className="cursor-pointer inline-flex py-[0.8rem] px-8 justify-center items-center rounded-[2.5rem] bg-blue-shade text-[1.25rem] font-[500] font-poppins-regular-20 m-0 text-white">
+            Hire Now
+          </button>
+        </Link>
         <img
           src={vector_445}
           alt=""

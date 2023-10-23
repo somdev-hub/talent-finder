@@ -1,7 +1,22 @@
-import React from "react";
-import testimonial_img from "../assets/landing-page/testimonial-img.png";
-import microsoft from "../assets/landing-page/microsoft.png";
 import star from "../assets/landing-page/star.svg";
+import PropTypes from "prop-types";
+
+/**
+ * A component that renders a testimonial card with an image, name, designation, heading, company, text, stars, and pagination.
+ * @param {Object} props - The props object.
+ * @param {string} props.img - The image URL for the testimonial.
+ * @param {string} props.name - The name of the person giving the testimonial.
+ * @param {string} props.designation - The designation of the person giving the testimonial.
+ * @param {string} props.heading - The heading for the testimonial.
+ * @param {string} props.company - The company of the person giving the testimonial.
+ * @param {string} props.text - The text of the testimonial.
+ * @param {number} props.stars - The number of stars to display for the testimonial.
+ * @param {number} props.currentPagination - The current pagination index.
+ * @param {function} props.setCurrentPagination - The function to call when the pagination index changes.
+ * @param {number} props.totalPagination - The total number of pagination items.
+ * @param {string} props.backgroundColor - The background color for the testimonial card.
+ * @returns {JSX.Element} - The rendered component.
+ */
 
 const TestimonialCard = ({
   img,
@@ -14,7 +29,7 @@ const TestimonialCard = ({
   currentPagination,
   setCurrentPagination,
   totalPagination,
-  backgroundColor,
+  backgroundColor
 }) => {
   return (
     <div className={`xl:p-0 pt-[5rem] `}>
@@ -92,6 +107,20 @@ const TestimonialCard = ({
       </div>
     </div>
   );
+};
+
+TestimonialCard.propTypes = {
+  img: PropTypes.string,
+  name: PropTypes.string,
+  designation: PropTypes.string,
+  heading: PropTypes.string,
+  company: PropTypes.string,
+  text: PropTypes.string,
+  stars: PropTypes.number,
+  currentPagination: PropTypes.number,
+  setCurrentPagination: PropTypes.func,
+  totalPagination: PropTypes.number,
+  backgroundColor: PropTypes.string
 };
 
 export default TestimonialCard;
