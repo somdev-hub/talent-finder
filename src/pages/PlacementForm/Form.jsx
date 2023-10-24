@@ -1,4 +1,4 @@
-import React from "react";
+import { useState } from "react";
 import SubInput from "../../components/SubInput";
 import ButtonPrimary from "../../components/ButtonPrimary";
 import facebook from "../../assets/PlacementForm/facebook_blue.svg";
@@ -6,13 +6,14 @@ import x from "../../assets/PlacementForm/x_blue.svg";
 import insta from "../../assets/PlacementForm/insta_blue.svg";
 import linkedin from "../../assets/PlacementForm/linkedin_blue.svg";
 import ReCAPTCHA from "react-google-recaptcha";
+import formValidator from "../../components/functions/formValidator";
 
 const Form = () => {
-  const [formData, setFormData] = React.useState({
+  const [formData, setFormData] = useState({
     fullName: "",
     email: "",
     phone: "",
-    areaOfInterest: "",
+    address: "",
     highestEducationalQualification: "",
     nameOfEducationalInstitution: "",
     currentCompany: "",
@@ -22,6 +23,26 @@ const Form = () => {
     coverLetter: "",
     howDidYouHear: ""
   });
+  const rules = {
+    fullName: "Full Name",
+    email: "Email Address",
+    phone: "Phone Number",
+    address: "Address",
+    expertise: "Expertise/Skills"
+  };
+  const [errorData, setErrorData] = useState({});
+
+  const validateField = (e) => {
+    const { name } = e.target;
+    const errors = validator(formData);
+    setErrorData((prevErrorData) => ({
+      ...prevErrorData,
+      [name]: errors[name]
+    }));
+  };
+
+  const validator = formValidator({ rules });
+
   const handleChange = (e) => {
     e.preventDefault();
     setFormData({
@@ -32,6 +53,11 @@ const Form = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    const errors = validator(formData);
+    setErrorData(errors);
+    if (Object.keys(errors).length > 0) {
+      return;
+    }
     console.log(formData);
   };
   return (
@@ -75,6 +101,8 @@ const Form = () => {
                   name="fullName"
                   onChange={handleChange}
                   value={formData.fullName}
+                  error={errorData.fullName}
+                  onBlur={validateField}
                 />
                 <SubInput
                   label="Email Address"
@@ -82,6 +110,8 @@ const Form = () => {
                   name="email"
                   onChange={handleChange}
                   value={formData.email}
+                  error={errorData.email}
+                  onBlur={validateField}
                 />
               </div>
               <div className="flex sm:flex-row flex-col gap-[1.5rem] w-full">
@@ -91,13 +121,17 @@ const Form = () => {
                   name="phone"
                   onChange={handleChange}
                   value={formData.phone}
+                  error={errorData.phone}
+                  onBlur={validateField}
                 />
                 <SubInput
                   label="Address"
                   required={true}
-                  name="areaOfInterest"
+                  name="address"
                   onChange={handleChange}
                   value={formData.areaOfInterest}
+                  error={errorData.address}
+                  onBlur={validateField}
                 />
               </div>
               <div className="flex sm:flex-row flex-col gap-[1.5rem] w-full">
@@ -135,6 +169,8 @@ const Form = () => {
                 name="expertise"
                 onChange={handleChange}
                 value={formData.expertise}
+                error={errorData.expertise}
+                onBlur={validateField}
               />
               <div className="flex sm:flex-row flex-col gap-[1.5rem] w-full">
                 <SubInput
@@ -142,12 +178,14 @@ const Form = () => {
                   name="resume"
                   onChange={handleChange}
                   type="file"
+                  accept="application/pdf,.docx"
                 />
                 <SubInput
                   label="Cover Letter"
                   name="coverLetter"
                   onChange={handleChange}
                   type="file"
+                  accept="application/pdf,.docx"
                 />
               </div>
 

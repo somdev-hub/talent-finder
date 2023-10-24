@@ -2,6 +2,7 @@ import { useRef, useState } from "react";
 import asterisk from "../assets/BookFreeTrial/asterisk.png";
 import attachment from "../assets/attachment.svg";
 import PropTypes from "prop-types";
+import Tooltip from "@mui/material/Tooltip";
 
 /**
  * A component that renders a form input with an optional label and file attachment button.
@@ -12,10 +13,23 @@ import PropTypes from "prop-types";
  * @param {boolean} props.required - Whether the input is required.
  * @param {string} props.name - The name of the input.
  * @param {string} props.value - The value of the input.
+ * @param {function} props.onBlur - The function to call when the input loses focus.
+ * @param {string} props.error - The error message to display.
+ * @param {string} props.accept - The file types to accept.
  * @returns {JSX.Element} - The rendered component.
  */
 
-const SubInput = ({ label, onChange, type, required, name, value }) => {
+const SubInput = ({
+  label,
+  onChange,
+  type,
+  required,
+  name,
+  value,
+  onBlur,
+  error,
+  accept
+}) => {
   const [file, setFile] = useState(null);
   const fileRef = useRef(null);
 
@@ -58,19 +72,25 @@ const SubInput = ({ label, onChange, type, required, name, value }) => {
           ref={fileRef}
           className="hidden"
           onChange={onFileChange}
+          accept={accept}
         />
       )}
 
-      <input
-        id="input"
-        type={type === "file" ? "text" : type}
-        required={required}
-        name={name}
-        value={type === "file" ? file?.name : value}
-        disabled={type === "file" ? true : false}
-        onChange={onChange}
-        className="text-[14px] sm:text-[1rem] font-poppins-regular-20 p-[8px] sm:p-4 pl-[12px] sm:pl-[25px] box-border border-2 border-solid border-text-light rounded-full inline-block"
-      />
+      <Tooltip title={error} placement="top" arrow>
+        <input
+          id="input"
+          type={type === "file" ? "text" : type}
+          // required={required}
+          name={name}
+          value={type === "file" ? file?.name : value}
+          disabled={type === "file" ? true : false}
+          onChange={onChange}
+          onBlur={onBlur}
+          className={`text-[14px] sm:text-[1rem] font-poppins-regular-20 p-[8px] sm:p-4 pl-[12px] sm:pl-[25px] box-border border-2 border-solid  ${
+            error ? "border-[#D20000]" : "border-text-light"
+          } rounded-full inline-block`}
+        />
+      </Tooltip>
     </div>
   );
 };
@@ -78,15 +98,18 @@ const SubInput = ({ label, onChange, type, required, name, value }) => {
 SubInput.propTypes = {
   label: PropTypes.string,
   onChange: PropTypes.func,
+  onBlur: PropTypes.func,
   type: PropTypes.string,
   required: PropTypes.bool,
   name: PropTypes.string,
-  value: PropTypes.string
+  value: PropTypes.string,
+  error: PropTypes.string,
+  accept: PropTypes.string
 };
 
 SubInput.defaultProps = {
-  type: "text",
+  // type: "text",
   required: false
-}
+};
 
 export default SubInput;

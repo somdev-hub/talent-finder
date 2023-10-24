@@ -7,6 +7,7 @@ import insta from "../../assets/PlacementForm/insta_blue.svg";
 import linkedin from "../../assets/PlacementForm/linkedin_blue.svg";
 import ReCAPTCHA from "react-google-recaptcha";
 import MultipleInput from "../../components/MultipleInput";
+import formValidator from "../../components/functions/formValidator";
 
 const Form = () => {
   const [selectedOptions, setSelectedOptions] = useState({
@@ -16,6 +17,13 @@ const Form = () => {
     employees: "",
     howDidYouHear: ""
   });
+  const [errorData, setErrorData] = useState({});
+  const rules = {
+    skills: "skill",
+    experience: "experience",
+    funding: "funding",
+    employees: "number of employees"
+  };
 
   const handleInputChange = (event, heading, object) => {
     event.preventDefault();
@@ -57,6 +65,8 @@ const Form = () => {
     }
   };
 
+  const validator = formValidator({ rules });
+
   const handleInput = (e) => {
     const { name, value } = e.target;
     setSelectedOptions({
@@ -67,6 +77,12 @@ const Form = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    const errors = validator(selectedOptions);
+    if (errors) {
+      console.log(errors);
+      setErrorData(errors);
+      return;
+    }
     console.log(selectedOptions);
   };
 
@@ -126,6 +142,7 @@ const Form = () => {
                 options={option.options}
                 required={option.required}
                 handleInputChange={handleInputChange}
+                error={errorData[option.heading]}
               />
             );
           })}
@@ -184,7 +201,7 @@ const Form = () => {
           </p>
         </div>
         <div className=" justify-center sm:hidden flex">
-          <ButtonPrimary text="Apply Now" color="neon" />
+          <ButtonPrimary text="Apply Now" color="neon" onclick={handleSubmit} />
         </div>
       </div>
     </div>

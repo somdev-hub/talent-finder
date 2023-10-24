@@ -2,33 +2,7 @@ import React, { useState } from "react";
 import asterisk from "../../assets/BookFreeTrial/asterisk.png";
 import tick from "../../assets/BookFreeTrial/tick.svg";
 import ButtonPrimary from "../../components/ButtonPrimary";
-
-const SubInput = ({ label, onChange, type, required, name }) => {
-  return (
-    <div className="flex flex-col w-full relative">
-      <label
-        htmlFor=""
-        className="text-text-medium leading-[130%] font-poppins-regular-20 text-[12px] md:text-[1rem] xl:text-[1.25rem] font-[500] flex absolute top-[-9px] left-[12px] sm:left-[25px] bg-white px-2"
-      >
-        {label}
-        {required && (
-          <img
-            src={asterisk}
-            alt=""
-            className="w-[9px] sm:w-[13px] h-[9px] sm:h-[13px] ml-[5px] flex"
-          />
-        )}
-      </label>
-      <input
-        type="text"
-        required={true}
-        name={name}
-        onChange={onChange}
-        className="text-[14px] sm:text-[1rem] font-poppins-regular-20 p-[8px] sm:p-4 pl-[12px] sm:pl-[25px] box-border border-2 border-solid border-text-light rounded-full inline-block"
-      />
-    </div>
-  );
-};
+import SubInput from "../../components/SubInput";
 
 const Form = () => {
   const [checked, setChecked] = React.useState({
@@ -49,6 +23,15 @@ const Form = () => {
     isCommitted: false,
     howDidYouHear: ""
   });
+  const [errorData, setErrorData] = useState({
+    fullName: "",
+    email: "",
+    phone: "",
+    areaOfInterest: "",
+    expertise: "",
+    isCommitted: false,
+    howDidYouHear: ""
+  });
 
   const handleChange = (e) => {
     e.preventDefault();
@@ -60,7 +43,51 @@ const Form = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    const errors = validateForm(formData);
+    if (Object.keys(errors).length > 0) {
+      setErrorData(errors);
+      console.warn(errors);
+      return;
+    }
     console.log(formData);
+  };
+
+  const validateForm = (values) => {
+    const errors = {};
+    const fields = {
+      fullName: "Full name",
+      email: "Email",
+      phone: "Phone number",
+      areaOfInterest: "Area of interest",
+      expertise: "Expertise",
+      howDidYouHear: "How did you hear"
+    };
+    for (const [fieldName, fieldLabel] of Object.entries(fields)) {
+      if (!values[fieldName]) {
+        errors[fieldName] = `${fieldLabel} is required`;
+      } else if (
+        fieldName === "email" &&
+        !/\S+@\S+\.\S+/.test(values[fieldName])
+      ) {
+        errors[fieldName] = `${fieldLabel} is invalid`;
+      } else if (
+        fieldName === "phone" &&
+        !/^\d{10}$/.test(values[fieldName])
+      ) {
+        errors[fieldName] = `${fieldLabel} is invalid`;
+      }
+    }
+    return errors;
+  };
+
+  const validateField = (e) => {
+    const { name, value } = e.target;
+    const errors = validateForm({ [name]: value });
+    console.log(errors);
+    setErrorData({
+      ...errorData,
+      [name]: errors[name]
+    });
   };
 
   return (
@@ -99,27 +126,36 @@ const Form = () => {
                   label="Full Name"
                   required={true}
                   name="fullName"
+                  error={errorData.fullName}
                   onChange={handleChange}
+                  onBlur={validateField}
                 />
                 <SubInput
                   label="Email Address"
                   required={true}
                   name="email"
+                  error={errorData.email}
                   onChange={handleChange}
+                  onBlur={validateField}
                 />
               </div>
               <div className="flex sm:flex-row flex-col gap-[1.5rem] w-full">
                 <SubInput
                   label="Phone Number"
                   required={true}
+                  error={errorData.phone}
+                  type="number"
                   name="phone"
                   onChange={handleChange}
+                  onBlur={validateField}
                 />
                 <SubInput
                   label="Area of Interest"
                   required={true}
                   name="areaOfInterest"
                   onChange={handleChange}
+                  error={errorData.areaOfInterest}
+                  onBlur={validateField}
                 />
               </div>
               <div className="flex sm:flex-row flex-col gap-[1.5rem] w-full">
@@ -140,6 +176,8 @@ const Form = () => {
                 required={true}
                 name="expertise"
                 onChange={handleChange}
+                error={errorData.expertise}
+                onBlur={validateField}
               />
               <h3 className="hidden sm:block text-text-dark text-[1rem] sm:text-[1.5rem] font-poppins-regular-20 font-[500] leading-[120%] text-center sm:text-left ">
                 We appreciate your interest, Please Fill out the form
@@ -235,7 +273,11 @@ const Form = () => {
                 </div>
               </div>
               <div className="flex justify-center">
-                <ButtonPrimary text="Book Free Trial" onclick={handleSubmit} color="neon" />
+                <ButtonPrimary
+                  text="Book Free Trial"
+                  onclick={handleSubmit}
+                  color="neon"
+                />
               </div>
             </div>
           </form>

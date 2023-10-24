@@ -17,7 +17,8 @@ const MultipleInput = ({
   heading,
   subheading,
   required,
-  handleInputChange
+  handleInputChange,
+  error
 }) => {
   const [isChecked, setIsChecked] = useState(
     options.reduce((acc, option) => {
@@ -62,7 +63,9 @@ const MultipleInput = ({
                 className={`w-[8rem] sm:w-[11rem] rounded-full px-[2rem] ${
                   isChecked[option]
                     ? "bg-blue-shade"
-                    : "bg-white  border-solid border-2 border-text-light"
+                    : `bg-white  border-solid border-2 ${
+                        error ? "border-[#D20000]" : "border-text-light"
+                      }`
                 }  flex justify-center py-[8px] cursor-pointer box-border`}
                 onClick={(event) => {
                   handleInputChange(event, heading, option);
