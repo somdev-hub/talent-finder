@@ -3,6 +3,8 @@ import asterisk from "../assets/BookFreeTrial/asterisk.png";
 import attachment from "../assets/attachment.svg";
 import PropTypes from "prop-types";
 import Tooltip from "@mui/material/Tooltip";
+import down_arrow from "../assets/down-arrow.svg";
+import { GlobalStyles, MenuItem, Select } from "@mui/material";
 
 /**
  * A component that renders a form input with an optional label and file attachment button.
@@ -28,7 +30,9 @@ const SubInput = ({
   value,
   onBlur,
   error,
-  accept
+  accept,
+  select,
+  selectItems
 }) => {
   const [file, setFile] = useState(null);
   const fileRef = useRef(null);
@@ -75,22 +79,64 @@ const SubInput = ({
           accept={accept}
         />
       )}
-
-      <Tooltip title={error} placement="top" arrow>
+      {/* <Tooltip title={error} placement="top" arrow>
         <input
           id="input"
           type={type === "file" ? "text" : type}
           // required={required}
           name={name}
+          // placeholder={`${select ? "Select" : ""}`}
           value={type === "file" ? file?.name : value}
           disabled={type === "file" ? true : false}
           onChange={onChange}
           onBlur={onBlur}
-          className={`text-[14px] sm:text-[1rem] font-poppins-regular-20 p-[8px] sm:p-4 pl-[12px] sm:pl-[25px] box-border border-2 border-solid  ${
+          className={`text-[14px] sm:text-[1rem] font-poppins-regular-20 p-[8px] sm:p-4 pl-[12px] sm:pl-[25px] box-border border-2 border-solid w-full ${
             error ? "border-[#D20000]" : "border-text-light"
           } rounded-full inline-block`}
         />
-      </Tooltip>
+      </Tooltip> */}
+      {select ? (
+        <>
+          <select
+            name=""
+            id=""
+            defaultValue="Select"
+            placeholder="Select"
+            className={`text-[14px] sm:text-[1rem] font-poppins-regular-20 p-[8px] sm:p-4 pl-[12px] sm:pl-[25px] box-border border-2 border-solid w-full focus:outline-none bg-white cursor-pointer ${
+              error ? "border-[#D20000]" : "border-text-light"
+            } rounded-full inline-block`}
+          >
+            {selectItems.map((item, index) => (
+              <option value={item} key={index}>
+                {item}
+              </option>
+            ))}
+          </select>
+
+          <img
+            src={down_arrow}
+            className="absolute top-[10px] sm:top-[20%] right-[15px] sm:right-[20px] w-[20px] sm:w-auto cursor-pointer"
+            alt=""
+          />
+        </>
+      ) : (
+        <Tooltip title={error} placement="top" arrow>
+          <input
+            id="input"
+            type={type === "file" ? "text" : type}
+            // required={required}
+            name={name}
+            // placeholder={`${select ? "Select" : ""}`}
+            value={type === "file" ? file?.name : value}
+            disabled={type === "file" ? true : false}
+            onChange={onChange}
+            onBlur={onBlur}
+            className={`text-[14px] sm:text-[1rem] font-poppins-regular-20 p-[8px] sm:p-4 pl-[12px] sm:pl-[25px] box-border border-2 border-solid w-full ${
+              error ? "border-[#D20000]" : "border-text-light"
+            } rounded-full inline-block`}
+          />
+        </Tooltip>
+      )}
     </div>
   );
 };

@@ -198,6 +198,8 @@ const Form = () => {
                     name="howDidYouHear"
                     onChange={handleChange}
                     value={formData.howDidYouHear}
+                    select={true}
+                  selectItems={["Coding", "Designing", "Marketing"]}
                   />
                 </div>
                 <div className="block sm:hidden">
@@ -206,6 +208,8 @@ const Form = () => {
                     name="howDidYouHear"
                     onChange={handleChange}
                     value={formData.howDidYouHear}
+                    select={true}
+                  selectItems={["Coding", "Designing", "Marketing"]}
                   />
                 </div>
               </div>

@@ -70,10 +70,7 @@ const Form = () => {
         !/\S+@\S+\.\S+/.test(values[fieldName])
       ) {
         errors[fieldName] = `${fieldLabel} is invalid`;
-      } else if (
-        fieldName === "phone" &&
-        !/^\d{10}$/.test(values[fieldName])
-      ) {
+      } else if (fieldName === "phone" && !/^\d{10}$/.test(values[fieldName])) {
         errors[fieldName] = `${fieldLabel} is invalid`;
       }
     }
@@ -156,6 +153,8 @@ const Form = () => {
                   onChange={handleChange}
                   error={errorData.areaOfInterest}
                   onBlur={validateField}
+                  select={true}
+                  selectItems={["Coding", "Designing", "Marketing"]}
                 />
               </div>
               <div className="flex sm:flex-row flex-col gap-[1.5rem] w-full">
@@ -262,13 +261,20 @@ const Form = () => {
                   How did you hear of our mentoring ?
                 </h3>
                 <div className="hidden sm:block">
-                  <SubInput name="howDidYouHear" onChange={handleChange} />
+                  <SubInput
+                    name="howDidYouHear"
+                    onChange={handleChange}
+                    select={true}
+                    selectItems={["Website", "Social media"]}
+                  />
                 </div>
                 <div className="block sm:hidden">
                   <SubInput
                     label="How did you hear of our mentoring ?"
                     name="howDidYouHear"
                     onChange={handleChange}
+                    select={true}
+                    selectItems={["Coding", "Designing", "Marketing"]}
                   />
                 </div>
               </div>

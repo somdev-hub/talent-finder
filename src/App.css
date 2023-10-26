@@ -50,7 +50,8 @@ input {
   outline: none;
 }
 
-input[type="file"] {
+input[type="file"],
+select {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
