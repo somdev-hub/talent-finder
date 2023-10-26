@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import asterisk from "../../assets/BookFreeTrial/asterisk.png";
 import tick from "../../assets/BookFreeTrial/tick.svg";
 import ButtonPrimary from "../../components/ButtonPrimary";
 import SubInput from "../../components/SubInput";
+import formValidator from "../../components/functions/formValidator";
+import cross from "../../assets/cross.svg";
 
 const Form = () => {
   const [checked, setChecked] = React.useState({
@@ -16,7 +17,7 @@ const Form = () => {
     areaOfInterest: "",
     highestEducationalQualification: "",
     currentCompany: "",
-    expertise: "",
+    expertise: [],
     goal1: "",
     goal2: "",
     goal3: "",
@@ -32,59 +33,54 @@ const Form = () => {
     isCommitted: false,
     howDidYouHear: ""
   });
+  const rules = {
+    fullName: "Full name",
+    email: "Email",
+    phone: "Phone number",
+    areaOfInterest: "Area of interest",
+    expertise: "Expertise",
+    howDidYouHear: "How did you hear"
+  };
+
+  const validator = formValidator({ rules });
 
   const handleChange = (e) => {
     e.preventDefault();
+
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
     });
   };
 
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter") {
+      console.log(e.target.value);
+      setFormData({
+        ...formData,
+        [e.target.name]: [...formData.expertise, e.target.value]
+      });
+      e.target.value = "";
+    }
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    const errors = validateForm(formData);
+    const errors = validator(formData);
     if (Object.keys(errors).length > 0) {
       setErrorData(errors);
-      console.warn(errors);
       return;
     }
     console.log(formData);
   };
 
-  const validateForm = (values) => {
-    const errors = {};
-    const fields = {
-      fullName: "Full name",
-      email: "Email",
-      phone: "Phone number",
-      areaOfInterest: "Area of interest",
-      expertise: "Expertise",
-      howDidYouHear: "How did you hear"
-    };
-    for (const [fieldName, fieldLabel] of Object.entries(fields)) {
-      if (!values[fieldName]) {
-        errors[fieldName] = `${fieldLabel} is required`;
-      } else if (
-        fieldName === "email" &&
-        !/\S+@\S+\.\S+/.test(values[fieldName])
-      ) {
-        errors[fieldName] = `${fieldLabel} is invalid`;
-      } else if (fieldName === "phone" && !/^\d{10}$/.test(values[fieldName])) {
-        errors[fieldName] = `${fieldLabel} is invalid`;
-      }
-    }
-    return errors;
-  };
-
   const validateField = (e) => {
-    const { name, value } = e.target;
-    const errors = validateForm({ [name]: value });
-    console.log(errors);
-    setErrorData({
-      ...errorData,
+    const { name } = e.target;
+    const errors = validator(formData);
+    setErrorData((prevErrorData) => ({
+      ...prevErrorData,
       [name]: errors[name]
-    });
+    }));
   };
 
   return (
@@ -152,7 +148,7 @@ const Form = () => {
                   name="areaOfInterest"
                   onChange={handleChange}
                   error={errorData.areaOfInterest}
-                  onBlur={validateField}
+                  // onBlur={validateField}
                   select={true}
                   selectItems={["Coding", "Designing", "Marketing"]}
                 />
@@ -174,10 +170,38 @@ const Form = () => {
                 label="Expertise/Skills"
                 required={true}
                 name="expertise"
-                onChange={handleChange}
+                // onChange={handleChange}
+                onKeyDown={handleKeyDown}
                 error={errorData.expertise}
-                onBlur={validateField}
+                // onBlur={validateField}
               />
+              <div className="flex gap-4">
+                {formData.expertise?.map((item, index) => {
+                  return (
+                    <div
+                      className="flex gap-2 items-center border-solid border-[1px] border-text-light rounded-full py-2 px-3 w-[fit-content]"
+                      key={index}
+                    >
+                      <p className="text-text-dark text-[14px] sm:text-[1rem] font-poppins-regular-20 font-[500] leading-[120%] text-center sm:text-left m-0">
+                        {item}
+                      </p>
+                      <img
+                        src={cross}
+                        alt=""
+                        className="w-[1rem] cursor-pointer"
+                        onClick={() => {
+                          let newExpertise = [...formData.expertise];
+                          newExpertise.splice(index, 1);
+                          setFormData({
+                            ...formData,
+                            expertise: newExpertise
+                          });
+                        }}
+                      />
+                    </div>
+                  );
+                })}
+              </div>
               <h3 className="hidden sm:block text-text-dark text-[1rem] sm:text-[1.5rem] font-poppins-regular-20 font-[500] leading-[120%] text-center sm:text-left ">
                 We appreciate your interest, Please Fill out the form
               </h3>

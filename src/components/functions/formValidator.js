@@ -18,7 +18,10 @@ const formValidator = ({ rules }) => {
         errors[fieldName] = `${fieldLabel} is invalid`;
       } else if (fieldName === "phone" && !/^\d{10}$/.test(values[fieldName])) {
         errors[fieldName] = `${fieldLabel} is invalid`;
-      } else if (fieldName === "skills" && values[fieldName].length === 0) {
+      } else if (
+        (fieldName === "skills" || fieldName === "expertise") &&
+        values[fieldName].length === 0
+      ) {
         errors[fieldName] = `${fieldLabel} is required`;
       }
     }

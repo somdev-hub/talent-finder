@@ -4,7 +4,6 @@ import attachment from "../assets/attachment.svg";
 import PropTypes from "prop-types";
 import Tooltip from "@mui/material/Tooltip";
 import down_arrow from "../assets/down-arrow.svg";
-import { GlobalStyles, MenuItem, Select } from "@mui/material";
 
 /**
  * A component that renders a form input with an optional label and file attachment button.
@@ -18,6 +17,9 @@ import { GlobalStyles, MenuItem, Select } from "@mui/material";
  * @param {function} props.onBlur - The function to call when the input loses focus.
  * @param {string} props.error - The error message to display.
  * @param {string} props.accept - The file types to accept.
+ * @param {boolean} props.select - Whether the input is a select.
+ * @param {Array} props.selectItems - The items to display in the select.
+ * @param {function} props.onKeyDown - The function to call when a key is pressed.
  * @returns {JSX.Element} - The rendered component.
  */
 
@@ -32,7 +34,8 @@ const SubInput = ({
   error,
   accept,
   select,
-  selectItems
+  selectItems,
+  onKeyDown
 }) => {
   const [file, setFile] = useState(null);
   const fileRef = useRef(null);
@@ -79,33 +82,23 @@ const SubInput = ({
           accept={accept}
         />
       )}
-      {/* <Tooltip title={error} placement="top" arrow>
-        <input
-          id="input"
-          type={type === "file" ? "text" : type}
-          // required={required}
-          name={name}
-          // placeholder={`${select ? "Select" : ""}`}
-          value={type === "file" ? file?.name : value}
-          disabled={type === "file" ? true : false}
-          onChange={onChange}
-          onBlur={onBlur}
-          className={`text-[14px] sm:text-[1rem] font-poppins-regular-20 p-[8px] sm:p-4 pl-[12px] sm:pl-[25px] box-border border-2 border-solid w-full ${
-            error ? "border-[#D20000]" : "border-text-light"
-          } rounded-full inline-block`}
-        />
-      </Tooltip> */}
+
       {select ? (
         <>
           <select
-            name=""
-            id=""
+            name={name}
+            id="select-input"
             defaultValue="Select"
-            placeholder="Select"
+            selected="Select"
             className={`text-[14px] sm:text-[1rem] font-poppins-regular-20 p-[8px] sm:p-4 pl-[12px] sm:pl-[25px] box-border border-2 border-solid w-full focus:outline-none bg-white cursor-pointer ${
               error ? "border-[#D20000]" : "border-text-light"
             } rounded-full inline-block`}
+            onChange={onChange}
+            // onSelect={onChange}
           >
+            <option value="Select" disabled hidden>
+              Select
+            </option>
             {selectItems.map((item, index) => (
               <option value={item} key={index}>
                 {item}
@@ -131,6 +124,7 @@ const SubInput = ({
             disabled={type === "file" ? true : false}
             onChange={onChange}
             onBlur={onBlur}
+            onKeyDown={onKeyDown}
             className={`text-[14px] sm:text-[1rem] font-poppins-regular-20 p-[8px] sm:p-4 pl-[12px] sm:pl-[25px] box-border border-2 border-solid w-full ${
               error ? "border-[#D20000]" : "border-text-light"
             } rounded-full inline-block`}
@@ -150,7 +144,10 @@ SubInput.propTypes = {
   name: PropTypes.string,
   value: PropTypes.string,
   error: PropTypes.string,
-  accept: PropTypes.string
+  accept: PropTypes.string,
+  select: PropTypes.bool,
+  selectItems: PropTypes.array,
+  onKeyDown: PropTypes.func
 };
 
 SubInput.defaultProps = {
