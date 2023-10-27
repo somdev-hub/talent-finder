@@ -14,7 +14,7 @@ const Footer = () => {
     <div className="hidden lg:block bg-blue-shade text-white  pt-[5rem] lg:pt-[3rem] xl:pt-[5rem] md:px-[3.5rem] lg:px-[1.5rem] xl:px-[7.5rem]">
       <div className="flex sm:flex-row flex-col justify-between ">
         <div className="flex flex-col justify-between">
-          <img src={main_logo} alt="" className="h-[2.5rem]" />
+          <img src={main_logo} alt="" className="h-[2.5rem]" loading="lazy" />
         </div>
         <div className="m-0">
           <ul className="font-poppins-regular-20 font-[300] text-white m-0">
@@ -95,16 +95,36 @@ const Footer = () => {
           </div>
           <div className="flex gap-4">
             <Tooltip title="Facebook" placement="top">
-              <img src={social_icon1} alt="" className="cursor-pointer"/>
+              <img
+                src={social_icon1}
+                alt=""
+                className="cursor-pointer"
+                loading="lazy"
+              />
             </Tooltip>
             <Tooltip placement="top" title="X">
-              <img src={social_icon2} alt="" className="cursor-pointer"/>
+              <img
+                src={social_icon2}
+                alt=""
+                className="cursor-pointer"
+                loading="lazy"
+              />
             </Tooltip>
             <Tooltip placement="top" title="Instagram">
-              <img src={social_icon3} alt="" className="cursor-pointer"/>
+              <img
+                src={social_icon3}
+                alt=""
+                className="cursor-pointer"
+                loading="lazy"
+              />
             </Tooltip>
             <Tooltip placement="top" title="Linkedin">
-              <img src={social_icon4} alt="" className="cursor-pointer"/>
+              <img
+                src={social_icon4}
+                alt=""
+                className="cursor-pointer"
+                loading="lazy"
+              />
             </Tooltip>
           </div>
         </div>

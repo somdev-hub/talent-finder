@@ -46,6 +46,7 @@ const Header = () => {
             src={header_main}
             alt=""
             className="sm:hidden block sm:w-auto  sm:mt-auto w-[85%]"
+            loading="lazy"
           />
           <p className="font-[300] text-center lg:text-left text-[1rem] sm:text-[1.25rem] lg:text-[1rem] xl:text-[1.25rem] font-poppins-regular-20 leading-[130%] md:my-4 xl:my-[3rem] m-0">
             Lorem ipsum dolor sit amet <br className="sm:hidden block" />{" "}
@@ -55,13 +56,18 @@ const Header = () => {
             <br className="sm:hidden block" /> lectus{" "}
             <br className="hidden sm:block" /> purus enim et a.
           </p>
-          <ButtonPrimary text="Apply Now" link={"/placement-form"} color="neon" />
+          <ButtonPrimary
+            text="Apply Now"
+            link={"/placement-form"}
+            color="neon"
+          />
         </div>
         <div className="hidden sm:flex justify-center items-center">
           <img
             src={header_main}
             alt=""
             className="flex items-center justify-center lg:w-[90%] xl:w-auto"
+            loading="lazy"
           />
         </div>
       </div>
@@ -94,6 +100,7 @@ const Header = () => {
                         src={image}
                         alt=""
                         className="sm:w-auto w-[4rem] m-0 h-auto object-contain"
+                        loading="lazy"
                       />
                     </div>
                   </SwiperSlide>
@@ -108,12 +115,38 @@ const Header = () => {
               src={whirlpool_logo}
               alt=""
               className="md:w-[6rem] lg:w-auto"
+              loading="lazy"
             />
-            <img src={tata_logo} alt="" className="md:w-[6rem] xl:w-auto" />
-            <img src={sony_logo} alt="" className="md:w-[6rem] xl:w-auto" />
-            <img src={uber_logo} alt="" className="md:w-[6rem] xl:w-auto" />
-            <img src={airtel_logo} alt="" className="md:w-[6rem] xl:w-auto" />
-            <img src={ibm_logo} alt="" className="md:w-[6rem] xl:w-auto" />
+            <img
+              src={tata_logo}
+              alt=""
+              className="md:w-[6rem] xl:w-auto"
+              loading="lazy"
+            />
+            <img
+              src={sony_logo}
+              alt=""
+              className="md:w-[6rem] xl:w-auto"
+              loading="lazy"
+            />
+            <img
+              src={uber_logo}
+              alt=""
+              className="md:w-[6rem] xl:w-auto"
+              loading="lazy"
+            />
+            <img
+              src={airtel_logo}
+              alt=""
+              className="md:w-[6rem] xl:w-auto"
+              loading="lazy"
+            />
+            <img
+              src={ibm_logo}
+              alt=""
+              className="md:w-[6rem] xl:w-auto"
+              loading="lazy"
+            />
           </div>
         </div>
       </div>

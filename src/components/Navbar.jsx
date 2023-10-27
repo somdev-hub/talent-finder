@@ -95,7 +95,7 @@ const Navbar = ({ color }) => {
                 </div>
               ) : (
                 <div className={` flex items-center`}>
-                  <img src={main_logo} alt="" className="w-1/2 sm:w-auto" />
+                  <img src={main_logo} alt="" className="w-1/2 sm:w-auto" loading="lazy" />
                 </div>
               )}
             </div>

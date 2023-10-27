@@ -29,6 +29,7 @@ const HowItWorks = () => {
           src={group_32}
           className="absolute top-[-20%] right-0 sm:block hidden"
           alt=""
+          loading="lazy"
         />
       </h2>
       <div className="relative sm:w-[25rem] w-[75%]  mt-[5rem]">

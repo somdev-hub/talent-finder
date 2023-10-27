@@ -60,54 +60,62 @@ export const Header = () => {
           src={vector_445}
           alt=""
           className="absolute md:top-[23rem] xl:top-[13rem] hidden sm:block"
+          loading="lazy"
         />
         <img
           src={hire_head1}
           alt=""
           className="absolute md:left-[5rem] md:top-[25rem] xl:left-[18rem] xl:top-[18rem] hidden sm:block"
+          loading="lazy"
         />
         <img
           src={hire_head2}
           alt=""
           className="absolute md:top-[33rem] lg:right-[25rem] md:right-[15rem] xl:top-[23.5rem] xl:right-auto hidden sm:block"
+          loading="lazy"
         />
         <img
           src={hire_head3}
           alt=""
           className="absolute md:top-[24rem] xl:right-[20rem] md:right-[5rem] xl:top-[17rem] hidden sm:block"
+          loading="lazy"
         />
         <div className="sm:hidden relative h-[53vh] overflow-hidden w-full">
           <img
             src={vector_538}
             alt=""
             className="absolute left-[-16px] top-[-10%]"
+            loading="lazy"
           />
           <img
             src={hire_head1_sm}
             alt=""
             className="absolute top-[8%] left-[14%] w-[10rem]"
+            loading="lazy"
           />
           <img
             src={hire_head2_sm}
             alt=""
             className="absolute right-[10%] top-[10rem] w-[10rem]"
+            loading="lazy"
           />
           <img
             src={hire_head3_sm}
             alt=""
             className="absolute top-[14.3rem] left-[5%] w-[10rem]"
+            loading="lazy"
           />
         </div>
         <div className="hidden relative mt-[22rem] md:w-[90%] xl:w-[60%] lg:w-[85%] border-t-[2px] border-solid border-text-light p-5 sm:flex items-center justify-between overflow-hidden sm:overflow-visible">
           <p className="font-[400] text-text-medium left-[30%] top-[-15%] absolute m-0 font-poppins-regular-20 bg-white z-10">
             Top tech companies trust us with their talent needs
           </p>
-          <img src={whirlpool_logo} alt="" />
-          <img src={tata_logo} alt="" />
-          <img src={sony_logo} alt="" />
-          <img src={uber_logo} alt="" />
-          <img src={airtel_logo} alt="" />
-          <img src={ibm_logo} alt="" />
+          <img src={whirlpool_logo} alt="" loading="lazy" />
+          <img src={tata_logo} alt="" loading="lazy" />
+          <img src={sony_logo} alt="" loading="lazy" />
+          <img src={uber_logo} alt="" loading="lazy" />
+          <img src={airtel_logo} alt="" loading="lazy" />
+          <img src={ibm_logo} alt="" loading="lazy" />
         </div>
         <div className="sm:hidden flex flex-col px-4 mb-8">
           <p className="w-[320px] font-[400] text-text-medium m-0 font-poppins-regular-20">
@@ -133,6 +141,7 @@ export const Header = () => {
                       src={image}
                       alt=""
                       className="sm:w-auto w-[4rem] m-0 h-auto"
+                      loading="lazy"
                     />
                   </div>
                 </SwiperSlide>

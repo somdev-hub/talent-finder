@@ -3,7 +3,7 @@ import React from "react";
 const WhyUsCard = ({ img, heading, text }) => {
   return (
     <div className="flex flex-col items-center justify-center">
-      <img src={img} alt="" className="sm:w-auto w-[30%]" />
+      <img src={img} alt="" className="sm:w-auto w-[30%]" loading="lazy" />
       <div className="mt-6 leading-[120%] font-poppins-regular-20 text-center">
      {/* fixed bugs added text color matched with figma */}
         <h4 className=" text-[var(--text-dark,#202020)] font-[500] text-[1.5rem] m-0">

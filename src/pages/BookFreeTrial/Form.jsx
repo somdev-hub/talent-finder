@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import tick from "../../assets/BookFreeTrial/tick.svg";
 import ButtonPrimary from "../../components/ButtonPrimary";
 import SubInput from "../../components/SubInput";
@@ -6,10 +6,6 @@ import formValidator from "../../components/functions/formValidator";
 import cross from "../../assets/cross.svg";
 
 const Form = () => {
-  const [checked, setChecked] = React.useState({
-    yes: false,
-    no: false
-  });
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
@@ -41,12 +37,39 @@ const Form = () => {
     expertise: "Expertise",
     howDidYouHear: "How did you hear"
   };
+  const goalExamples = {
+    coding: [
+      "Build a portfolio",
+      "Get a job",
+      "Get a promotion",
+      "Start a business",
+      "Learn a new skill"
+    ],
+    designing: [
+      "Design an app",
+      "Get a job",
+      "Get a promotion",
+      "Start a business",
+      "Learn a new skill"
+    ],
+    marketing: [
+      "Get a job",
+      "Get a promotion",
+      "Start a business",
+      "Learn a new skill"
+    ]
+  };
+  const [goalExample, setGoalExample] = useState(
+    formData.areaOfInterest ? goalExamples.coding : []
+  );
 
   const validator = formValidator({ rules });
 
   const handleChange = (e) => {
     e.preventDefault();
-
+    if (e.target.name === "areaOfInterest") {
+      setGoalExample(goalExamples[e.target.value.toLowerCase()]);
+    }
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
@@ -148,7 +171,6 @@ const Form = () => {
                   name="areaOfInterest"
                   onChange={handleChange}
                   error={errorData.areaOfInterest}
-                  // onBlur={validateField}
                   select={true}
                   selectItems={["Coding", "Designing", "Marketing"]}
                 />
@@ -170,19 +192,17 @@ const Form = () => {
                 label="Expertise/Skills"
                 required={true}
                 name="expertise"
-                // onChange={handleChange}
                 onKeyDown={handleKeyDown}
                 error={errorData.expertise}
-                // onBlur={validateField}
               />
-              <div className="flex gap-4">
+              <div className="flex gap-4 flex-wrap">
                 {formData.expertise?.map((item, index) => {
                   return (
                     <div
                       className="flex gap-2 items-center border-solid border-[1px] border-text-light rounded-full py-2 px-3 w-[fit-content]"
                       key={index}
                     >
-                      <p className="text-text-dark text-[14px] sm:text-[1rem] font-poppins-regular-20 font-[500] leading-[120%] text-center sm:text-left m-0">
+                      <p className="text-text-dark text-[12px] sm:text-[1rem] font-poppins-regular-20 font-[500] leading-[120%] text-center sm:text-left m-0">
                         {item}
                       </p>
                       <img
@@ -209,75 +229,86 @@ const Form = () => {
                 Please Indicate Learning goals
               </h3>
               <div className="flex flex-col gap-[2.5rem]">
-                <SubInput label="Goal 1" name="goal1" onChange={handleChange} />
-                <SubInput label="Goal 2" name="goal2" onChange={handleChange} />
-                <SubInput label="Goal 3" name="goal3" onChange={handleChange} />
+                <SubInput
+                  label="Goal 1"
+                  name="goal1"
+                  onChange={handleChange}
+                  placeholder={goalExample[0]}
+                />
+                <SubInput
+                  label="Goal 2"
+                  name="goal2"
+                  onChange={handleChange}
+                  placeholder={goalExample[1]}
+                />
+                <SubInput
+                  label="Goal 3"
+                  name="goal3"
+                  onChange={handleChange}
+                  placeholder={goalExample[2]}
+                />
               </div>
               <div className="">
                 <h3 className="text-text-dark text-[14px] sm:text-[1.5rem] font-poppins-regular-20 font-[500] leading-[120%] text-center sm:text-left ">
                   Are you willing to commit 1-2 hrs every week for 1 year?
                 </h3>
                 <div className="flex gap-[3rem] sm:justify-start justify-center">
-                  <div className="">
-                    <input
-                      type="checkbox"
-                      name="yes"
-                      id=""
-                      defaultChecked={checked.yes}
-                      checked={checked.yes}
-                      className="appearance-none"
-                    />
-                    <div className="flex">
-                      <div
-                        className={`text-text-medium sm:text-text-dark h-[1.3rem] w-[1.3rem] mr-4 cursor-pointer relative border-[2.5px] border-solid border-white-400`}
-                        onClick={() => setChecked({ yes: true, no: false })}
-                      >
-                        <img
-                          src={tick}
-                          alt=""
-                          className={`absolute top-0 left-0 w-[20px]  ${
-                            checked.yes ? "block" : "hidden"
-                          }`}
-                        />
+                  {["yes", "no"].map((value) => (
+                    <div className="" key={value}>
+                      <input
+                        type="checkbox"
+                        name={value}
+                        id=""
+                        defaultChecked={
+                          value === "yes"
+                            ? formData.isCommitted
+                            : !formData.isCommitted
+                        }
+                        checked={
+                          value === "yes"
+                            ? formData.isCommitted
+                            : !formData.isCommitted
+                        }
+                        className="appearance-none"
+                      />
+                      <div className="flex">
+                        <div
+                          className={`text-text-medium sm:text-text-dark h-[1.3rem] w-[1.3rem] mr-4 cursor-pointer relative border-[2.5px] border-solid border-white-400`}
+                          onClick={() =>
+                            setFormData({
+                              ...formData,
+                              isCommitted: value === "yes"
+                            })
+                          }
+                        >
+                          <img
+                            src={tick}
+                            alt=""
+                            className={`absolute top-0 left-0 w-[20px]  ${
+                              value === "yes"
+                                ? formData.isCommitted
+                                  ? "block"
+                                  : "hidden"
+                                : !formData.isCommitted
+                                ? "block"
+                                : "hidden"
+                            }`}
+                          />
+                        </div>
+                        <p
+                          className="text-text-medium sm:text-text-dark m-0 font-[500] text-[1rem] cursor-pointer font-poppins-regular-20"
+                          onClick={() =>
+                            setFormData({
+                              ...formData,
+                              isCommitted: value === "yes"
+                            })
+                          }
+                        >
+                          {value}
+                        </p>
                       </div>
-                      <p
-                        className="text-text-medium sm:text-text-dark m-0 font-[500] text-[1rem] cursor-pointer font-poppins-regular-20"
-                        onClick={() => setChecked({ yes: true, no: false })}
-                      >
-                        yes
-                      </p>
                     </div>
-                  </div>
-                  <div className="">
-                    <input
-                      type="checkbox"
-                      name="no"
-                      id=""
-                      defaultChecked={checked.no}
-                      checked={checked.no}
-                      className="appearance-none"
-                    />
-                    <div className="flex">
-                      <div
-                        className={`text-text-medium sm:text-text-dark h-[1.3rem] w-[1.3rem] mr-4 cursor-pointer relative border-[2.5px] border-solid border-white-400`}
-                        onClick={() => setChecked({ yes: false, no: true })}
-                      >
-                        <img
-                          src={tick}
-                          alt=""
-                          className={`absolute top-0 left-0 w-[20px]  ${
-                            checked.no ? "block" : "hidden"
-                          }`}
-                        />
-                      </div>
-                      <p
-                        className="text-text-medium sm:text-text-dark m-0 font-[500] text-[1rem] cursor-pointer font-poppins-regular-20"
-                        onClick={() => setChecked({ yes: false, no: true })}
-                      >
-                        no
-                      </p>
-                    </div>
-                  </div>
+                  ))}
                 </div>
               </div>
               <div className="">
@@ -289,7 +320,14 @@ const Form = () => {
                     name="howDidYouHear"
                     onChange={handleChange}
                     select={true}
-                    selectItems={["Website", "Social media"]}
+                    selectItems={[
+                      "Website",
+                      "YouTube",
+                      "Indeed",
+                      "Linkedin",
+                      "Promotion",
+                      "others"
+                    ]}
                   />
                 </div>
                 <div className="block sm:hidden">
@@ -298,7 +336,14 @@ const Form = () => {
                     name="howDidYouHear"
                     onChange={handleChange}
                     select={true}
-                    selectItems={["Coding", "Designing", "Marketing"]}
+                    selectItems={[
+                      "Website",
+                      "YouTube",
+                      "Indeed",
+                      "Linkedin",
+                      "Promotion",
+                      "others"
+                    ]}
                   />
                 </div>
               </div>

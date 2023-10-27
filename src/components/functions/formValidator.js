@@ -9,25 +9,43 @@ const formValidator = ({ rules }) => {
   const validateForm = (values) => {
     const errors = {};
     for (const [fieldName, fieldLabel] of Object.entries(rules)) {
-      if (!values[fieldName]) {
-        errors[fieldName] = `${fieldLabel} is required`;
-      } else if (
-        fieldName === "email" &&
-        !/\S+@\S+\.\S+/.test(values[fieldName])
-      ) {
-        errors[fieldName] = `${fieldLabel} is invalid`;
-      } else if (fieldName === "phone" && !/^\d{10}$/.test(values[fieldName])) {
-        errors[fieldName] = `${fieldLabel} is invalid`;
-      } else if (
-        (fieldName === "skills" || fieldName === "expertise") &&
-        values[fieldName].length === 0
-      ) {
-        errors[fieldName] = `${fieldLabel} is required`;
+      switch (fieldName) {
+        case "email":
+          if (!values[fieldName]) {
+            errors[fieldName] = `${fieldLabel} is required`;
+          } else if (!/\S+@\S+\.\S+/.test(values[fieldName])) {
+            errors[fieldName] = `${fieldLabel} is invalid`;
+          }
+          break;
+        case "phone":
+          if (!values[fieldName]) {
+            errors[fieldName] = `${fieldLabel} is required`;
+          } else if (!/^\d{10}$/.test(values[fieldName])) {
+            errors[fieldName] = `${fieldLabel} is invalid`;
+          }
+          break;
+        case "skills":
+        case "expertise":
+          if (values[fieldName].length === 0) {
+            errors[fieldName] = `${fieldLabel} is required`;
+          }
+          break;
+        case "fullName":
+          if (!values[fieldName]) {
+            errors[fieldName] = `${fieldLabel} is required`;
+          } else if (!/^[a-zA-Z ]+$/.test(values[fieldName])) {
+            errors[fieldName] = `${fieldLabel} is invalid`;
+          }
+          break;
+        default:
+          if (!values[fieldName]) {
+            errors[fieldName] = `${fieldLabel} is required`;
+          }
+          break;
       }
     }
     return errors;
   };
-
   return validateForm;
 };
 

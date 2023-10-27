@@ -7,6 +7,7 @@ import insta from "../../assets/PlacementForm/insta_blue.svg";
 import linkedin from "../../assets/PlacementForm/linkedin_blue.svg";
 import ReCAPTCHA from "react-google-recaptcha";
 import formValidator from "../../components/functions/formValidator";
+import cross from "../../assets/cross.svg";
 
 const Form = () => {
   const [formData, setFormData] = useState({
@@ -18,7 +19,7 @@ const Form = () => {
     nameOfEducationalInstitution: "",
     currentCompany: "",
     totalExperience: "",
-    expertise: "",
+    expertise: [],
     resume: "",
     coverLetter: "",
     howDidYouHear: ""
@@ -49,6 +50,17 @@ const Form = () => {
       ...formData,
       [e.target.name]: e.target.value
     });
+  };
+
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter") {
+      console.log(e.target.value);
+      setFormData({
+        ...formData,
+        [e.target.name]: [...formData.expertise, e.target.value]
+      });
+      e.target.value = "";
+    }
   };
 
   const handleSubmit = (e) => {
@@ -167,11 +179,36 @@ const Form = () => {
                 label="Expertise/Skills"
                 required={true}
                 name="expertise"
-                onChange={handleChange}
-                value={formData.expertise}
+                onKeyDown={handleKeyDown}
                 error={errorData.expertise}
-                onBlur={validateField}
               />
+              <div className="flex gap-4 flex-wrap">
+                {formData.expertise?.map((item, index) => {
+                  return (
+                    <div
+                      className="flex gap-2 items-center border-solid border-[1px] border-text-light rounded-full py-2 px-3 w-[fit-content]"
+                      key={index}
+                    >
+                      <p className="text-text-dark text-[12px] sm:text-[1rem] font-poppins-regular-20 font-[500] leading-[120%] text-center sm:text-left m-0">
+                        {item}
+                      </p>
+                      <img
+                        src={cross}
+                        alt=""
+                        className="w-[1rem] cursor-pointer"
+                        onClick={() => {
+                          let newExpertise = [...formData.expertise];
+                          newExpertise.splice(index, 1);
+                          setFormData({
+                            ...formData,
+                            expertise: newExpertise
+                          });
+                        }}
+                      />
+                    </div>
+                  );
+                })}
+              </div>
               <div className="flex sm:flex-row flex-col gap-[1.5rem] w-full">
                 <SubInput
                   label="Resume/CV Upload  "
@@ -199,7 +236,14 @@ const Form = () => {
                     onChange={handleChange}
                     value={formData.howDidYouHear}
                     select={true}
-                  selectItems={["Coding", "Designing", "Marketing"]}
+                    selectItems={[
+                      "Website",
+                      "YouTube",
+                      "Indeed",
+                      "Linkedin",
+                      "Promotion",
+                      "others"
+                    ]}
                   />
                 </div>
                 <div className="block sm:hidden">
@@ -209,7 +253,14 @@ const Form = () => {
                     onChange={handleChange}
                     value={formData.howDidYouHear}
                     select={true}
-                  selectItems={["Coding", "Designing", "Marketing"]}
+                    selectItems={[
+                      "Website",
+                      "YouTube",
+                      "Indeed",
+                      "Linkedin",
+                      "Promotion",
+                      "others"
+                    ]}
                   />
                 </div>
               </div>

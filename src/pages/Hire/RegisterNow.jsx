@@ -37,6 +37,7 @@ const RegisterNow = () => {
           alt=""
           style={{ display: showScrollToTop ? "block" : "none" }}
           onClick={handleScrollToTop}
+          loading="lazy"
         />
       </div>
     </div>

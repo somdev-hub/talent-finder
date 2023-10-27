@@ -46,9 +46,10 @@ const TestimonialCard = ({
           src={img}
           alt=""
           className="xl:w-auto w-[35%] md:w-1/4 lg:w-[18%] md:top-[-6rem] right-0 top-[-5rem] absolute xl:hidden block"
+          loading="lazy"
         />
         <div className="sm:static hidden xl:block absolute top-[-10%]">
-          <img src={img} alt="" className="sm:w-auto w-2/3" />
+          <img src={img} alt="" className="sm:w-auto w-2/3" loading="lazy" />
         </div>
         <div className="text-left">
           <div className="flex xl:flex-row flex-col justify-between items-start">

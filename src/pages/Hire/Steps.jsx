@@ -31,22 +31,21 @@ const Steps = () => {
         })}
       </div> */}
       <div className="flex flex-wrap gap-[3.5rem] mt-8 sm:mt-[4rem] flex-col lg:flex-row justify-center">
-  {steps.map((step, index) => (
-    <div
-      className="flex flex-col items-center justify-center gap-[1rem] max-w-[300px]"
-      key={index}
-    >
-      <img src={step.img} alt="" />
-      <h3 className="text-[1.5rem] font-[500] font-poppins-regular-20 leading-[120%] m-0">
-        {step.title}
-      </h3>
-      <p className="w-auto xl:w-[250px] text-text-medium font-[400] leading-[120%] font-poppins-regular-20 m-0 text-center">
-        {step.desc}
-      </p>
-    </div>
-  ))}
-</div>
-
+        {steps.map((step, index) => (
+          <div
+            className="flex flex-col items-center justify-center gap-[1rem] max-w-[300px]"
+            key={index}
+          >
+            <img src={step.img} alt="" loading="lazy" />
+            <h3 className="text-[1.5rem] font-[500] font-poppins-regular-20 leading-[120%] m-0">
+              {step.title}
+            </h3>
+            <p className="w-auto xl:w-[250px] text-text-medium font-[400] leading-[120%] font-poppins-regular-20 m-0 text-center">
+              {step.desc}
+            </p>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

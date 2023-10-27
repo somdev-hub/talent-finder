@@ -1,5 +1,3 @@
-import React from "react";
-import Navbar from "../../components/Navbar";
 import header_main from "../../assets/landing-page/header-main.png";
 import header_main_sm from "../../assets/landing-page/header-main-sm.png";
 import check_mark from "../../assets/landing-page/check-mark-circle-2.svg";
@@ -12,8 +10,8 @@ import uber_logo from "../../assets/landing-page/uber-logo.png";
 import airtel_logo from "../../assets/landing-page/airtel-logo.png";
 import ibm_logo from "../../assets/landing-page/ibm-logo.png";
 import ButtonPrimary from "../../components/ButtonPrimary";
-import { Autoplay, Pagination } from "swiper/modules";
-import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
+import { Autoplay } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
 const Header = () => {
@@ -44,6 +42,7 @@ const Header = () => {
             src={header_main_sm}
             alt=""
             className="lg:hidden block lg:w-auto sm:mt-auto w-[120%] sm:w-auto relative left-[15%] md:left-[8%]"
+            loading="lazy"
           />
           {/* added width in line 50 */}
           <p className="w-[382px] sm:w-[590px] font-[300] text-[1.25rem] lg:text-[1rem] xl:text-[1.25rem] text-center lg:text-left font-poppins-regular-20 leading-[130%] sm:my-[1rem] xl:my-8 m-0">
@@ -51,10 +50,18 @@ const Header = () => {
             integer. Risus sapien nec volutpat ut lectus purus enim et a.
           </p>
           <div className="hidden sm:block">
-            <ButtonPrimary text={"Book Free Trial"} link={"/bookfreetrial"} color="neon" />
+            <ButtonPrimary
+              text={"Book Free Trial"}
+              link={"/bookfreetrial"}
+              color="neon"
+            />
           </div>
           <div className="block sm:hidden">
-            <ButtonPrimary text={"Book Now"} link={"/bookfreetrial"} color="neon" />
+            <ButtonPrimary
+              text={"Book Now"}
+              link={"/bookfreetrial"}
+              color="neon"
+            />
           </div>
 
           <div className="font-[300] leading-[120%] font-poppins-regular-20 sm:block flex flex-col items-center">
@@ -73,6 +80,7 @@ const Header = () => {
             src={header_main}
             alt=""
             className="2xl:w-[80%] w-auto lg:w-[90%] "
+            loading="lazy"
           />
         </div>
       </div>
@@ -102,6 +110,7 @@ const Header = () => {
                         src={image}
                         alt=""
                         className="sm:w-auto w-[4rem] m-0 h-auto"
+                        loading="lazy"
                       />
                     </div>
                   </SwiperSlide>
@@ -112,12 +121,42 @@ const Header = () => {
         </div>
         <div className="hidden sm:flex w-full items-center gap-[4rem] justify-center  overflow-x-auto ">
           <div className="sm:w-auto md:w-[90%] lg:w-[80%] xl:w-[82%] flex items-center justify-around">
-            <img src={whirlpool_logo} alt="" className="w-[6rem] lg:w-auto" />
-            <img src={tata_logo} alt="" className="w-[6rem] xl:w-[6rem]" />
-            <img src={sony_logo} alt="" className="w-[6rem] xl:w-[6rem]" />
-            <img src={uber_logo} alt="" className="w-[6rem] xl:w-[6rem]" />
-            <img src={airtel_logo} alt="" className="w-[6rem] xl:w-[6rem]" />
-            <img src={ibm_logo} alt="" className="w-[6rem] xl:w-[6rem]" />
+            <img
+              src={whirlpool_logo}
+              alt=""
+              className="w-[6rem] lg:w-auto"
+              loading="lazy"
+            />
+            <img
+              src={tata_logo}
+              alt=""
+              className="w-[6rem] xl:w-[6rem]"
+              loading="lazy"
+            />
+            <img
+              src={sony_logo}
+              alt=""
+              className="w-[6rem] xl:w-[6rem]"
+              loading="lazy"
+            />
+            <img
+              src={uber_logo}
+              alt=""
+              className="w-[6rem] xl:w-[6rem]"
+              loading="lazy"
+            />
+            <img
+              src={airtel_logo}
+              alt=""
+              className="w-[6rem] xl:w-[6rem]"
+              loading="lazy"
+            />
+            <img
+              src={ibm_logo}
+              alt=""
+              className="w-[6rem] xl:w-[6rem]"
+              loading="lazy"
+            />
           </div>
         </div>
       </div>

@@ -153,7 +153,7 @@ const Form = () => {
               onChange={handleInput}
               value={selectedOptions.howDidYouHear}
               select={true}
-              selectItems={["Coding", "Designing", "Marketing"]}
+              selectItems={["Website","YouTube","Indeed","Linkedin","Promotion","others"]}
             />
           </div>
 

@@ -23,7 +23,7 @@ const HowItWorkSlide = ({ heading, text, img }) => {
         </p>
       </div>
       <div className="w-auto md:w-1/2">
-        <img src={img} alt="" className="w-full" />
+        <img src={img} alt="" className="w-full" loading="lazy" />
       </div>
     </div>
   );

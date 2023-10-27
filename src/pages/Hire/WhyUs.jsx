@@ -33,7 +33,7 @@ const WhyUs = () => {
               key={index}
               className="flex flex-col items-center justify-center lg:px-8"
             >
-              <img src={why.img} alt="" />
+              <img src={why.img} alt="" loading="lazy" />
               <div className="text-white text-center mt-8">
                 <h3 className="font-[500] text-[1.5rem] font-poppins-regular-20 m-0">
                   {why.title}

@@ -28,6 +28,7 @@ const Testimonials = () => {
           src={group7}
           className="absolute left-[5.5rem] top-[-7px] sm:block hidden"
           alt=""
+          loading="lazy"
         />
       </div>
       <h2 className="text-black font-[400] text-[2rem] sm:text-[3.5rem] font-coolvetica-56 m-0 mt-4">

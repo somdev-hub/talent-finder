@@ -1,8 +1,6 @@
-import React from "react";
 import benifits_main from "../../assets/placement/benifits-main.svg";
 import highlight_6 from "../../assets/placement/highlight-6.svg";
 import { benefits } from "../../assets/data/benefits";
-import { benefits_sm } from "../../assets/data/benefits";
 
 const Benefits = () => {
   return (
@@ -22,7 +20,7 @@ const Benefits = () => {
         />
       </div>
       <div className="flex xl:flex-row flex-col sm:gap-8 mt-10 sm:mt-[6rem] items-center justify-center">
-        <img src={benifits_main} alt="" className="w-4/5 lg:w-1/2 xl:pl-[7%]" />
+        <img src={benifits_main} alt="" className="w-4/5 lg:w-1/2 xl:pl-[7%]" loading="lazy" />
         <div className="grid lg:justify-items-center xl:justify-items-start">
           <p className="xl:w-[750px] sm:block hidden text-[1.5rem] font-[400] leading-[115%] font-poppins-regular-20 m-0">
             Are you on the hunt for your dream job? <br /> Here's why you should

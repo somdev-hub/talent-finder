@@ -14,9 +14,9 @@ const FooterSm = () => {
   return (
     <div className="lg:hidden block text-white bg-blue-shade">
       <div className="flex items-center px-[1.25rem] py-[2rem] justify-start pb-2 border-b-2 border-solid border-white">
-        <img src={main_logo} alt="" className="w-1/4" />
+        <img src={main_logo} alt="" className="w-1/4" loading="lazy" />
       </div>
-      
+
       <div className="px-[1.25rem] ">
         <div className="flex justify-between md:justify-around">
           <ul className="text-left p-0">
@@ -97,16 +97,16 @@ const FooterSm = () => {
       </div>
       <div className="flex gap-4 justify-center border-y-[1px] border-opacity-[0.3] py-2 border-solid border-slate-100 mt-8">
         <Tooltip placement="top" title="Facebook">
-          <img src={social_icon1} alt="" className="w-4" />
+          <img src={social_icon1} alt="" className="w-4" loading="lazy" />
         </Tooltip>
         <Tooltip placement="top" title="X">
-          <img src={social_icon2} alt="" className="w-4" />
+          <img src={social_icon2} alt="" className="w-4" loading="lazy" />
         </Tooltip>
         <Tooltip placement="top" title="Instagram ">
-          <img src={social_icon3} alt="" className="w-4" />
+          <img src={social_icon3} alt="" className="w-4" loading="lazy" />
         </Tooltip>
         <Tooltip placement="top" title="Linkedin">
-          <img src={social_icon4} alt="" className="w-4" />
+          <img src={social_icon4} alt="" className="w-4" loading="lazy" />
         </Tooltip>
       </div>
       <div className="text-[14px] md:text-[1.25rem] bg-dark-blue text-white font-[300] font-poppins-regular-20 flex justify-start ml-5 py-2">

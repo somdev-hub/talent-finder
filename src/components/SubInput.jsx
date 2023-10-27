@@ -35,7 +35,8 @@ const SubInput = ({
   accept,
   select,
   selectItems,
-  onKeyDown
+  onKeyDown,
+  placeholder
 }) => {
   const [file, setFile] = useState(null);
   const fileRef = useRef(null);
@@ -120,6 +121,7 @@ const SubInput = ({
             // required={required}
             name={name}
             // placeholder={`${select ? "Select" : ""}`}
+            placeholder={placeholder && `Ex: ${placeholder}`}
             value={type === "file" ? file?.name : value}
             disabled={type === "file" ? true : false}
             onChange={onChange}
