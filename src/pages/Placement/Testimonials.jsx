@@ -99,7 +99,7 @@ const Testimonials = () => {
           </Swiper>
         </div>
       </div>
-      <ButtonPrimary text="Apply Now" color="neon" />
+      <ButtonPrimary text="Apply Now" color="neon" link="/placement-form" />
     </div>
   );
 };

@@ -1,6 +1,6 @@
-import React, { useState } from "react";
 import ButtonPrimary from "../../components/ButtonPrimary";
 import register_now1 from "../../assets/hire/register-now1.svg";
+import { useState } from "react";
 
 const RegisterNow = () => {
   const [showScrollToTop, setShowScrollToTop] = useState(false);
@@ -30,7 +30,7 @@ const RegisterNow = () => {
         better!
       </p>
       <div className="relative w-fit  m-auto">
-        <ButtonPrimary text="Hire Now" color="neon" />
+        <ButtonPrimary text="Hire Now" color="neon" link="/hire-form" />
         <img
           src={register_now1}
           className="absolute z-20 sm:bottom-[-13px] bottom-[-2.5rem] right-[40%] cursor-pointer"

@@ -47,7 +47,7 @@ const WhyUs = () => {
           );
         })}
       </div>
-      <ButtonPrimary text="Hire Now" color="neon" />
+      <ButtonPrimary text="Hire Now" color="neon" link="/hire-form" />
     </div>
   );
 };

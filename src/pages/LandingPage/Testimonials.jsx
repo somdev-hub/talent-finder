@@ -67,10 +67,10 @@ const Testimonials = () => {
         </div>
       </div>
       <div className="hidden sm:block">
-        <ButtonPrimary text={"Book Free Trial"} color="neon" />
+        <ButtonPrimary text={"Book Free Trial"} color="neon" link="/bookfreetrial" />
       </div>
       <div className="block sm:hidden">
-        <ButtonPrimary text={"Apply Now"} color="neon" />
+        <ButtonPrimary text={"Apply Now"} color="neon" link="/bookfreetrial" />
       </div>
 
       <img

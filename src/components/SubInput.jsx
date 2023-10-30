@@ -47,6 +47,7 @@ const SubInput = ({
 
   const onFileChange = (e) => {
     const file = e.target.files[0];
+    onChange(e);
     setFile(file);
   };
   return (
@@ -118,11 +119,9 @@ const SubInput = ({
           <input
             id="input"
             type={type === "file" ? "text" : type}
-            // required={required}
             name={name}
-            // placeholder={`${select ? "Select" : ""}`}
             placeholder={placeholder && `Ex: ${placeholder}`}
-            value={type === "file" ? file?.name : value}
+            value={type === "file" ? file?.name : value }
             disabled={type === "file" ? true : false}
             onChange={onChange}
             onBlur={onBlur}

@@ -78,7 +78,8 @@ const Form = () => {
 
   const handleKeyDown = (e) => {
     if (e.key === "Enter") {
-      console.log(e.target.value);
+      e.preventDefault();
+      // console.log(e.target.value);
       setFormData({
         ...formData,
         [e.target.name]: [...formData.expertise, e.target.value]

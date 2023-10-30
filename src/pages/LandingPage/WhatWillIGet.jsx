@@ -1,19 +1,33 @@
 import WhatWillIgetCard from "../../components/WhatWillIgetCard";
 import line2 from "../../assets/landing-page/Line-2.svg";
-import { whatWillIGetSlides } from "../../assets/data/whatWillIGet";
+import whatWillIGetSlides from "../../assets/data/whatWillIGet";
 import ButtonPrimary from "../../components/ButtonPrimary";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 const WhatWillIGet = () => {
+  const [data, setData] = useState([]);
+  useEffect(() => {
+    const fetchData = async () => {
+      const response = await fetch("/data.json");
+      const res = await response.json();
+      setData(res);
+      console.log(res);
+    };
+    fetchData();
+    console.log(data);
+  }, []);
+
   return (
     <div className="mt-[5rem] sm:mt-0 text-center p-[1.5rem] sm:py-[5rem] flex flex-col justify-center items-center">
-    {/* fixed text color */}
+      {/* fixed text color */}
       <p className="text-[1.5rem] font-[400] font-coolvetica-56 text-[#6D38FB] m-0">
         Benefits
       </p>
       <div className="relative">
-    {/* fixed text color */}
+        {/* fixed text color */}
         <h2 className="font-[400] text-[#202020] text-[2.5rem] sm:text-[3.5rem] font-coolvetica-56 m-0 mt-8">
-        What will i get?
+          What will i get?
         </h2>
         {/* fixed highlight images right position from 5 to 7 */}
         <img
@@ -24,7 +38,7 @@ const WhatWillIGet = () => {
       </div>
       {/* fixed image bug*/}
       <div className="mt-10 flex lg:flex-row flex-col gap-6 lg:gap-2 xl:gap-10 md:w-[90%] lg:w-full xl:w-4/5">
-        {whatWillIGetSlides.map((item, index) => {
+        {data.map((item, index) => {
           return (
             <WhatWillIgetCard
               key={index}
@@ -36,7 +50,7 @@ const WhatWillIGet = () => {
         })}
       </div>
       <div className="sm:hidden mt-[3.5rem]">
-        <ButtonPrimary text="Book Free Trial" />
+        <ButtonPrimary text="Book Free Trial" link="/bookfreetrial" />
       </div>
     </div>
   );

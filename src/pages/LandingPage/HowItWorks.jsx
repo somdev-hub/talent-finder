@@ -83,7 +83,7 @@ const HowItWorks = () => {
           </Swiper>
         </div>
       </div>
-      <ButtonPrimary text="Book Free Trial" color="neon" />
+      <ButtonPrimary text="Book Free Trial" color="neon" link="/bookfreetrial" />
     </div>
   );
 };

@@ -78,9 +78,8 @@ const Form = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     const errors = validator(selectedOptions);
-    if (errors) {
-      console.log(errors);
-      setErrorData(errors);
+    setErrorData(errors);
+    if (Object.keys(errors).length > 0) {
       return;
     }
     console.log(selectedOptions);

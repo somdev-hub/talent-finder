@@ -22,10 +22,18 @@ const RegisterNow = () => {
           className="absolute right-[44%] 2xl:right-[62%] bottom-[-4rem] -z-10 sm:block hidden"
         />
         <div className="sm:hidden block">
-          <ButtonPrimary text={"Apply Now"} color="neon" />
+          <ButtonPrimary
+            text={"Apply Now"}
+            color="neon"
+            link="/bookfreetrial"
+          />
         </div>
         <div className="hidden sm:block 2xl:ml-[18px]">
-          <ButtonPrimary text={"Book Free Trial"} color="neon" />
+          <ButtonPrimary
+            text={"Book Free Trial"}
+            color="neon"
+            link="/bookfreetrial"
+          />
         </div>
         <img
           src={vector221}
@@ -33,9 +41,9 @@ const RegisterNow = () => {
           className="absolute bottom-0 left-[12rem] 2xl:left-[14rem] -z-10 sm:block hidden"
         />
       </div>
-      <div className="sm:hidden block mt-6">
+      {/* <div className="sm:hidden block mt-6">
         <ButtonSecondary text="View Sample Profile" />
-      </div>
+      </div> */}
       <img src={vector_210} alt="" className="sm:hidden block" />
     </div>
   );

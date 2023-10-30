@@ -54,7 +54,8 @@ const Form = () => {
 
   const handleKeyDown = (e) => {
     if (e.key === "Enter") {
-      console.log(e.target.value);
+      e.preventDefault();
+      // console.log(e.target.value);
       setFormData({
         ...formData,
         [e.target.name]: [...formData.expertise, e.target.value]
@@ -179,6 +180,7 @@ const Form = () => {
                 label="Expertise/Skills"
                 required={true}
                 name="expertise"
+                // value={formData.expertise[formData.expertise.length - 1]}
                 onKeyDown={handleKeyDown}
                 error={errorData.expertise}
               />
