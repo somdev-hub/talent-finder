@@ -41,9 +41,9 @@ const RegisterNow = () => {
           className="absolute bottom-0 left-[12rem] 2xl:left-[14rem] -z-10 sm:block hidden"
         />
       </div>
-      {/* <div className="sm:hidden block mt-6">
+      <div className="sm:hidden block mt-6">
         <ButtonSecondary text="View Sample Profile" />
-      </div> */}
+      </div>
       <img src={vector_210} alt="" className="sm:hidden block" />
     </div>
   );

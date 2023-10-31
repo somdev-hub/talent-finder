@@ -83,6 +83,7 @@ const Form = () => {
       return;
     }
     console.log(selectedOptions);
+    window.location.href = "/loader";
   };
 
   const formOptions = [
@@ -152,7 +153,14 @@ const Form = () => {
               onChange={handleInput}
               value={selectedOptions.howDidYouHear}
               select={true}
-              selectItems={["Website","YouTube","Indeed","Linkedin","Promotion","others"]}
+              selectItems={[
+                "Blog",
+                "Friends",
+                "Indeed",
+                "Linkedin",
+                "Promotion",
+                "others"
+              ]}
             />
           </div>
 
@@ -202,7 +210,11 @@ const Form = () => {
           </p>
         </div>
         <div className=" justify-center sm:hidden flex">
-          <ButtonPrimary text="Apply Now" color="neon" onclick={handleSubmit} />
+          <ButtonPrimary
+            text="Apply Now"
+            color="neon"
+            onclick={handleSubmit}
+          />
         </div>
       </div>
     </div>

@@ -119,6 +119,7 @@ const SubInput = ({
           <input
             id="input"
             type={type === "file" ? "text" : type}
+            maxLength={type === "tel" ? "10" : null}
             name={name}
             placeholder={placeholder && `Ex: ${placeholder}`}
             value={type === "file" ? file?.name : value }

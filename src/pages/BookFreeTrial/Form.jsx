@@ -96,6 +96,7 @@ const Form = () => {
       return;
     }
     console.log(formData);
+    window.location.href = "/loader";
   };
 
   const validateField = (e) => {
@@ -161,7 +162,7 @@ const Form = () => {
                   label="Phone Number"
                   required={true}
                   error={errorData.phone}
-                  type="number"
+                  type="tel"
                   name="phone"
                   onChange={handleChange}
                   onBlur={validateField}
@@ -322,8 +323,8 @@ const Form = () => {
                     onChange={handleChange}
                     select={true}
                     selectItems={[
-                      "Website",
-                      "YouTube",
+                      "Blog",
+                      "Friends",
                       "Indeed",
                       "Linkedin",
                       "Promotion",
@@ -338,8 +339,8 @@ const Form = () => {
                     onChange={handleChange}
                     select={true}
                     selectItems={[
-                      "Website",
-                      "YouTube",
+                      "Blog",
+                      "Friends",
                       "Indeed",
                       "Linkedin",
                       "Promotion",

@@ -32,9 +32,9 @@ const RegisterNow = () => {
           className="absolute bottom-[10%] left-[29rem] -z-10 sm:block hidden"
         />
       </div>
-      {/* <div className="sm:hidden block mt-6">
+      <div className="sm:hidden block mt-6">
         <ButtonPrimary text="View Sample Profile" primary={false} />
-      </div> */}
+      </div>
       <img src={vector_210} alt="" className="sm:hidden block " />
     </div>
   );

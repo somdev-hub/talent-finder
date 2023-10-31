@@ -72,6 +72,7 @@ const Form = () => {
       return;
     }
     console.log(formData);
+    window.location.href = "/loader";
   };
   return (
     <div className="mx-[1.5rem] xl:mx-[7.5rem] sm:mx-[3.5rem] sm:mt-[8rem] mb-[5rem]">
@@ -131,6 +132,7 @@ const Form = () => {
                 <SubInput
                   label="Phone Number"
                   required={true}
+                  type="tel"
                   name="phone"
                   onChange={handleChange}
                   value={formData.phone}
@@ -239,8 +241,8 @@ const Form = () => {
                     value={formData.howDidYouHear}
                     select={true}
                     selectItems={[
-                      "Website",
-                      "YouTube",
+                      "Blog",
+                      "Friends",
                       "Indeed",
                       "Linkedin",
                       "Promotion",
@@ -256,8 +258,8 @@ const Form = () => {
                     value={formData.howDidYouHear}
                     select={true}
                     selectItems={[
-                      "Website",
-                      "YouTube",
+                      "Blog",
+                      "Friends",
                       "Indeed",
                       "Linkedin",
                       "Promotion",

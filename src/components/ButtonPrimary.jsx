@@ -15,13 +15,13 @@ import PropTypes from "prop-types";
 const ButtonPrimary = ({ text, link, onclick, color, primary }) => {
   return (
     // fixed bg and text color
-    <Link to={link}>
+    <a href={link}>
       <button
         className={`relative z-10 rounded-[2.5rem] bg-${
           primary ? color : "white"
         } inline-flex py-[14px] px-[2rem] justify-center items-center text-${
           primary ? (color === "neon" ? "text-dark" : "white") : "text-dark"
-        } text-[1.25rem] font-[500] leading-[130%] font-poppins-regular-20 cursor-pointer
+        } text-[1.25rem] font-[500] leading-[130%] font-poppins-regular-20 ${primary ? "cursor-pointer" : ""}
         ${!primary ? "border-solid border-[4px] border-neon" : "border-none"}
 
         `}
@@ -29,7 +29,7 @@ const ButtonPrimary = ({ text, link, onclick, color, primary }) => {
       >
         {text}
       </button>
-    </Link>
+    </a>
   );
 };
 
