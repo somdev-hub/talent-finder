@@ -20,6 +20,7 @@ import down_arrow from "../assets/down-arrow.svg";
  * @param {boolean} props.select - Whether the input is a select.
  * @param {Array} props.selectItems - The items to display in the select.
  * @param {function} props.onKeyDown - The function to call when a key is pressed.
+ * @param {string} props.placeholder - The placeholder text to display.
  * @returns {JSX.Element} - The rendered component.
  */
 
@@ -36,7 +37,7 @@ const SubInput = ({
   select,
   selectItems,
   onKeyDown,
-  placeholder
+  placeholder,
 }) => {
   const [file, setFile] = useState(null);
   const fileRef = useRef(null);
@@ -49,6 +50,21 @@ const SubInput = ({
     const file = e.target.files[0];
     onChange(e);
     setFile(file);
+  };
+
+  const handleKeyPress = (event) => {
+    if (name === "phone") {
+      if (!/[0-9]/.test(event.key)) {
+        event.preventDefault();
+      }
+    }
+    if (name === "fullName") {
+      if (!/[a-zA-Z ]/.test(event.key)) {
+        event.preventDefault();
+      }
+    } else {
+      onKeyDown(event);
+    }
   };
   return (
     <div className="flex flex-col w-full relative">
@@ -115,23 +131,31 @@ const SubInput = ({
           />
         </>
       ) : (
-        <Tooltip title={error} placement="top" arrow>
+        // <Tooltip title={error} placement="top" arrow>
+        <>
           <input
             id="input"
             type={type === "file" ? "text" : type}
             maxLength={type === "tel" ? "10" : null}
             name={name}
+            // onKeyPress={handleKeyPress}
             placeholder={placeholder && `Ex: ${placeholder}`}
-            value={type === "file" ? file?.name : value }
+            value={type === "file" ? file?.name : value}
             disabled={type === "file" ? true : false}
             onChange={onChange}
             onBlur={onBlur}
-            onKeyDown={onKeyDown}
+            onKeyDown={handleKeyPress}
             className={`text-[14px] sm:text-[1rem] font-poppins-regular-20 p-[8px] sm:p-4 pl-[12px] sm:pl-[25px] box-border border-2 border-solid w-full ${
               error ? "border-[#D20000]" : "border-text-light"
             } rounded-full inline-block`}
           />
-        </Tooltip>
+          {error && (
+            <p className="text-[#D20000] font-poppins-regular-20 text-[14px] pl-[25px] m-0 mt-3">
+              {error}
+            </p>
+          )}
+        </>
+        // </Tooltip>
       )}
     </div>
   );
@@ -149,7 +173,8 @@ SubInput.propTypes = {
   accept: PropTypes.string,
   select: PropTypes.bool,
   selectItems: PropTypes.array,
-  onKeyDown: PropTypes.func
+  onKeyDown: PropTypes.func,
+  placeholder: PropTypes.string,
 };
 
 SubInput.defaultProps = {

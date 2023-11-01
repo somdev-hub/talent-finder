@@ -67,6 +67,15 @@ const Form = () => {
 
   const handleChange = (e) => {
     e.preventDefault();
+    const { name } = e.target;
+    // if (name != "expertise" || name != "isCommitted" || name != "areaOfInterest") {
+      // return;
+      const errors = validator(formData);
+      setErrorData((prevErrorData) => ({
+        ...prevErrorData,
+        [name]: errors[name]
+      }));
+    // }
     if (e.target.name === "areaOfInterest") {
       setGoalExample(goalExamples[e.target.value.toLowerCase()]);
     }
@@ -147,6 +156,7 @@ const Form = () => {
                   error={errorData.fullName}
                   onChange={handleChange}
                   onBlur={validateField}
+                  pattern="[A-Za-z]"
                 />
                 <SubInput
                   label="Email Address"

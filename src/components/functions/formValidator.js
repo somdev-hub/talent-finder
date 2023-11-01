@@ -14,7 +14,7 @@ const formValidator = ({ rules }) => {
           if (!values[fieldName]) {
             errors[fieldName] = `${fieldLabel} is required`;
           } else if (!/\S+@\S+\.\S+/.test(values[fieldName])) {
-            errors[fieldName] = `${fieldLabel} is invalid`;
+            errors[fieldName] = `Enter valid email i.e example@gmail.com`;
           }
           break;
         case "phone":
