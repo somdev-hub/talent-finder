@@ -19,8 +19,8 @@ const Loader = () => {
           Congratulations!
         </h3>
         <p className="font-[400] text-[1rem] sm:text-[1.5rem] text-center font-poppins-regular-20 m-0 mt-4">
-          Your account is ready to use. You will be redirected to the Home page
-          in a few seconds
+          Your account is now active and ready for use. You will be
+          automatically redirected to the Home page shortly.
         </p>
       </div>
       <div className="">

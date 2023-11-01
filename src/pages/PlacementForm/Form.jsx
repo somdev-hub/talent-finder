@@ -46,6 +46,12 @@ const Form = () => {
 
   const handleChange = (e) => {
     e.preventDefault();
+    const { name } = e.target;
+    const errors = validator(formData);
+    setErrorData((prevErrorData) => ({
+      ...prevErrorData,
+      [name]: errors[name]
+    }));
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
