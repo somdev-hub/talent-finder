@@ -80,6 +80,7 @@ const Form = () => {
     const errors = validator(selectedOptions);
     setErrorData(errors);
     if (Object.keys(errors).length > 0) {
+      console.log(errors);
       return;
     }
     console.log(selectedOptions);

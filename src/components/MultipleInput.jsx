@@ -85,6 +85,11 @@ const MultipleInput = ({
           );
         })}
       </div>
+      {error && (
+                <p className="text-[#D20000] font-poppins-regular-20 text-[14px] pl-[25px] m-0 mt-3">
+                  {error}
+                </p>
+              )}
     </div>
   );
 };
